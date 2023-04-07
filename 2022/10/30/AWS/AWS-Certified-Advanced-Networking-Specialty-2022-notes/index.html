@@ -1,0 +1,463 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="keywords" content="Hexo Theme Keep">
+    <meta name="description" content="Study note">
+    <meta name="author" content="Camille Chang">
+    
+    <title>
+        
+            AWS-Certified Advanced Networking - Specialty 2022-notes |
+        
+        Camille Chang&#39;s Blog
+    </title>
+    
+<link rel="stylesheet" href="/css/style.css">
+
+    <link rel="shortcut icon" href="/images/cat.svg">
+    
+<link rel="stylesheet" href="/css/font-awesome.min.css">
+
+    <script id="hexo-configurations">
+    let KEEP = window.KEEP || {};
+    KEEP.hexo_config = {"hostname":"example.com","root":"/","language":"en","path":"search.json"};
+    KEEP.theme_config = {"toc":{"enable":false,"number":false,"expand_all":false,"init_open":false},"style":{"primary_color":"#0066CC","avatar":"/images/logo.jpg","favicon":"/images/cat.svg","article_img_align":"left","left_side_width":"260px","content_max_width":"920px","hover":{"shadow":false,"scale":false},"first_screen":{"enable":false,"background_img":"/images/bg.svg","description":"Keep writing and Keep loving."},"scroll":{"progress_bar":{"enable":false},"percent":{"enable":false}}},"local_search":{"enable":true,"preload":false,"trigger":"auto","top_n_per_article":1,"unescape":false},"code_copy":{"enable":false,"style":"default"},"pjax":{"enable":false},"lazyload":{"enable":true},"version":"3.4.5"};
+    KEEP.language_ago = {"second":"%s seconds ago","minute":"%s minutes ago","hour":"%s hours ago","day":"%s days ago","week":"%s weeks ago","month":"%s months ago","year":"%s years ago"};
+  </script>
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3322039958811580"
+    crossorigin="anonymous">
+		</script>
+<meta name="generator" content="Hexo 6.3.0"></head>
+
+
+
+	<body>
+		<div class="progress-bar-container">
+    
+
+    
+</div>
+
+
+<main class="page-container">
+
+    
+
+    <div class="page-main-content">
+
+        <div class="page-main-content-top">
+            <header class="header-wrapper">
+
+	<div
+		class="header-content">
+		<div class="left">
+			
+					<a class="logo-title" href="/">
+						Camille Chang&#39;s Blog
+					</a>
+		</div>
+
+		<div class="right">
+			<div class="pc">
+				<ul class="menu-list">
+					
+						<li class="menu-item">
+							<a class=""
+								href="/">
+								HOME
+							</a>
+						</li>
+						
+						<li class="menu-item">
+							<a class=""
+								href="/archives">
+								ARCHIVES
+							</a>
+						</li>
+						
+						<li class="menu-item">
+							<a class=""
+								href="/categories">
+								CATEGORIES
+							</a>
+						</li>
+						
+						<li class="menu-item">
+							<a class=""
+								href="/about">
+								ABOUT
+							</a>
+						</li>
+						
+							
+								<li class="menu-item search search-popup-trigger">
+									<i class="fas fa-search"></i>
+								</li>
+								
+				</ul>
+			</div>
+			<div class="mobile">
+				
+					<div class="icon-item search search-popup-trigger"><i class="fas fa-search"></i></div>
+					
+						<div class="icon-item menu-bar">
+							<div class="menu-bar-middle"></div>
+						</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="header-drawer">
+		<ul class="drawer-menu-list">
+			
+				<li class="drawer-menu-item flex-center">
+					<a class=""
+						href="/">
+						HOME
+					</a>
+				</li>
+				
+				<li class="drawer-menu-item flex-center">
+					<a class=""
+						href="/archives">
+						ARCHIVES
+					</a>
+				</li>
+				
+				<li class="drawer-menu-item flex-center">
+					<a class=""
+						href="/categories">
+						CATEGORIES
+					</a>
+				</li>
+				
+				<li class="drawer-menu-item flex-center">
+					<a class=""
+						href="/about">
+						ABOUT
+					</a>
+				</li>
+				
+		</ul>
+	</div>
+
+	<div class="window-mask"></div>
+</header>
+        </div>
+
+        <div class="page-main-content-middle">
+
+            <div class="main-content">
+
+                
+                    <div class="fade-in-down-animation">
+    <div class="article-content-container">
+
+        <div class="article-title">
+            <span class="title-hover-animation">AWS-Certified Advanced Networking - Specialty 2022-notes</span>
+        </div>
+
+        
+            <div class="article-header">
+                <div class="avatar">
+                    <img src="/images/logo.jpg">
+                </div>
+                <div class="info">
+                    <div class="author">
+                        <span class="name">Camille Chang</span>
+                        
+                    </div>
+                    <div class="meta-info">
+                        <div class="article-meta-info">
+    <span class="article-date article-meta-item">
+        <i class="fas fa-edit"></i>&nbsp;
+        <span class="pc">2022-10-30 18:37:41</span>
+        <span class="mobile">2022-10-30 18:37</span>
+    </span>
+    
+        <span class="article-categories article-meta-item">
+            <i class="fas fa-folder"></i>&nbsp;
+            <ul>
+                
+                    <li>
+                        <a href="/categories/AWS/">AWS</a>&nbsp;
+                    </li>
+                
+            </ul>
+        </span>
+    
+    
+        <span class="article-tags article-meta-item">
+            <i class="fas fa-tags"></i>&nbsp;
+            <ul>
+                
+                    <li>
+                        <a href="/tags/AWS/">AWS</a>&nbsp;
+                    </li>
+                
+                    <li>
+                        | <a href="/tags/Certification/">Certification</a>&nbsp;
+                    </li>
+                
+                    <li>
+                        | <a href="/tags/Network/">Network</a>&nbsp;
+                    </li>
+                
+            </ul>
+        </span>
+    
+
+    
+    
+    
+    
+</div>
+
+                    </div>
+                </div>
+            </div>
+        
+
+        <div class="article-content markdown-body">
+            <h3 id="Exam"><a href="#Exam" class="headerlink" title="Exam"></a>Exam</h3><p><strong>Passing score is 750, 50 of 65 questions will affect your score</strong></p>
+<h4 id="Domain-1-Network-Design-30"><a href="#Domain-1-Network-Design-30" class="headerlink" title="Domain 1: Network Design 30%"></a>Domain 1: Network Design 30%</h4><h4 id="Domain-2-Network-Implementation-26"><a href="#Domain-2-Network-Implementation-26" class="headerlink" title="Domain 2: Network Implementation 26%"></a>Domain 2: Network Implementation 26%</h4><ul>
+<li>TGW</li>
+<li>Site to site VPN &#x3D; on Prem + Amazon VPC</li>
+<li>Direct Connect +VPN&#x3D; IPsec encrypted private connection.</li>
+</ul>
+<h4 id="Domain-3-Network-Management-and-Operation-20"><a href="#Domain-3-Network-Management-and-Operation-20" class="headerlink" title="Domain 3: Network Management and Operation 20%"></a>Domain 3: Network Management and Operation 20%</h4><ul>
+<li>VPC Traffic Mirroring(Mirror filter, mirror target, mirror session ), Route 53(health check, DNS failover), Cloudwatch logs+interface VPC endpoints, VPC FLow logs for IP traffic</li>
+</ul>
+<h4 id="Domain-4-Network-Security-Compliance-and-Governance-24"><a href="#Domain-4-Network-Security-Compliance-and-Governance-24" class="headerlink" title="Domain 4: Network Security, Compliance, and Governance 24%"></a>Domain 4: Network Security, Compliance, and Governance 24%</h4><ul>
+<li>Shield, WAF, Network Firewall,  SG+ ACLs, endpoints</li>
+</ul>
+
+        </div>
+
+        
+
+        
+            <ul class="post-tags-box">
+                
+                    <li class="tag-item">
+                        <a href="/tags/AWS/">#AWS</a>&nbsp;
+                    </li>
+                
+                    <li class="tag-item">
+                        <a href="/tags/Certification/">#Certification</a>&nbsp;
+                    </li>
+                
+                    <li class="tag-item">
+                        <a href="/tags/Network/">#Network</a>&nbsp;
+                    </li>
+                
+            </ul>
+        
+
+        
+            <div class="article-nav">
+                
+                    <div class="article-prev">
+                        <a class="prev"
+                           rel="prev"
+                           href="/2022/11/13/AWS/How-to-pass-AWS-Certified-Security-Specialty-SCS-C01-exam/"
+                        >
+                            <span class="left arrow-icon flex-center">
+                              <i class="fas fa-chevron-left"></i>
+                            </span>
+                            <span class="title flex-center">
+                                <span class="post-nav-title-item">How to pass AWS Certified Security Specialty SCS-C01 exam</span>
+                                <span class="post-nav-item">Prev posts</span>
+                            </span>
+                        </a>
+                    </div>
+                
+                
+                    <div class="article-next">
+                        <a class="next"
+                           rel="next"
+                           href="/2022/10/24/books/Deep-work-rules-reading-notes/"
+                        >
+                            <span class="title flex-center">
+                                <span class="post-nav-title-item">Deep work rules- reading notes</span>
+                                <span class="post-nav-item">Next posts</span>
+                            </span>
+                            <span class="right arrow-icon flex-center">
+                              <i class="fas fa-chevron-right"></i>
+                            </span>
+                        </a>
+                    </div>
+                
+            </div>
+        
+
+        
+    </div>
+</div>
+
+
+                
+            </div>
+
+        </div>
+
+        <div class="page-main-content-bottom">
+            <footer class="footer">
+    <div class="info-container">
+        <div class="copyright-info info-item">
+            &copy;
+            
+              <span>2020</span>
+              -
+            
+            2023&nbsp;<i class="fas fa-heart icon-animate"></i>&nbsp;<a href="/">Camille Chang</a>
+        </div>
+        
+        <div class="theme-info info-item">
+            Powered by <a target="_blank" href="https://hexo.io">Hexo</a>&nbsp;|&nbsp;Theme&nbsp;<a class="theme-version" target="_blank" href="https://github.com/XPoet/hexo-theme-keep">Keep v3.4.5</a>
+        </div>
+        
+        
+    </div>
+</footer>
+
+        </div>
+    </div>
+
+    
+        <div class="post-tools">
+            <div class="post-tools-container">
+    <ul class="tools-list">
+        <!-- TOC aside toggle -->
+        
+
+        <!-- go comment -->
+        
+    </ul>
+</div>
+
+        </div>
+    
+
+    <div class="right-bottom-side-tools">
+        <div class="side-tools-container">
+    <ul class="side-tools-list">
+        <li class="tools-item tool-font-adjust-plus flex-center">
+            <i class="fas fa-search-plus"></i>
+        </li>
+
+        <li class="tools-item tool-font-adjust-minus flex-center">
+            <i class="fas fa-search-minus"></i>
+        </li>
+
+        <li class="tools-item tool-expand-width flex-center">
+            <i class="fas fa-arrows-alt-h"></i>
+        </li>
+
+        <li class="tools-item tool-dark-light-toggle flex-center">
+            <i class="fas fa-moon"></i>
+        </li>
+
+        <!-- rss -->
+        
+
+        
+            <li class="tools-item tool-scroll-to-top flex-center">
+                <i class="fas fa-arrow-up"></i>
+            </li>
+        
+
+        <li class="tools-item tool-scroll-to-bottom flex-center">
+            <i class="fas fa-arrow-down"></i>
+        </li>
+    </ul>
+
+    <ul class="exposed-tools-list">
+        <li class="tools-item tool-toggle-show flex-center">
+            <i class="fas fa-cog fa-spin"></i>
+        </li>
+        
+    </ul>
+</div>
+
+    </div>
+
+    
+
+    <div class="image-viewer-container">
+    <img src="">
+</div>
+
+
+    
+        <div class="search-pop-overlay">
+    <div class="popup search-popup">
+        <div class="search-header">
+          <span class="search-input-field-pre">
+            <i class="fas fa-keyboard"></i>
+          </span>
+            <div class="search-input-container">
+                <input autocomplete="off"
+                       autocorrect="off"
+                       autocapitalize="off"
+                       placeholder="Search..."
+                       spellcheck="false"
+                       type="search"
+                       class="search-input"
+                >
+            </div>
+            <span class="popup-btn-close">
+                <i class="fas fa-times"></i>
+            </span>
+        </div>
+        <div id="search-result">
+            <div id="no-result">
+                <i class="fas fa-spinner fa-pulse fa-5x fa-fw"></i>
+            </div>
+        </div>
+    </div>
+</div>
+
+    
+
+</main>
+
+
+
+			
+<script src="/js/utils.js"></script>
+
+<script src="/js/main.js"></script>
+
+<script src="/js/header-shrink.js"></script>
+
+<script src="/js/back2top.js"></script>
+
+<script src="/js/dark-light-toggle.js"></script>
+
+
+
+    
+<script src="/js/local-search.js"></script>
+
+
+
+
+
+
+    
+<script src="/js/lazyload.js"></script>
+
+
+
+<div class="post-scripts">
+    
+</div>
+
+
+
+	</body>
+
+</html>
