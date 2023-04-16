@@ -17,13 +17,11 @@
 <link rel="stylesheet" href="/css/style.css">
 
     <link rel="shortcut icon" href="/images/cat.svg">
-    
-<link rel="stylesheet" href="/css/font-awesome.min.css">
-
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.4.5/source/css/font-awesome.min.css">
     <script id="hexo-configurations">
     let KEEP = window.KEEP || {};
     KEEP.hexo_config = {"hostname":"example.com","root":"/","language":"en","path":"search.json"};
-    KEEP.theme_config = {"toc":{"enable":false,"number":false,"expand_all":false,"init_open":false},"style":{"primary_color":"#0066CC","avatar":"/images/logo.jpg","favicon":"/images/cat.svg","article_img_align":"left","left_side_width":"260px","content_max_width":"920px","hover":{"shadow":false,"scale":false},"first_screen":{"enable":false,"background_img":"/images/bg.svg","description":"Keep writing and Keep loving."},"scroll":{"progress_bar":{"enable":false},"percent":{"enable":false}}},"local_search":{"enable":true,"preload":false,"trigger":"auto","top_n_per_article":1,"unescape":false},"code_copy":{"enable":false,"style":"default"},"pjax":{"enable":false},"lazyload":{"enable":true},"version":"3.4.5"};
+    KEEP.theme_config = {"toc":{"enable":true,"number":true,"expand_all":true,"init_open":true},"style":{"primary_color":"#0066CC","avatar":"/images/cat.svg","favicon":"/images/cat.svg","article_img_align":"left","left_side_width":"260px","content_max_width":"920px","hover":{"shadow":true,"scale":true},"first_screen":{"enable":false,"background_img":"/images/rainbow-bg.svg","description":"Keep writing and Keep loving."},"scroll":{"progress_bar":{"enable":false},"percent":{"enable":false}}},"local_search":{"enable":true,"preload":false,"trigger":"auto","top_n_per_article":1,"unescape":false},"code_copy":{"enable":false,"style":"default"},"pjax":{"enable":true},"lazyload":{"enable":false},"version":"3.4.5"};
     KEEP.language_ago = {"second":"%s seconds ago","minute":"%s minutes ago","hour":"%s hours ago","day":"%s days ago","week":"%s weeks ago","month":"%s months ago","year":"%s years ago"};
   </script>
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3322039958811580"
@@ -37,6 +35,11 @@
 		<div class="progress-bar-container">
     
 
+    
+        <span class="pjax-progress-bar"></span>
+        <span class="pjax-progress-icon">
+            <i class="fas fa-circle-notch fa-spin"></i>
+        </span>
     
 </div>
 
@@ -54,6 +57,10 @@
 		class="header-content">
 		<div class="left">
 			
+				<a class="logo-image" href="/">
+					<img src="/images/cat.svg">
+				</a>
+				
 					<a class="logo-title" href="/">
 						Camille Chang&#39;s Blog
 					</a>
@@ -162,7 +169,7 @@
         
             <div class="article-header">
                 <div class="avatar">
-                    <img src="/images/logo.jpg">
+                    <img src="/images/cat.svg">
                 </div>
                 <div class="info">
                     <div class="author">
@@ -207,7 +214,19 @@
 
     
     
+        <span class="article-wordcount article-meta-item">
+            <i class="fas fa-file-word"></i>&nbsp;<span>1.1k Words</span>
+        </span>
     
+    
+        <span class="article-min2read article-meta-item">
+            <i class="fas fa-clock"></i>&nbsp;<span>6 Mins</span>
+        </span>
+    
+    
+        <span class="article-pv article-meta-item">
+            <i class="fas fa-eye"></i>&nbsp;<span id="busuanzi_value_page_pv"></span>
+        </span>
     
 </div>
 
@@ -386,6 +405,16 @@
             2023&nbsp;<i class="fas fa-heart icon-animate"></i>&nbsp;<a href="/">Camille Chang</a>
         </div>
         
+            <script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+            <div class="website-count info-item">
+                
+                    <span id="busuanzi_container_site_uv">
+                        Visitor Count&nbsp;<span id="busuanzi_value_site_uv"></span>&ensp;
+                    </span>
+                
+                
+            </div>
+        
         <div class="theme-info info-item">
             Powered by <a target="_blank" href="https://hexo.io">Hexo</a>&nbsp;|&nbsp;Theme&nbsp;<a class="theme-version" target="_blank" href="https://github.com/XPoet/hexo-theme-keep">Keep v3.4.5</a>
         </div>
@@ -402,6 +431,10 @@
             <div class="post-tools-container">
     <ul class="tools-list">
         <!-- TOC aside toggle -->
+        
+            <li class="tools-item page-aside-toggle">
+                <i class="fas fa-outdent"></i>
+            </li>
         
 
         <!-- go comment -->
@@ -456,6 +489,14 @@
     </div>
 
     
+        <aside class="page-aside">
+            <div class="post-toc-wrap">
+    <div class="post-toc">
+        <ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#Route53"><span class="nav-number">1.</span> <span class="nav-text">Route53</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#CloudFormation"><span class="nav-number">2.</span> <span class="nav-text">CloudFormation</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#encryption"><span class="nav-number">3.</span> <span class="nav-text">encryption</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Volume-and-Storage"><span class="nav-number">4.</span> <span class="nav-text">Volume and Storage</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#AD"><span class="nav-number">5.</span> <span class="nav-text">AD</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#AMI"><span class="nav-number">6.</span> <span class="nav-text">AMI</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#ElasticCache-in-memory-data-store"><span class="nav-number">7.</span> <span class="nav-text">ElasticCache(in-memory data store)</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Some-security-and-other-services"><span class="nav-number">8.</span> <span class="nav-text">Some security and other services</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#VPC-and-Network"><span class="nav-number">9.</span> <span class="nav-text">VPC and Network</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Others-never-remembered"><span class="nav-number"></span> <span class="nav-text">Others never remembered</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#System-mamanger"><span class="nav-number"></span> <span class="nav-text">System mamanger</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Cloudfront"><span class="nav-number"></span> <span class="nav-text">Cloudfront</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Little"><span class="nav-number"></span> <span class="nav-text">Little</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#ALB"><span class="nav-number"></span> <span class="nav-text">ALB</span></a>
+    </div>
+</div>
+        </aside>
+    
 
     <div class="image-viewer-container">
     <img src="">
@@ -497,35 +538,53 @@
 
 
 
-			
-<script src="/js/utils.js"></script>
+			<script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.4.5/source/js/utils.js"></script><script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.4.5/source/js/main.js"></script><script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.4.5/source/js/header-shrink.js"></script><script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.4.5/source/js/back2top.js"></script><script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.4.5/source/js/dark-light-toggle.js"></script>
 
-<script src="/js/main.js"></script>
 
-<script src="/js/header-shrink.js"></script>
-
-<script src="/js/back2top.js"></script>
-
-<script src="/js/dark-light-toggle.js"></script>
+    <script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.4.5/source/js/local-search.js"></script>
 
 
 
+
+
+
+<div class="post-scripts pjax">
     
-<script src="/js/local-search.js"></script>
-
-
-
-
-
-
-    
-<script src="/js/lazyload.js"></script>
-
-
-
-<div class="post-scripts">
+        <script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.4.5/source/js/left-side-toggle.js"></script><script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.4.5/source/js/libs/anime.min.js"></script><script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.4.5/source/js/toc.js"></script>
     
 </div>
+
+
+    <script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.4.5/source/js/libs/pjax.min.js"></script>
+<script>
+    window.addEventListener('DOMContentLoaded', () => {
+        window.pjax = new Pjax({
+            selectors: [
+                'head title',
+                '.page-container',
+                '.pjax'
+            ],
+            history: true,
+            debug: false,
+            cacheBust: false,
+            timeout: 0,
+            analytics: false,
+            currentUrlFullReload: false,
+            scrollRestoration: false,
+            // scrollTo: true,
+        });
+
+        document.addEventListener('pjax:send', () => {
+            KEEP.utils.pjaxProgressBarStart();
+        });
+
+        document.addEventListener('pjax:complete', () => {
+            KEEP.utils.pjaxProgressBarEnd();
+            window.pjax.executeScripts(document.querySelectorAll('script[data-pjax], .pjax script'));
+            KEEP.refresh();
+        });
+    });
+</script>
 
 
 
