@@ -17,11 +17,13 @@
 <link rel="stylesheet" href="/css/style.css">
 
     <link rel="shortcut icon" href="/images/cat.svg">
-    <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.4.5/source/css/font-awesome.min.css">
+    
+<link rel="stylesheet" href="/css/font-awesome.min.css">
+
     <script id="hexo-configurations">
     let KEEP = window.KEEP || {};
     KEEP.hexo_config = {"hostname":"example.com","root":"/","language":"en","path":"search.json"};
-    KEEP.theme_config = {"toc":{"enable":true,"number":true,"expand_all":true,"init_open":true},"style":{"primary_color":"#0066CC","avatar":"/images/cat.svg","favicon":"/images/cat.svg","article_img_align":"left","left_side_width":"260px","content_max_width":"920px","hover":{"shadow":true,"scale":true},"first_screen":{"enable":false,"background_img":"/images/rainbow-bg.svg","description":"Keep writing and Keep loving."},"scroll":{"progress_bar":{"enable":false},"percent":{"enable":false}}},"local_search":{"enable":true,"preload":false,"trigger":"auto","top_n_per_article":1,"unescape":false},"code_copy":{"enable":false,"style":"default"},"pjax":{"enable":true},"lazyload":{"enable":false},"version":"3.4.5"};
+    KEEP.theme_config = {"toc":{"enable":false,"number":false,"expand_all":false,"init_open":false},"style":{"primary_color":"#0066CC","avatar":"/images/cat.svg","favicon":"/images/cat.svg","article_img_align":"left","left_side_width":"260px","content_max_width":"920px","hover":{"shadow":true,"scale":true},"first_screen":{"enable":false,"background_img":"/images/rainbow-bg.svg","description":"Keep writing and Keep loving."},"scroll":{"progress_bar":{"enable":false},"percent":{"enable":false}}},"local_search":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"code_copy":{"enable":false,"style":"default"},"pjax":{"enable":false},"lazyload":{"enable":false},"version":"3.4.5"};
     KEEP.language_ago = {"second":"%s seconds ago","minute":"%s minutes ago","hour":"%s hours ago","day":"%s days ago","week":"%s weeks ago","month":"%s months ago","year":"%s years ago"};
   </script>
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3322039958811580"
@@ -35,11 +37,6 @@
 		<div class="progress-bar-container">
     
 
-    
-        <span class="pjax-progress-bar"></span>
-        <span class="pjax-progress-icon">
-            <i class="fas fa-circle-notch fa-spin"></i>
-        </span>
     
 </div>
 
@@ -99,16 +96,10 @@
 						</li>
 						
 							
-								<li class="menu-item search search-popup-trigger">
-									<i class="fas fa-search"></i>
-								</li>
-								
 				</ul>
 			</div>
 			<div class="mobile">
 				
-					<div class="icon-item search search-popup-trigger"><i class="fas fa-search"></i></div>
-					
 						<div class="icon-item menu-bar">
 							<div class="menu-bar-middle"></div>
 						</div>
@@ -224,10 +215,6 @@
         </span>
     
     
-        <span class="article-pv article-meta-item">
-            <i class="fas fa-eye"></i>&nbsp;<span id="busuanzi_value_page_pv"></span>
-        </span>
-    
 </div>
 
                     </div>
@@ -261,9 +248,7 @@
 <li>RDS<br>  1. Enhanced monitoring, metrics, cpu, memory, cheaper visibility<br>  2. Proxy pool share DB connections, improve performance.<br>  3. Multi-AZ, high availability.</li>
 <li>S3<br>  1. RTC(Replication time control), event notification &lt;15mins<br>  2. WORM, vault lock policy<br>  3. Inventory report, audit&#x2F;report replication&#x2F;encryption status of objects.<br>  vs System manager inventory, collect metadata from EC2 and on prem.<br>  4. Transfer Acceleration is a bucket-level feature that enables fast, easy, and secure transfers of files over long distances between your client and an S3 bucket.<br>  5. Global Accelerator service does not work with S3. It only supports endpoints like application load balancers, network load balancers, EC2 instances, or elastic IP addresses.</li>
 <li>Data Lifecycle Manager<br>  1. automate the creation, retention, and deletion of Amazon Elastic Block Store (Amazon EBS) snapshots.<br>  2. create a lifecycle policy that includes specific tags to back up EBS volumes on a specified schedule and for a specified retention period.</li>
-<li>Aurora DB cluster,<br>  - consists of one or more DB instances and a cluster volume that manages the data for those DB instances<br>  -  cluster volume is a virtual database storage volume that spans multiple Availability Zones, with each Availability Zone having a copy of the DB cluster data.<br>  <img src="/../../imgs/AuroraDBCluster.png" alt="AuroraDBCluster"><br>  Link <a class="link"   target="_blank" rel="noopener" href="https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/Aurora.Overview.html" >https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/Aurora.Overview.html<i class="fas fa-external-link-alt"></i></a><br>  - backtracking an Aurora DB cluster,”rewinds” the DB cluster to the time you specify<br>  - the Performance Insights feature in the Amazon Aurora Serverless database which will automatically connect to a new Aurora database instance while preserving application connections.</li>
-</ul>
-<h3 id="AD"><a href="#AD" class="headerlink" title="AD"></a>AD</h3><ul>
+<li>Aurora DB cluster,<br>  - consists of one or more DB instances and a cluster volume that manages the data for those DB instances<br>  -  cluster volume is a virtual database storage volume that spans multiple Availability Zones, with each Availability Zone having a copy of the DB cluster data.<br>  <img src="/../../imgs/AuroraDBCluster.png" alt="AuroraDBCluster"><br>  Link <a class="link"   target="_blank" rel="noopener" href="https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/Aurora.Overview.html" >https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/Aurora.Overview.html<i class="fas fa-external-link-alt"></i></a><br>  - backtracking an Aurora DB cluster,”rewinds” the DB cluster to the time you specify<br>  - the Performance Insights feature in the Amazon Aurora Serverless database which will automatically connect to a new Aurora database instance while preserving application connections.<h3 id="AD"><a href="#AD" class="headerlink" title="AD"></a>AD</h3></li>
 <li>AWS AD, windows, VPN&#x2F; direct connect</li>
 <li>AD connector, trust relationship, AD-&gt;AWS</li>
 <li>Simple AD, LDAP</li>
@@ -286,28 +271,43 @@
 <ol>
 <li>Scaling HORIZONTALLY:<br>   1.1. scale out (Add Nodes to a Cluster)<br>   1.2. scale in (Remove Nodes from a Cluster)</li>
 <li>Scaling VERTICALLY<br>   2.1  scale out (create a new cluster and using a higher EC2 type)<br>   2.1  scale in (create a new cluster and using a lower EC2 type)</li>
-<li>does not support Multi-AZ for high availability.<br>  <img src="/../../imgs/Memcached.png" alt="Memcached"><br>  From link <a class="link"   target="_blank" rel="noopener" href="https://portal.tutorialsdojo.com/courses/aws-certified-sysops-administrator-associate-practice-exams/" >https://portal.tutorialsdojo.com/courses/aws-certified-sysops-administrator-associate-practice-exams/<i class="fas fa-external-link-alt"></i></a></li>
+<li>does not support Multi-AZ for high availability.<br>  <img src="/../../imgs/Memcached.png" alt="Memcached"><br>  From link <a class="link"   target="_blank" rel="noopener" href="https://portal.tutorialsdojo.com/courses/aws-certified-sysops-administrator-associate-practice-exams/" >https://portal.tutorialsdojo.com/courses/aws-certified-sysops-administrator-associate-practice-exams/<i class="fas fa-external-link-alt"></i></a><h3 id="Some-security-and-other-services"><a href="#Some-security-and-other-services" class="headerlink" title="Some security and other services"></a>Some security and other services</h3></li>
 </ol>
 </li>
-</ul>
-<h3 id="Some-security-and-other-services"><a href="#Some-security-and-other-services" class="headerlink" title="Some security and other services"></a>Some security and other services</h3><ul>
-<li>WAF, SQL Injection&#x2F; Cross site scripting, filter web traffic based on IP addresses, HTTP body&#x2F;headers, custom URIs</li>
-<li>OpsHubs, manage snow family, devices and local aws services</li>
-<li>OpsWorks, chef and puppet</li>
-<li>Control tower,create accounts via account factory, enroll account, landing zone’s managment accounts.</li>
-<li>Artifact, report of ISO certificates and PCI.</li>
-<li>cloudHSM, hardware security module, 3rd party support, generated encryption keys</li>
-<li>Config,</li>
-<li>Shield, DDOS</li>
-<li>Shield Advanced: DDOS protecting for scaling, layer3,4 and 7</li>
-<li>Inspector, automated vulnerability management service that continually scans workloads for software vulnerabilities and unintended network exposure.</li>
-<li>GuardDuty, Intelligent threat detection.</li>
-<li>Cloudtrail, who to blame, log API activity, data events and file integrity validation.</li>
-<li>X-Ray, debug apps</li>
-<li>Macie, machine learning to discover, monitor and protect s3. API keys, regulatory documents.</li>
-<li>Glue, extract, transform, load (ETL) service, work with data lakes,redshift,RDS,crawler to populate glue catalog with tables.</li>
-<li>Trust Advisor, check service  usage&gt;80%, real time guidance, cost</li>
-<li>Cost Explorer, view costs, usage and forecast.</li>
+<li><p>WAF, SQL Injection&#x2F; Cross site scripting, filter web traffic based on IP addresses, HTTP body&#x2F;headers, custom URIs</p>
+</li>
+<li><p>OpsHubs, manage snow family, devices and local aws services</p>
+</li>
+<li><p>OpsWorks, chef and puppet</p>
+</li>
+<li><p>Control tower,create accounts via account factory, enroll account, landing zone’s managment accounts.</p>
+</li>
+<li><p>Artifact, report of ISO certificates and PCI.</p>
+</li>
+<li><p>cloudHSM, hardware security module, 3rd party support, generated encryption keys</p>
+</li>
+<li><p>Config,</p>
+</li>
+<li><p>Shield, DDOS</p>
+</li>
+<li><p>Shield Advanced: DDOS protecting for scaling, layer3,4 and 7</p>
+</li>
+<li><p>Inspector, automated vulnerability management service that continually scans workloads for software vulnerabilities and unintended network exposure.</p>
+</li>
+<li><p>GuardDuty, Intelligent threat detection.</p>
+</li>
+<li><p>Cloudtrail, who to blame, log API activity, data events and file integrity validation.</p>
+</li>
+<li><p>X-Ray, debug apps</p>
+</li>
+<li><p>Macie, machine learning to discover, monitor and protect s3. API keys, regulatory documents.</p>
+</li>
+<li><p>Glue, extract, transform, load (ETL) service, work with data lakes,redshift,RDS,crawler to populate glue catalog with tables.</p>
+</li>
+<li><p>Trust Advisor, check service  usage&gt;80%, real time guidance, cost</p>
+</li>
+<li><p>Cost Explorer, view costs, usage and forecast.</p>
+</li>
 </ul>
 <h3 id="VPC-and-Network"><a href="#VPC-and-Network" class="headerlink" title="VPC and Network"></a>VPC and Network</h3><ul>
 <li>Direct connect + VPN &#x3D; IPSec-encrypted private connection</li>
@@ -335,9 +335,7 @@
 <li>By default, the enableDnsHostNames is set to false for VPCs created using the AWS CLI</li>
 <li>AWS Resource Access Manager (RAM) helps you securely share your resources across AWS accounts</li>
 <li>Step Function, provides serverless orchestration for modern applications.</li>
-<li>SWF,fully-managed state tracker and task coordinator service</li>
-</ul>
-<h2 id="ALB"><a href="#ALB" class="headerlink" title="ALB"></a>ALB</h2><ul>
+<li>SWF,fully-managed state tracker and task coordinator service<h2 id="ALB"><a href="#ALB" class="headerlink" title="ALB"></a>ALB</h2></li>
 <li>Connection draining, Auto Scaling will wait for outstanding requests to complete before terminating instances.</li>
 <li>ASG lifecycle hook, can be used  to the auto-scaling group to pause an instance before it’s terminated.  perform custom actions during ec2 instances scale-out or scale-in.</li>
 <li>EC2Rescue,a troubleshooting tool that you can run on your Amazon EC2 Windows Server instances.</li>
@@ -405,16 +403,6 @@
             2023&nbsp;<i class="fas fa-heart icon-animate"></i>&nbsp;<a href="/">Camille Chang</a>
         </div>
         
-            <script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
-            <div class="website-count info-item">
-                
-                    <span id="busuanzi_container_site_uv">
-                        Visitor Count&nbsp;<span id="busuanzi_value_site_uv"></span>&ensp;
-                    </span>
-                
-                
-            </div>
-        
         <div class="theme-info info-item">
             Powered by <a target="_blank" href="https://hexo.io">Hexo</a>&nbsp;|&nbsp;Theme&nbsp;<a class="theme-version" target="_blank" href="https://github.com/XPoet/hexo-theme-keep">Keep v3.4.5</a>
         </div>
@@ -431,10 +419,6 @@
             <div class="post-tools-container">
     <ul class="tools-list">
         <!-- TOC aside toggle -->
-        
-            <li class="tools-item page-aside-toggle">
-                <i class="fas fa-outdent"></i>
-            </li>
         
 
         <!-- go comment -->
@@ -489,14 +473,6 @@
     </div>
 
     
-        <aside class="page-aside">
-            <div class="post-toc-wrap">
-    <div class="post-toc">
-        <ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#Route53"><span class="nav-number">1.</span> <span class="nav-text">Route53</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#CloudFormation"><span class="nav-number">2.</span> <span class="nav-text">CloudFormation</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#encryption"><span class="nav-number">3.</span> <span class="nav-text">encryption</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Volume-and-Storage"><span class="nav-number">4.</span> <span class="nav-text">Volume and Storage</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#AD"><span class="nav-number">5.</span> <span class="nav-text">AD</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#AMI"><span class="nav-number">6.</span> <span class="nav-text">AMI</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#ElasticCache-in-memory-data-store"><span class="nav-number">7.</span> <span class="nav-text">ElasticCache(in-memory data store)</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Some-security-and-other-services"><span class="nav-number">8.</span> <span class="nav-text">Some security and other services</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#VPC-and-Network"><span class="nav-number">9.</span> <span class="nav-text">VPC and Network</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Others-never-remembered"><span class="nav-number"></span> <span class="nav-text">Others never remembered</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#System-mamanger"><span class="nav-number"></span> <span class="nav-text">System mamanger</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Cloudfront"><span class="nav-number"></span> <span class="nav-text">Cloudfront</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Little"><span class="nav-number"></span> <span class="nav-text">Little</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#ALB"><span class="nav-number"></span> <span class="nav-text">ALB</span></a>
-    </div>
-</div>
-        </aside>
-    
 
     <div class="image-viewer-container">
     <img src="">
@@ -504,87 +480,32 @@
 
 
     
-        <div class="search-pop-overlay">
-    <div class="popup search-popup">
-        <div class="search-header">
-          <span class="search-input-field-pre">
-            <i class="fas fa-keyboard"></i>
-          </span>
-            <div class="search-input-container">
-                <input autocomplete="off"
-                       autocorrect="off"
-                       autocapitalize="off"
-                       placeholder="Search..."
-                       spellcheck="false"
-                       type="search"
-                       class="search-input"
-                >
-            </div>
-            <span class="popup-btn-close">
-                <i class="fas fa-times"></i>
-            </span>
-        </div>
-        <div id="search-result">
-            <div id="no-result">
-                <i class="fas fa-spinner fa-pulse fa-5x fa-fw"></i>
-            </div>
-        </div>
-    </div>
-</div>
-
-    
 
 </main>
 
 
 
-			<script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.4.5/source/js/utils.js"></script><script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.4.5/source/js/main.js"></script><script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.4.5/source/js/header-shrink.js"></script><script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.4.5/source/js/back2top.js"></script><script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.4.5/source/js/dark-light-toggle.js"></script>
+			
+<script src="/js/utils.js"></script>
+
+<script src="/js/main.js"></script>
+
+<script src="/js/header-shrink.js"></script>
+
+<script src="/js/back2top.js"></script>
+
+<script src="/js/dark-light-toggle.js"></script>
 
 
-    <script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.4.5/source/js/local-search.js"></script>
 
 
 
 
 
 
-<div class="post-scripts pjax">
-    
-        <script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.4.5/source/js/left-side-toggle.js"></script><script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.4.5/source/js/libs/anime.min.js"></script><script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.4.5/source/js/toc.js"></script>
+<div class="post-scripts">
     
 </div>
-
-
-    <script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.4.5/source/js/libs/pjax.min.js"></script>
-<script>
-    window.addEventListener('DOMContentLoaded', () => {
-        window.pjax = new Pjax({
-            selectors: [
-                'head title',
-                '.page-container',
-                '.pjax'
-            ],
-            history: true,
-            debug: false,
-            cacheBust: false,
-            timeout: 0,
-            analytics: false,
-            currentUrlFullReload: false,
-            scrollRestoration: false,
-            // scrollTo: true,
-        });
-
-        document.addEventListener('pjax:send', () => {
-            KEEP.utils.pjaxProgressBarStart();
-        });
-
-        document.addEventListener('pjax:complete', () => {
-            KEEP.utils.pjaxProgressBarEnd();
-            window.pjax.executeScripts(document.querySelectorAll('script[data-pjax], .pjax script'));
-            KEEP.refresh();
-        });
-    });
-</script>
 
 
 
