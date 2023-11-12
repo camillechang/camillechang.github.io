@@ -9,7 +9,7 @@
     
     <title>
         
-            Tags |
+            AWS Interview questions |
         
         Camille Chang&#39;s Blog
     </title>
@@ -164,15 +164,168 @@
             <div class="main-content">
 
                 
-                    
-    <div class="fade-in-down-animation">
-        <div class="tagcloud-container">
-            <div class="tagcloud-content">
-                <a href="/tags/AWS/" style="font-size: 1.6rem;">AWS</a> <a href="/tags/CKA/" style="font-size: 1rem;">CKA</a> <a href="/tags/Certification/" style="font-size: 1.6rem;">Certification</a> <a href="/tags/DevOps/" style="font-size: 1.12rem;">DevOps</a> <a href="/tags/Docker/" style="font-size: 1rem;">Docker</a> <a href="/tags/Habits/" style="font-size: 1rem;">Habits</a> <a href="/tags/Hexo/" style="font-size: 1rem;">Hexo</a> <a href="/tags/Investment/" style="font-size: 1.36rem;">Investment</a> <a href="/tags/Life/" style="font-size: 1.12rem;">Life</a> <a href="/tags/Linux/" style="font-size: 1rem;">Linux</a> <a href="/tags/Network/" style="font-size: 1rem;">Network</a> <a href="/tags/Nginx/" style="font-size: 1rem;">Nginx</a> <a href="/tags/Python/" style="font-size: 1rem;">Python</a> <a href="/tags/books/" style="font-size: 1.48rem;">books</a> <a href="/tags/codetest/" style="font-size: 1.24rem;">codetest</a> <a href="/tags/death/" style="font-size: 1rem;">death</a> <a href="/tags/git/" style="font-size: 1rem;">git</a> <a href="/tags/house/" style="font-size: 1rem;">house</a> <a href="/tags/interview/" style="font-size: 1.24rem;">interview</a> <a href="/tags/investment/" style="font-size: 1.12rem;">investment</a> <a href="/tags/money/" style="font-size: 1.24rem;">money</a> <a href="/tags/notes/" style="font-size: 1.36rem;">notes</a> <a href="/tags/security/" style="font-size: 1.12rem;">security</a> <a href="/tags/success/" style="font-size: 1rem;">success</a> <a href="/tags/sysops/" style="font-size: 1rem;">sysops</a> <a href="/tags/thoughts/" style="font-size: 1rem;">thoughts</a> <a href="/tags/tips/" style="font-size: 1.12rem;">tips</a>
-            </div>
-        </div>
-    </div>
+                    <div class="fade-in-down-animation">
+    <div class="article-content-container">
 
+        <div class="article-title">
+            <span class="title-hover-animation">AWS Interview questions</span>
+        </div>
+
+        
+            <div class="article-header">
+                <div class="avatar">
+                    <img src="/images/cat.svg">
+                </div>
+                <div class="info">
+                    <div class="author">
+                        <span class="name">Camille Chang</span>
+                        
+                    </div>
+                    <div class="meta-info">
+                        <div class="article-meta-info">
+    <span class="article-date article-meta-item">
+        <i class="fas fa-edit"></i>&nbsp;
+        <span class="pc">2023-11-12 09:41:26</span>
+        <span class="mobile">2023-11-12 09:41</span>
+    </span>
+    
+        <span class="article-categories article-meta-item">
+            <i class="fas fa-folder"></i>&nbsp;
+            <ul>
+                
+                    <li>
+                        <a href="/categories/work/">work</a>&nbsp;
+                    </li>
+                
+            </ul>
+        </span>
+    
+    
+        <span class="article-tags article-meta-item">
+            <i class="fas fa-tags"></i>&nbsp;
+            <ul>
+                
+                    <li>
+                        <a href="/tags/AWS/">AWS</a>&nbsp;
+                    </li>
+                
+                    <li>
+                        | <a href="/tags/interview/">interview</a>&nbsp;
+                    </li>
+                
+                    <li>
+                        | <a href="/tags/codetest/">codetest</a>&nbsp;
+                    </li>
+                
+            </ul>
+        </span>
+    
+
+    
+    
+        <span class="article-wordcount article-meta-item">
+            <i class="fas fa-file-word"></i>&nbsp;<span>136 Words</span>
+        </span>
+    
+    
+        <span class="article-min2read article-meta-item">
+            <i class="fas fa-clock"></i>&nbsp;<span>1 Mins</span>
+        </span>
+    
+    
+</div>
+
+                    </div>
+                </div>
+            </div>
+        
+
+        <div class="article-content markdown-body">
+            <ol>
+<li>EBS vs instance store(instance local store)</li>
+</ol>
+<ul>
+<li>EBS<ul>
+<li>EBS volumes are persistent, EBS is suitable for databases, file systems, and storing any critical data that needs to be quickly accessible and requires durability.</li>
+<li>Offers consistent and predictable performance.</li>
+<li>the lifetime of a EBS volume is independent of the lifetime of an EC2 instance to which it may be attached.</li>
+</ul>
+</li>
+<li>Instance store<ul>
+<li>Volumes are ephemeral. Data on an instance store volume is lost if the instance is stopped, terminated, or if it fails.</li>
+<li>Provides higher throughput and lower latency compared to EBS</li>
+<li>Best suited for temporary storage of information that changes frequently, such as buffers, caches</li>
+<li>Cost: there is no additional cost for using instance store volumes as they are included in the price of the instance itself.</li>
+<li>Only available for certain EC2 instance types and sizes.</li>
+</ul>
+</li>
+</ul>
+<ol start="2">
+<li></li>
+</ol>
+
+        </div>
+
+        
+
+        
+            <ul class="post-tags-box">
+                
+                    <li class="tag-item">
+                        <a href="/tags/AWS/">#AWS</a>&nbsp;
+                    </li>
+                
+                    <li class="tag-item">
+                        <a href="/tags/interview/">#interview</a>&nbsp;
+                    </li>
+                
+                    <li class="tag-item">
+                        <a href="/tags/codetest/">#codetest</a>&nbsp;
+                    </li>
+                
+            </ul>
+        
+
+        
+            <div class="article-nav">
+                
+                    <div class="article-prev">
+                        <a class="prev"
+                           rel="prev"
+                           href="/2023/11/11/Work/git-commands/"
+                        >
+                            <span class="left arrow-icon flex-center">
+                              <i class="fas fa-chevron-left"></i>
+                            </span>
+                            <span class="title flex-center">
+                                <span class="post-nav-title-item">git commands</span>
+                                <span class="post-nav-item">Prev posts</span>
+                            </span>
+                        </a>
+                    </div>
+                
+                
+                    <div class="article-next">
+                        <a class="next"
+                           rel="next"
+                           href="/2023/11/11/Work/Linux-commands/"
+                        >
+                            <span class="title flex-center">
+                                <span class="post-nav-title-item">Linux commands</span>
+                                <span class="post-nav-item">Next posts</span>
+                            </span>
+                            <span class="right arrow-icon flex-center">
+                              <i class="fas fa-chevron-right"></i>
+                            </span>
+                        </a>
+                    </div>
+                
+            </div>
+        
+
+        
+    </div>
+</div>
 
 
                 
@@ -217,6 +370,19 @@
         </div>
     </div>
 
+    
+        <div class="post-tools">
+            <div class="post-tools-container">
+    <ul class="tools-list">
+        <!-- TOC aside toggle -->
+        
+
+        <!-- go comment -->
+        
+    </ul>
+</div>
+
+        </div>
     
 
     <div class="right-bottom-side-tools">

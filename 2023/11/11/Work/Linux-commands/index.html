@@ -9,7 +9,7 @@
     
     <title>
         
-            NGINX basic |
+            Linux commands |
         
         Camille Chang&#39;s Blog
     </title>
@@ -168,7 +168,7 @@
     <div class="article-content-container">
 
         <div class="article-title">
-            <span class="title-hover-animation">NGINX basic</span>
+            <span class="title-hover-animation">Linux commands</span>
         </div>
 
         
@@ -185,8 +185,8 @@
                         <div class="article-meta-info">
     <span class="article-date article-meta-item">
         <i class="fas fa-edit"></i>&nbsp;
-        <span class="pc">2023-06-30 19:05:29</span>
-        <span class="mobile">2023-06-30 19:05</span>
+        <span class="pc">2023-11-12 09:41:07</span>
+        <span class="mobile">2023-11-12 09:41</span>
     </span>
     
         <span class="article-categories article-meta-item">
@@ -194,7 +194,7 @@
             <ul>
                 
                     <li>
-                        <a href="/categories/DevOps/">DevOps</a>&nbsp;
+                        <a href="/categories/work/">work</a>&nbsp;
                     </li>
                 
             </ul>
@@ -206,11 +206,15 @@
             <ul>
                 
                     <li>
-                        <a href="/tags/DevOps/">DevOps</a>&nbsp;
+                        <a href="/tags/interview/">interview</a>&nbsp;
                     </li>
                 
                     <li>
-                        | <a href="/tags/Nginx/">Nginx</a>&nbsp;
+                        | <a href="/tags/codetest/">codetest</a>&nbsp;
+                    </li>
+                
+                    <li>
+                        | <a href="/tags/Linux/">Linux</a>&nbsp;
                     </li>
                 
             </ul>
@@ -220,12 +224,12 @@
     
     
         <span class="article-wordcount article-meta-item">
-            <i class="fas fa-file-word"></i>&nbsp;<span>140 Words</span>
+            <i class="fas fa-file-word"></i>&nbsp;<span>482 Words</span>
         </span>
     
     
         <span class="article-min2read article-meta-item">
-            <i class="fas fa-clock"></i>&nbsp;<span>1 Mins</span>
+            <i class="fas fa-clock"></i>&nbsp;<span>3 Mins</span>
         </span>
     
     
@@ -237,15 +241,54 @@
         
 
         <div class="article-content markdown-body">
-            <ul>
-<li>Reverse Proxy Server<h2 id="NGINX-vs-Apache"><a href="#NGINX-vs-Apache" class="headerlink" title="NGINX vs Apache"></a>NGINX vs Apache</h2><img src="/../../imgs/nginx.jpg" alt="nginx"><h2 id="MacOS-install-Nginx"><a href="#MacOS-install-Nginx" class="headerlink" title="MacOS install Nginx"></a>MacOS install Nginx</h2></li>
-<li><code>brew install nginx</code></li>
-<li><code>brew services reload nginx</code></li>
-<li>Config file location <code>/usr/local/etc/nginx/nginx.conf</code></li>
-<li><code>curl -I ip/style.css</code> get header info<h2 id="Reverse-Proxy"><a href="#Reverse-Proxy" class="headerlink" title="Reverse Proxy"></a>Reverse Proxy</h2></li>
-<li>正向代理是客户端的代理，而反向代理是服务器的代理</li>
-<li>正向代理（Forward Proxy）是一种代理服务器，代表客户端向其他服务器发送请求，并将响应返回给客户端</li>
-<li>反向代理（Reverse Proxy）是一种网络服务，它代表服务器处理客户端请求，并将这些请求转发到内部网络中的后端服务器。</li>
+            <ol>
+<li>tar command to archive three files to a file test.tar?</li>
+</ol>
+<ul>
+<li><code>tar -cvf test.tar file1.txt file2.txt file3.txt </code></li>
+<li>-c: This option stands for “create”, indicating that you’re creating a new archive.</li>
+<li>-v: This stands for “verbose”. It’s optional and when used, it tells tar to list the files it’s archiving. It’s useful for seeing what’s being included in the archive.</li>
+<li>-f: This option allows you to specify the name of the archive. In this case, test.tar is the name of the archive you’re creating.</li>
+</ul>
+<ol start="2">
+<li>linux disk command</li>
+</ol>
+<ul>
+<li><p>-dmesg (Display Message): This command is used to examine or control the kernel ring buffer. It prints the message buffer of the kernel, which includes information about hardware devices that the kernel detects during boot, along with any drivers attached to them.</p>
+<ul>
+<li>After booting, you can use dmesg to see messages related to hardware devices, including HDDs.</li>
+<li>Running dmesg | grep sda (assuming sda is your HDD) can help you see messages related to the detection of your HDD.</li>
+</ul>
+</li>
+<li><p>dd (Data Duplicator): This command is used for copying and converting data. It can be used to perform operations like backing up a disk’s contents or copying data between different media. It is not used for detecting or listing hardware.</p>
+</li>
+<li><p>du (Disk Usage): This command reports the amount of disk space used by files and directories. It is useful for monitoring disk usage but does not provide information about hardware detection.</p>
+</li>
+<li><p>dc (Desk Calculator): This is a reverse-polish calculator which supports arbitrary precision arithmetic. It is not related to hardware or disk management at all.</p>
+</li>
+</ul>
+<ol start="3">
+<li>iptables(a tool used for configuring the Linux kernel’s netfilter firewall)</li>
+</ol>
+<ul>
+<li><p>Filter Table: The default table if no other table is specified. It is used to control the authorization of data packets to and from the system. The standard chains in the filter table are INPUT, FORWARD, and OUTPUT.</p>
+</li>
+<li><p>NAT Table: This table is used for network address translation (NAT). It alters packets’ source and destination addresses as they pass through. The typical chains in the NAT table are PREROUTING, POSTROUTING, and OUTPUT.</p>
+</li>
+<li><p>Mangle Table: Used for specialized packet alteration. This table can be used for altering packet headers in various ways (e.g., adjusting TTL values). The chains in the mangle table include PREROUTING, INPUT, FORWARD, OUTPUT, and POSTROUTING.</p>
+</li>
+<li><p>Raw Table: Used mainly for configuring exemptions from connection tracking. The chains in the raw table are PREROUTING and OUTPUT.</p>
+</li>
+<li><p>Security Table: Used for Mandatory Access Control (MAC) networking rules, such as those enabled by SELinux. The chains here are INPUT, OUTPUT, and FORWARD.</p>
+</li>
+</ul>
+<ol start="4">
+<li>disk commands</li>
+</ol>
+<ul>
+<li><code>du</code>: Stands for disk usage. It’s used to estimate file space usage.</li>
+<li><code>df</code>: Stands for disk free. It’s used to show the amount of free disk space on file systems.</li>
+<li><code>dc</code>: Stands for desktop calculator. It’s an arbitrary precision calculator.</li>
 </ul>
 
         </div>
@@ -256,11 +299,15 @@
             <ul class="post-tags-box">
                 
                     <li class="tag-item">
-                        <a href="/tags/DevOps/">#DevOps</a>&nbsp;
+                        <a href="/tags/interview/">#interview</a>&nbsp;
                     </li>
                 
                     <li class="tag-item">
-                        <a href="/tags/Nginx/">#Nginx</a>&nbsp;
+                        <a href="/tags/codetest/">#codetest</a>&nbsp;
+                    </li>
+                
+                    <li class="tag-item">
+                        <a href="/tags/Linux/">#Linux</a>&nbsp;
                     </li>
                 
             </ul>
@@ -272,13 +319,13 @@
                     <div class="article-prev">
                         <a class="prev"
                            rel="prev"
-                           href="/2023/11/11/Work/Linux-commands/"
+                           href="/2023/11/11/Work/AWS-Interview-questions/"
                         >
                             <span class="left arrow-icon flex-center">
                               <i class="fas fa-chevron-left"></i>
                             </span>
                             <span class="title flex-center">
-                                <span class="post-nav-title-item">Linux commands</span>
+                                <span class="post-nav-title-item">AWS Interview questions</span>
                                 <span class="post-nav-item">Prev posts</span>
                             </span>
                         </a>
@@ -288,10 +335,10 @@
                     <div class="article-next">
                         <a class="next"
                            rel="next"
-                           href="/2023/06/26/books/%E4%B8%8D%E7%96%B2%E5%8A%B3%E7%9A%84%E7%94%9F%E6%B4%BB/"
+                           href="/2023/06/30/Devops/NGINX-basic/"
                         >
                             <span class="title flex-center">
-                                <span class="post-nav-title-item">不疲劳的生活</span>
+                                <span class="post-nav-title-item">NGINX basic</span>
                                 <span class="post-nav-item">Next posts</span>
                             </span>
                             <span class="right arrow-icon flex-center">
