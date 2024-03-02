@@ -95,13 +95,6 @@
 							</a>
 						</li>
 						
-						<li class="menu-item">
-							<a class=""
-								href="/ads.txt">
-								GOOGLE-ADS
-							</a>
-						</li>
-						
 							
 				</ul>
 			</div>
@@ -142,13 +135,6 @@
 					<a class=""
 						href="/about">
 						ABOUT
-					</a>
-				</li>
-				
-				<li class="drawer-menu-item flex-center">
-					<a class=""
-						href="/ads.txt">
-						GOOGLE-ADS
 					</a>
 				</li>
 				
@@ -326,6 +312,8 @@
 <h3 id="VPC-and-Network"><a href="#VPC-and-Network" class="headerlink" title="VPC and Network"></a>VPC and Network</h3><ul>
 <li>Direct connect + VPN &#x3D; IPSec-encrypted private connection</li>
 <li>Site to site VPN &#x3D; on prem + amazon VPC</li>
+<li>Route table and NACLs, stateless - VPC level</li>
+<li>Security group-&gt; stateful, subnet level</li>
 </ul>
 <h2 id="Others-never-remembered"><a href="#Others-never-remembered" class="headerlink" title="Others never remembered"></a>Others never remembered</h2><ul>
 <li>Enhanced Networking, provides higher bandwidth, higher packet per second (PPS) performance, and consistently lower inter-instance latencies</li>
@@ -333,12 +321,13 @@
 <li>CloudFront Origin Shield, an additional layer in the CloudFront caching infrastructure that helps to minimize your origin’s load, improve its availability, and reduce its operating costs.缓存Better cache hit ratio,Better network performance and Reduced origin load.</li>
 <li>warm pool is a pool of pre-initialized EC2 instances that sits alongside an Auto Scaling group</li>
 </ul>
-<h2 id="System-mamanger"><a href="#System-mamanger" class="headerlink" title="System mamanger"></a>System mamanger</h2><ul>
+<h2 id="System-manager"><a href="#System-manager" class="headerlink" title="System manager"></a>System manager</h2><ul>
 <li>Inventory, collects information about your instances and the software installed on them, helping you to understand your system configurations and installed applications.</li>
 <li>Automation, automate common and repetitive IT operations and management tasks</li>
 <li>Run Command, provides you safe, secure remote management of your instances at scale without logging into your servers, replacing the need for bastion hosts, SSH, or remote PowerShell</li>
 </ul>
 <h2 id="Cloudfront"><a href="#Cloudfront" class="headerlink" title="Cloudfront"></a>Cloudfront</h2><ul>
+<li>Edge locations and local zones</li>
 <li>Cache statistics,</li>
 <li>Popular objects, what objects are frequently being accessed, and get statistics on those objects.</li>
 <li>Top referrers</li>
@@ -352,7 +341,9 @@
 <li>SWF,fully-managed state tracker and task coordinator service<h2 id="ALB"><a href="#ALB" class="headerlink" title="ALB"></a>ALB</h2></li>
 <li>Connection draining, Auto Scaling will wait for outstanding requests to complete before terminating instances.</li>
 <li>ASG lifecycle hook, can be used  to the auto-scaling group to pause an instance before it’s terminated.  perform custom actions during ec2 instances scale-out or scale-in.</li>
-<li>EC2Rescue,a troubleshooting tool that you can run on your Amazon EC2 Windows Server instances.</li>
+<li>EC2Rescue,a troubleshooting tool that you can run on your Amazon EC2 Windows Server instances.<h2 id="IAM"><a href="#IAM" class="headerlink" title="IAM"></a>IAM</h2></li>
+<li>Identity based policy, attached to Identity(role, user and group)</li>
+<li>resource based policy, attached to resources and additional principal</li>
 </ul>
 
         </div>
@@ -414,7 +405,7 @@
               <span>2020</span>
               -
             
-            2023&nbsp;<i class="fas fa-heart icon-animate"></i>&nbsp;<a href="/">Camille Chang</a>
+            2024&nbsp;<i class="fas fa-heart icon-animate"></i>&nbsp;<a href="/">Camille Chang</a>
         </div>
         
             <script async  src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
