@@ -14,761 +14,683 @@
     
 <link rel="stylesheet" href="/css/style.css">
 
-    <link rel="shortcut icon" href="/images/cat.svg">
     
-<link rel="stylesheet" href="/css/font-awesome.min.css">
+    
+<link rel="stylesheet" href="/font/css/fontawesome.min.css">
 
-    <script id="hexo-configurations">
-    let KEEP = window.KEEP || {};
-    KEEP.hexo_config = {"hostname":"example.com","root":"/","language":"en","path":"search.json"};
-    KEEP.theme_config = {"toc":{"enable":false,"number":false,"expand_all":false,"init_open":false},"style":{"primary_color":"#0066CC","avatar":"/images/cat.svg","favicon":"/images/cat.svg","article_img_align":"left","left_side_width":"260px","content_max_width":"920px","hover":{"shadow":true,"scale":true},"first_screen":{"enable":false,"background_img":"/images/rainbow-bg.svg","description":"Keep writing and Keep loving."},"scroll":{"progress_bar":{"enable":false},"percent":{"enable":false}}},"local_search":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"code_copy":{"enable":false,"style":"default"},"pjax":{"enable":false},"lazyload":{"enable":false},"version":"3.4.5"};
-    KEEP.language_ago = {"second":"%s seconds ago","minute":"%s minutes ago","hour":"%s hours ago","day":"%s days ago","week":"%s weeks ago","month":"%s months ago","year":"%s years ago"};
+    
+<link rel="stylesheet" href="/font/css/regular.min.css">
+
+    
+<link rel="stylesheet" href="/font/css/solid.min.css">
+
+    
+<link rel="stylesheet" href="/font/css/brands.min.css">
+
+    
+    <script class="keep-theme-configurations">
+    const KEEP = window.KEEP || {}
+    KEEP.hexo_config = {"hostname":"example.com","root":"/","language":"en","path":"search.json"}
+    KEEP.theme_config = {"base_info":{"title":"Camille Chang's Blog","author":"Camille Chang","url":"https://keep.xpoet.cn/","logo_img":"/images/cat.svg"},"style":{"primary_color":"#0066CC","avatar":"/images/cat.svg","favicon":"/images/cat.svg","article_img_align":"left","left_side_width":"260px","content_max_width":"920px","hover":{"shadow":true,"scale":true},"first_screen":{"enable":false,"background_img":"/images/rainbow-bg.svg","description":"Keep writing and Keep loving."},"scroll":{"progress_bar":{"enable":false},"percent":{"enable":false}}},"social_contact":{"enable":false,"links":{"github":null,"weixin":null,"qq":null,"weibo":null,"zhihu":null,"twitter":null,"facebook":null,"email":null}},"menu":{"Archives":"/archives","Categories":"/categories","About":"/about"},"home_article":{"category":{"enable":true,"limit":3},"tag":{"enable":true,"limit":5}},"post":{"word_count":{"enable":true,"wordcount":true,"min2read":true},"author_label":{"enable":false,"auto":false,"custom_label_list":["Trainee","Engineer","Architect","CTO","BOSS"]}},"code_copy":{"enable":false,"style":"default"},"toc":{"enable":false,"number":false,"expand_all":false,"init_open":false},"copyright_info":{"enable":false},"website_count":{"busuanzi_count":{"enable":true,"site_uv":true,"site_pv":true,"page_pv":false}},"local_search":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"comment":{"enable":false,"use":"gitalk","gitalk":{"github_id":null,"repository":null,"client_id":null,"client_secret":null}},"rss":{"enable":true},"feed":{"enable":true,"type":"atom","path":"atom.xml","limit":20,"hub":null,"content":null,"content_limit":140,"content_limit_delim":" ","order_by":"-date","icon":"icon.png","autodiscovery":true,"template":null},"lazyload":{"enable":false},"cdn":{"enable":false},"pjax":{"enable":false},"footer":{"since":2020,"icp":null,"upyun":null},"version":"4.0.7","root":""}
+    KEEP.language_ago = {"second":"%s seconds ago","minute":"%s minutes ago","hour":"%s hours ago","day":"%s days ago","week":"%s weeks ago","month":"%s months ago","year":"%s years ago"}
+    KEEP.language_code_block = {"copy":"Copy code","copied":"Copied","fold":"Fold code block","folded":"Folded"}
+    KEEP.language_copy_copyright = {"copy":"Copy copyright info","copied":"Copied","title":"Original post title","author":"Original post author","link":"Original post link"}
   </script>
 <meta name="generator" content="Hexo 6.3.0"><link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
 </head>
 
 
-
-	<body>
-		<div class="progress-bar-container">
+<body>
+<div class="progress-bar-container">
     
 
     
 </div>
 
 
-<main class="page-container">
+<main class="page-container border-box">
 
+    <!-- home first screen  -->
     
 
-    <div class="page-main-content">
-
+    <!-- page content -->
+    <div class="page-main-content border-box is-home">
         <div class="page-main-content-top">
-            <header class="header-wrapper">
+            
+<header class="header-wrapper">
 
-	<div
-		class="header-content">
-		<div class="left">
-			
-				<a class="logo-image" href="/">
-					<img src="/images/cat.svg">
-				</a>
-				
-					<a class="logo-title" href="/">
-						Camille Chang&#39;s Blog
-					</a>
-		</div>
-
-		<div class="right">
-			<div class="pc">
-				<ul class="menu-list">
-					
-						<li class="menu-item">
-							<a class="active"
-								href="/">
-								HOME
-							</a>
-						</li>
-						
-						<li class="menu-item">
-							<a class=""
-								href="/archives">
-								ARCHIVES
-							</a>
-						</li>
-						
-						<li class="menu-item">
-							<a class=""
-								href="/categories">
-								CATEGORIES
-							</a>
-						</li>
-						
-						<li class="menu-item">
-							<a class=""
-								href="/about">
-								ABOUT
-							</a>
-						</li>
-						
-							
-				</ul>
-			</div>
-			<div class="mobile">
-				
-						<div class="icon-item menu-bar">
-							<div class="menu-bar-middle"></div>
-						</div>
-			</div>
-		</div>
-	</div>
-
-	<div class="header-drawer">
-		<ul class="drawer-menu-list">
-			
-				<li class="drawer-menu-item flex-center">
-					<a class="active"
-						href="/">
-						HOME
-					</a>
-				</li>
-				
-				<li class="drawer-menu-item flex-center">
-					<a class=""
-						href="/archives">
-						ARCHIVES
-					</a>
-				</li>
-				
-				<li class="drawer-menu-item flex-center">
-					<a class=""
-						href="/categories">
-						CATEGORIES
-					</a>
-				</li>
-				
-				<li class="drawer-menu-item flex-center">
-					<a class=""
-						href="/about">
-						ABOUT
-					</a>
-				</li>
-				
-		</ul>
-	</div>
-
-	<div class="window-mask"></div>
-</header>
+    <div class="border-box header-content">
+        <div class="left border-box">
+            
+            <a class="site-name border-box" href="/">
+               Camille Chang&#39;s Blog
+            </a>
         </div>
 
-        <div class="page-main-content-middle">
-
-            <div class="main-content">
-
+        <div class="right border-box">
+            <div class="pc">
+                <ul class="menu-list">
+                    <li class="menu-item">
+                        <a class="active"
+                           href="/"
+                        >HOME</a>
+                    </li>
+                    
+                        <li class="menu-item">
+                            <a class=""
+                               href="/archives"
+                            >ARCHIVES</a>
+                        </li>
+                    
+                        <li class="menu-item">
+                            <a class=""
+                               href="/categories"
+                            >CATEGORIES</a>
+                        </li>
+                    
+                        <li class="menu-item">
+                            <a class=""
+                               href="/about"
+                            >ABOUT</a>
+                        </li>
+                    
+                    
+                </ul>
+            </div>
+            <div class="mobile">
                 
+                <div class="icon-item menu-bar">
+                    <div class="menu-bar-middle"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="header-drawer">
+        <ul class="drawer-menu-list">
+            <li class="drawer-menu-item flex-center">
+                <a class="active"
+                   href="/"
+                >HOME</a>
+            </li>
+            
+                <li class="drawer-menu-item flex-center">
+                    <a class=""
+                       href="/archives"
+                    >ARCHIVES</a>
+                </li>
+            
+                <li class="drawer-menu-item flex-center">
+                    <a class=""
+                       href="/categories"
+                    >CATEGORIES</a>
+                </li>
+            
+                <li class="drawer-menu-item flex-center">
+                    <a class=""
+                       href="/about"
+                    >ABOUT</a>
+                </li>
+            
+        </ul>
+    </div>
+
+    <div class="window-mask"></div>
+
+</header>
+
+
+        </div>
+
+        <div class="page-main-content-middle border-box">
+
+            <div class="main-content border-box">
+                
+
                     <div class="home-content-container fade-in-down-animation">
-    <ul class="home-article-list">
+    
+    <ul class="home-post-list border-box">
         
-            <li class="home-article-item">
+            <li class="home-post-item">
 
                 
 
-                <h3 class="home-article-title">
-                    <a href="/2024/03/05/life/%E5%8E%9F%E5%AD%90%E4%B9%A0%E6%83%AF-%E6%8E%8C%E6%8E%A7%E4%B9%A0%E6%83%AF/">
-                        原子习惯-掌控习惯
-                    </a>
-                </h3>
-
-                <div class="home-article-content markdown-body">
+                <div class="home-post-item-bottom border-box">
                     
+                    <h3 class="home-post-title border-box">
+                        <a href="/2024/03/05/life/%E5%8E%9F%E5%AD%90%E4%B9%A0%E6%83%AF-%E6%8E%8C%E6%8E%A7%E4%B9%A0%E6%83%AF/">
+                            原子习惯-掌控习惯
+                        </a>
+                    </h3>
+
+                    <div class="home-post-content keep-markdown-body">
                         
-                    
-                </div>
+                            
+                        
+                    </div>
 
-                <div class="home-article-meta-info-container">
-    <div class="home-article-meta-info">
-        <span><i class="fas fa-history"></i>&nbsp;<span class="home-article-date" data-date="Tue Mar 05 2024 21:35:19 GMT+1100">2024-03-05</span></span>
+                    
+
+<div class="post-meta-info-container border-box home">
+    <div class="post-meta-info border-box">
         
-            <span class="home-article-category"><i class="fas fa-folder"></i>&nbsp;
-                <ul>
-                    
-                        <li>
-                            
-                            <a href="/categories/Life/">Life</a>&nbsp;
-                        </li>
-                    
-                    
-                </ul>
+            <span class="meta-info-item border-box">
+                <i class="icon fas fa-history"></i>&nbsp;<span class="home-post-history" data-updated="Tue Mar 05 2024 22:49:20 GMT+1100">2024-03-05 22:49:20</span>
             </span>
         
+
         
-            <span class="home-article-tag">
-                <i class="fas fa-tags"></i>&nbsp;
-                <ul>
-                    
-                        <li>
-                            
-                            <a href="/tags/Life/">Life</a>&nbsp;
-                        </li>
-                    
-                        <li>
-                            | 
-                            <a href="/tags/thoughts/">thoughts</a>&nbsp;
-                        </li>
-                    
-                        <li>
-                            | 
-                            <a href="/tags/habits/">habits</a>&nbsp;
-                        </li>
-                    
-                </ul>
-            </span>
+
+        
+
+        
+
+        
+        
+        
         
     </div>
 
-    <a href="/2024/03/05/life/%E5%8E%9F%E5%AD%90%E4%B9%A0%E6%83%AF-%E6%8E%8C%E6%8E%A7%E4%B9%A0%E6%83%AF/">Read more&nbsp;<i class="fas fa-angle-right"></i></a>
+    
+        <a class="home-read-more" href="/2024/03/05/life/%E5%8E%9F%E5%AD%90%E4%B9%A0%E6%83%AF-%E6%8E%8C%E6%8E%A7%E4%B9%A0%E6%83%AF/">Read more&nbsp;<i class="icon fas fa-angle-right"></i></a>
+    
 </div>
 
+                </div>
             </li>
         
-            <li class="home-article-item">
+            <li class="home-post-item">
 
                 
 
-                <h3 class="home-article-title">
-                    <a href="/2024/03/02/life/%E5%AF%8C%E6%9C%89%E7%9A%84%E4%B9%A0%E6%83%AF/">
-                        富有的习惯
-                    </a>
-                </h3>
-
-                <div class="home-article-content markdown-body">
+                <div class="home-post-item-bottom border-box">
                     
-                        富有的习惯 - Thomas.C.Greey
+                    <h3 class="home-post-title border-box">
+                        <a href="/2024/03/02/life/%E5%AF%8C%E6%9C%89%E7%9A%84%E4%B9%A0%E6%83%AF/">
+                            富有的习惯
+                        </a>
+                    </h3>
+
+                    <div class="home-post-content keep-markdown-body">
+                        
+                            富有的习惯 - Thomas.C.Greey
 1 每天阅读和学习，而不是娱乐自学,提升,读成功人士自传个人修养、成长类,历史类的书。2 坚持运动， 每天大于30min3 乐与结识成功人士,目标明确、乐观热情、心态积极4 追求自己的梦想和目标5 坚持早...
-                    
-                </div>
+                        
+                    </div>
 
-                <div class="home-article-meta-info-container">
-    <div class="home-article-meta-info">
-        <span><i class="fas fa-history"></i>&nbsp;<span class="home-article-date" data-date="Sat Mar 02 2024 15:01:31 GMT+1100">2024-03-02</span></span>
+                    
+
+<div class="post-meta-info-container border-box home">
+    <div class="post-meta-info border-box">
         
-            <span class="home-article-category"><i class="fas fa-folder"></i>&nbsp;
-                <ul>
-                    
-                        <li>
-                            
-                            <a href="/categories/Life/">Life</a>&nbsp;
-                        </li>
-                    
-                    
-                </ul>
+            <span class="meta-info-item border-box">
+                <i class="icon fas fa-history"></i>&nbsp;<span class="home-post-history" data-updated="Tue Mar 05 2024 22:49:20 GMT+1100">2024-03-05 22:49:20</span>
             </span>
         
+
         
-            <span class="home-article-tag">
-                <i class="fas fa-tags"></i>&nbsp;
-                <ul>
-                    
-                        <li>
-                            
-                            <a href="/tags/Life/">Life</a>&nbsp;
-                        </li>
-                    
-                        <li>
-                            | 
-                            <a href="/tags/thoughts/">thoughts</a>&nbsp;
-                        </li>
-                    
-                </ul>
-            </span>
+
+        
+
+        
+
+        
+        
+        
         
     </div>
 
-    <a href="/2024/03/02/life/%E5%AF%8C%E6%9C%89%E7%9A%84%E4%B9%A0%E6%83%AF/">Read more&nbsp;<i class="fas fa-angle-right"></i></a>
+    
+        <a class="home-read-more" href="/2024/03/02/life/%E5%AF%8C%E6%9C%89%E7%9A%84%E4%B9%A0%E6%83%AF/">Read more&nbsp;<i class="icon fas fa-angle-right"></i></a>
+    
 </div>
 
+                </div>
             </li>
         
-            <li class="home-article-item">
+            <li class="home-post-item">
 
                 
 
-                <h3 class="home-article-title">
-                    <a href="/2024/02/12/money/%E9%87%91%E9%92%B1%E5%BF%83%E7%90%86%E5%AD%A6/">
-                        金钱心理学
-                    </a>
-                </h3>
-
-                <div class="home-article-content markdown-body">
+                <div class="home-post-item-bottom border-box">
                     
+                    <h3 class="home-post-title border-box">
+                        <a href="/2024/02/12/money/%E9%87%91%E9%92%B1%E5%BF%83%E7%90%86%E5%AD%A6/">
+                            金钱心理学
+                        </a>
+                    </h3>
+
+                    <div class="home-post-content keep-markdown-body">
                         
+                            
 对金钱的观念是被心理支配的，是主观的。
 你对金钱的个人经验可能只有0.00000001%符合实际，但它构成了 你对世界运作方式的主观判断的80%。所以，两个同样聪明的人对经济 衰退的发生机制和原因、如何进行投资、哪些问题需要优先考虑、自 己能承受多...
-                    
-                </div>
+                        
+                    </div>
 
-                <div class="home-article-meta-info-container">
-    <div class="home-article-meta-info">
-        <span><i class="fas fa-history"></i>&nbsp;<span class="home-article-date" data-date="Mon Feb 12 2024 20:18:01 GMT+1100">2024-02-12</span></span>
+                    
+
+<div class="post-meta-info-container border-box home">
+    <div class="post-meta-info border-box">
         
-            <span class="home-article-category"><i class="fas fa-folder"></i>&nbsp;
-                <ul>
-                    
-                        <li>
-                            
-                            <a href="/categories/money/">money</a>&nbsp;
-                        </li>
-                    
-                    
-                </ul>
+            <span class="meta-info-item border-box">
+                <i class="icon fas fa-history"></i>&nbsp;<span class="home-post-history" data-updated="Tue Mar 05 2024 22:49:20 GMT+1100">2024-03-05 22:49:20</span>
             </span>
         
+
         
-            <span class="home-article-tag">
-                <i class="fas fa-tags"></i>&nbsp;
-                <ul>
-                    
-                        <li>
-                            
-                            <a href="/tags/thoughts/">thoughts</a>&nbsp;
-                        </li>
-                    
-                        <li>
-                            | 
-                            <a href="/tags/Investment/">Investment</a>&nbsp;
-                        </li>
-                    
-                        <li>
-                            | 
-                            <a href="/tags/money/">money</a>&nbsp;
-                        </li>
-                    
-                </ul>
-            </span>
+
+        
+
+        
+
+        
+        
+        
         
     </div>
 
-    <a href="/2024/02/12/money/%E9%87%91%E9%92%B1%E5%BF%83%E7%90%86%E5%AD%A6/">Read more&nbsp;<i class="fas fa-angle-right"></i></a>
+    
+        <a class="home-read-more" href="/2024/02/12/money/%E9%87%91%E9%92%B1%E5%BF%83%E7%90%86%E5%AD%A6/">Read more&nbsp;<i class="icon fas fa-angle-right"></i></a>
+    
 </div>
 
+                </div>
             </li>
         
-            <li class="home-article-item">
+            <li class="home-post-item">
 
                 
 
-                <h3 class="home-article-title">
-                    <a href="/2023/11/11/Work/git-commands/">
-                        git commands
-                    </a>
-                </h3>
-
-                <div class="home-article-content markdown-body">
+                <div class="home-post-item-bottom border-box">
                     
+                    <h3 class="home-post-title border-box">
+                        <a href="/2023/11/11/Work/git-commands/">
+                            git commands
+                        </a>
+                    </h3>
+
+                    <div class="home-post-content keep-markdown-body">
                         
+                            
 git clean, used to remove untracked files from the working tree. It’s important to be cautious with this command, as it will...
-                    
-                </div>
+                        
+                    </div>
 
-                <div class="home-article-meta-info-container">
-    <div class="home-article-meta-info">
-        <span><i class="fas fa-history"></i>&nbsp;<span class="home-article-date" data-date="Sun Nov 12 2023 09:41:36 GMT+1100">2023-11-12</span></span>
+                    
+
+<div class="post-meta-info-container border-box home">
+    <div class="post-meta-info border-box">
         
-            <span class="home-article-category"><i class="fas fa-folder"></i>&nbsp;
-                <ul>
-                    
-                        <li>
-                            
-                            <a href="/categories/work/">work</a>&nbsp;
-                        </li>
-                    
-                    
-                </ul>
+            <span class="meta-info-item border-box">
+                <i class="icon fas fa-history"></i>&nbsp;<span class="home-post-history" data-updated="Tue Mar 05 2024 22:49:20 GMT+1100">2024-03-05 22:49:20</span>
             </span>
         
+
         
-            <span class="home-article-tag">
-                <i class="fas fa-tags"></i>&nbsp;
-                <ul>
-                    
-                        <li>
-                            
-                            <a href="/tags/interview/">interview</a>&nbsp;
-                        </li>
-                    
-                        <li>
-                            | 
-                            <a href="/tags/codetest/">codetest</a>&nbsp;
-                        </li>
-                    
-                        <li>
-                            | 
-                            <a href="/tags/git/">git</a>&nbsp;
-                        </li>
-                    
-                </ul>
-            </span>
+
+        
+
+        
+
+        
+        
+        
         
     </div>
 
-    <a href="/2023/11/11/Work/git-commands/">Read more&nbsp;<i class="fas fa-angle-right"></i></a>
+    
+        <a class="home-read-more" href="/2023/11/11/Work/git-commands/">Read more&nbsp;<i class="icon fas fa-angle-right"></i></a>
+    
 </div>
 
+                </div>
             </li>
         
-            <li class="home-article-item">
+            <li class="home-post-item">
 
                 
 
-                <h3 class="home-article-title">
-                    <a href="/2023/11/11/Work/AWS-Interview-questions/">
-                        AWS Interview questions
-                    </a>
-                </h3>
-
-                <div class="home-article-content markdown-body">
+                <div class="home-post-item-bottom border-box">
                     
+                    <h3 class="home-post-title border-box">
+                        <a href="/2023/11/11/Work/AWS-Interview-questions/">
+                            AWS Interview questions
+                        </a>
+                    </h3>
+
+                    <div class="home-post-content keep-markdown-body">
                         
+                            
 EBS vs instance store(instance local store)
 
 
 EBS
 EBS volumes are persistent, EBS is suitable for databases, file systems, a...
-                    
-                </div>
+                        
+                    </div>
 
-                <div class="home-article-meta-info-container">
-    <div class="home-article-meta-info">
-        <span><i class="fas fa-history"></i>&nbsp;<span class="home-article-date" data-date="Sun Nov 12 2023 09:41:26 GMT+1100">2023-11-12</span></span>
+                    
+
+<div class="post-meta-info-container border-box home">
+    <div class="post-meta-info border-box">
         
-            <span class="home-article-category"><i class="fas fa-folder"></i>&nbsp;
-                <ul>
-                    
-                        <li>
-                            
-                            <a href="/categories/work/">work</a>&nbsp;
-                        </li>
-                    
-                    
-                </ul>
+            <span class="meta-info-item border-box">
+                <i class="icon fas fa-history"></i>&nbsp;<span class="home-post-history" data-updated="Tue Mar 05 2024 22:49:20 GMT+1100">2024-03-05 22:49:20</span>
             </span>
         
+
         
-            <span class="home-article-tag">
-                <i class="fas fa-tags"></i>&nbsp;
-                <ul>
-                    
-                        <li>
-                            
-                            <a href="/tags/AWS/">AWS</a>&nbsp;
-                        </li>
-                    
-                        <li>
-                            | 
-                            <a href="/tags/interview/">interview</a>&nbsp;
-                        </li>
-                    
-                        <li>
-                            | 
-                            <a href="/tags/codetest/">codetest</a>&nbsp;
-                        </li>
-                    
-                </ul>
-            </span>
+
+        
+
+        
+
+        
+        
+        
         
     </div>
 
-    <a href="/2023/11/11/Work/AWS-Interview-questions/">Read more&nbsp;<i class="fas fa-angle-right"></i></a>
+    
+        <a class="home-read-more" href="/2023/11/11/Work/AWS-Interview-questions/">Read more&nbsp;<i class="icon fas fa-angle-right"></i></a>
+    
 </div>
 
+                </div>
             </li>
         
-            <li class="home-article-item">
+            <li class="home-post-item">
 
                 
 
-                <h3 class="home-article-title">
-                    <a href="/2023/11/11/Work/Linux-commands/">
-                        Linux commands
-                    </a>
-                </h3>
-
-                <div class="home-article-content markdown-body">
+                <div class="home-post-item-bottom border-box">
                     
+                    <h3 class="home-post-title border-box">
+                        <a href="/2023/11/11/Work/Linux-commands/">
+                            Linux commands
+                        </a>
+                    </h3>
+
+                    <div class="home-post-content keep-markdown-body">
                         
+                            
 tar command to archive three files to a file test.tar?
 
 
 tar -cvf test.tar file1.txt file2.txt file3.txt 
 -c: This option st...
-                    
-                </div>
+                        
+                    </div>
 
-                <div class="home-article-meta-info-container">
-    <div class="home-article-meta-info">
-        <span><i class="fas fa-history"></i>&nbsp;<span class="home-article-date" data-date="Sun Nov 12 2023 09:41:07 GMT+1100">2023-11-12</span></span>
+                    
+
+<div class="post-meta-info-container border-box home">
+    <div class="post-meta-info border-box">
         
-            <span class="home-article-category"><i class="fas fa-folder"></i>&nbsp;
-                <ul>
-                    
-                        <li>
-                            
-                            <a href="/categories/work/">work</a>&nbsp;
-                        </li>
-                    
-                    
-                </ul>
+            <span class="meta-info-item border-box">
+                <i class="icon fas fa-history"></i>&nbsp;<span class="home-post-history" data-updated="Tue Mar 05 2024 22:49:20 GMT+1100">2024-03-05 22:49:20</span>
             </span>
         
+
         
-            <span class="home-article-tag">
-                <i class="fas fa-tags"></i>&nbsp;
-                <ul>
-                    
-                        <li>
-                            
-                            <a href="/tags/interview/">interview</a>&nbsp;
-                        </li>
-                    
-                        <li>
-                            | 
-                            <a href="/tags/codetest/">codetest</a>&nbsp;
-                        </li>
-                    
-                        <li>
-                            | 
-                            <a href="/tags/Linux/">Linux</a>&nbsp;
-                        </li>
-                    
-                </ul>
-            </span>
+
+        
+
+        
+
+        
+        
+        
         
     </div>
 
-    <a href="/2023/11/11/Work/Linux-commands/">Read more&nbsp;<i class="fas fa-angle-right"></i></a>
+    
+        <a class="home-read-more" href="/2023/11/11/Work/Linux-commands/">Read more&nbsp;<i class="icon fas fa-angle-right"></i></a>
+    
 </div>
 
+                </div>
             </li>
         
-            <li class="home-article-item">
+            <li class="home-post-item">
 
                 
 
-                <h3 class="home-article-title">
-                    <a href="/2023/06/30/Devops/NGINX-basic/">
-                        NGINX basic
-                    </a>
-                </h3>
-
-                <div class="home-article-content markdown-body">
+                <div class="home-post-item-bottom border-box">
                     
+                    <h3 class="home-post-title border-box">
+                        <a href="/2023/06/30/Devops/NGINX-basic/">
+                            NGINX basic
+                        </a>
+                    </h3>
+
+                    <div class="home-post-content keep-markdown-body">
                         
+                            
 Reverse Proxy ServerNGINX vs ApacheMacOS install Nginx
 brew install nginx
 brew services reload nginx
 Config file location /u...
-                    
-                </div>
+                        
+                    </div>
 
-                <div class="home-article-meta-info-container">
-    <div class="home-article-meta-info">
-        <span><i class="fas fa-history"></i>&nbsp;<span class="home-article-date" data-date="Fri Jun 30 2023 19:05:29 GMT+1000">2023-06-30</span></span>
+                    
+
+<div class="post-meta-info-container border-box home">
+    <div class="post-meta-info border-box">
         
-            <span class="home-article-category"><i class="fas fa-folder"></i>&nbsp;
-                <ul>
-                    
-                        <li>
-                            
-                            <a href="/categories/DevOps/">DevOps</a>&nbsp;
-                        </li>
-                    
-                    
-                </ul>
+            <span class="meta-info-item border-box">
+                <i class="icon fas fa-history"></i>&nbsp;<span class="home-post-history" data-updated="Tue Mar 05 2024 22:49:20 GMT+1100">2024-03-05 22:49:20</span>
             </span>
         
+
         
-            <span class="home-article-tag">
-                <i class="fas fa-tags"></i>&nbsp;
-                <ul>
-                    
-                        <li>
-                            
-                            <a href="/tags/DevOps/">DevOps</a>&nbsp;
-                        </li>
-                    
-                        <li>
-                            | 
-                            <a href="/tags/Nginx/">Nginx</a>&nbsp;
-                        </li>
-                    
-                </ul>
-            </span>
+
+        
+
+        
+
+        
+        
+        
         
     </div>
 
-    <a href="/2023/06/30/Devops/NGINX-basic/">Read more&nbsp;<i class="fas fa-angle-right"></i></a>
+    
+        <a class="home-read-more" href="/2023/06/30/Devops/NGINX-basic/">Read more&nbsp;<i class="icon fas fa-angle-right"></i></a>
+    
 </div>
 
+                </div>
             </li>
         
-            <li class="home-article-item">
+            <li class="home-post-item">
 
                 
 
-                <h3 class="home-article-title">
-                    <a href="/2023/06/26/books/%E4%B8%8D%E7%96%B2%E5%8A%B3%E7%9A%84%E7%94%9F%E6%B4%BB/">
-                        不疲劳的生活
-                    </a>
-                </h3>
-
-                <div class="home-article-content markdown-body">
+                <div class="home-post-item-bottom border-box">
                     
-                        摘抄自《不疲劳的生活》作者: [日]工藤孝文
+                    <h3 class="home-post-title border-box">
+                        <a href="/2023/06/26/books/%E4%B8%8D%E7%96%B2%E5%8A%B3%E7%9A%84%E7%94%9F%E6%B4%BB/">
+                            不疲劳的生活
+                        </a>
+                    </h3>
+
+                    <div class="home-post-content keep-markdown-body">
+                        
+                            摘抄自《不疲劳的生活》作者: [日]工藤孝文
 
 早上喝一杯牛奶，提高睡眠质量。
 早上吃富含蛋白质的食物，牛奶鱼类豆制品坚果等。
 建议睡得很好，可醒来依然觉得累的人，白天小憩20分钟，当天的疲劳当天消除。
 心烦意乱的时候吃个泡菜锅吧。
 晚上10点后不要...
-                    
-                </div>
+                        
+                    </div>
 
-                <div class="home-article-meta-info-container">
-    <div class="home-article-meta-info">
-        <span><i class="fas fa-history"></i>&nbsp;<span class="home-article-date" data-date="Mon Jun 26 2023 21:58:27 GMT+1000">2023-06-26</span></span>
+                    
+
+<div class="post-meta-info-container border-box home">
+    <div class="post-meta-info border-box">
         
-            <span class="home-article-category"><i class="fas fa-folder"></i>&nbsp;
-                <ul>
-                    
-                        <li>
-                            
-                            <a href="/categories/books/">books</a>&nbsp;
-                        </li>
-                    
-                    
-                </ul>
+            <span class="meta-info-item border-box">
+                <i class="icon fas fa-history"></i>&nbsp;<span class="home-post-history" data-updated="Tue Mar 05 2024 22:49:20 GMT+1100">2024-03-05 22:49:20</span>
             </span>
         
+
         
-            <span class="home-article-tag">
-                <i class="fas fa-tags"></i>&nbsp;
-                <ul>
-                    
-                        <li>
-                            
-                            <a href="/tags/books/">books</a>&nbsp;
-                        </li>
-                    
-                        <li>
-                            | 
-                            <a href="/tags/notes/">notes</a>&nbsp;
-                        </li>
-                    
-                </ul>
-            </span>
+
+        
+
+        
+
+        
+        
+        
         
     </div>
 
-    <a href="/2023/06/26/books/%E4%B8%8D%E7%96%B2%E5%8A%B3%E7%9A%84%E7%94%9F%E6%B4%BB/">Read more&nbsp;<i class="fas fa-angle-right"></i></a>
+    
+        <a class="home-read-more" href="/2023/06/26/books/%E4%B8%8D%E7%96%B2%E5%8A%B3%E7%9A%84%E7%94%9F%E6%B4%BB/">Read more&nbsp;<i class="icon fas fa-angle-right"></i></a>
+    
 </div>
 
+                </div>
             </li>
         
-            <li class="home-article-item">
+            <li class="home-post-item">
 
                 
 
-                <h3 class="home-article-title">
-                    <a href="/2023/04/24/money/The-Rational-Optimist/">
-                        The Rational Optimist
-                    </a>
-                </h3>
-
-                <div class="home-article-content markdown-body">
+                <div class="home-post-item-bottom border-box">
                     
-                        现在拥有的生活就是最好的生活，跟前人相比，我们的生活幸福的多，有空调舒适的床，各种可以选择的食物，没必要悲观。
+                    <h3 class="home-post-title border-box">
+                        <a href="/2023/04/24/money/The-Rational-Optimist/">
+                            The Rational Optimist
+                        </a>
+                    </h3>
+
+                    <div class="home-post-content keep-markdown-body">
+                        
+                            现在拥有的生活就是最好的生活，跟前人相比，我们的生活幸福的多，有空调舒适的床，各种可以选择的食物，没必要悲观。
 人类的不断进化，是建立在物物交换,社会分工专业化和不断创新的基础之上的。
 任何时候，都有悲观主义的存在，但是这是最好的时代，也是最坏的时代...
-                    
-                </div>
+                        
+                    </div>
 
-                <div class="home-article-meta-info-container">
-    <div class="home-article-meta-info">
-        <span><i class="fas fa-history"></i>&nbsp;<span class="home-article-date" data-date="Mon Apr 24 2023 19:13:52 GMT+1000">2023-04-24</span></span>
+                    
+
+<div class="post-meta-info-container border-box home">
+    <div class="post-meta-info border-box">
+        
+            <span class="meta-info-item border-box">
+                <i class="icon fas fa-history"></i>&nbsp;<span class="home-post-history" data-updated="Tue Mar 05 2024 22:49:20 GMT+1100">2024-03-05 22:49:20</span>
+            </span>
+        
+
+        
+
+        
+
+        
+
+        
+        
         
         
     </div>
 
-    <a href="/2023/04/24/money/The-Rational-Optimist/">Read more&nbsp;<i class="fas fa-angle-right"></i></a>
+    
+        <a class="home-read-more" href="/2023/04/24/money/The-Rational-Optimist/">Read more&nbsp;<i class="icon fas fa-angle-right"></i></a>
+    
 </div>
 
+                </div>
             </li>
         
-            <li class="home-article-item">
+            <li class="home-post-item">
 
                 
 
-                <h3 class="home-article-title">
-                    <a href="/2023/04/17/money/%E7%BA%B3%E7%93%A6%E5%B0%94%E5%AE%9D%E5%85%B8-The-Almandack-of-Naval-Ravikant/">
-                        纳瓦尔宝典| The Almandack of Naval Ravikant
-                    </a>
-                </h3>
-
-                <div class="home-article-content markdown-body">
+                <div class="home-post-item-bottom border-box">
                     
-                        Some useful notes from the book:
+                    <h3 class="home-post-title border-box">
+                        <a href="/2023/04/17/money/%E7%BA%B3%E7%93%A6%E5%B0%94%E5%AE%9D%E5%85%B8-The-Almandack-of-Naval-Ravikant/">
+                            纳瓦尔宝典| The Almandack of Naval Ravikant
+                        </a>
+                    </h3>
+
+                    <div class="home-post-content keep-markdown-body">
+                        
+                            Some useful notes from the book:
 
 代码和媒体是不需要许可证就能使用的杠杆,你可以创建媒体和软件，让它们在你睡觉时为你工作。
 如果不会写代码，那就出书，写博客，做视频录播客。
 工作时共事的人和工作的内容比努力程度更重要...
-                    
-                </div>
+                        
+                    </div>
 
-                <div class="home-article-meta-info-container">
-    <div class="home-article-meta-info">
-        <span><i class="fas fa-history"></i>&nbsp;<span class="home-article-date" data-date="Mon Apr 17 2023 17:45:30 GMT+1000">2023-04-17</span></span>
+                    
+
+<div class="post-meta-info-container border-box home">
+    <div class="post-meta-info border-box">
         
-            <span class="home-article-category"><i class="fas fa-folder"></i>&nbsp;
-                <ul>
-                    
-                        <li>
-                            
-                            <a href="/categories/books/">books</a>&nbsp;
-                        </li>
-                    
-                    
-                </ul>
+            <span class="meta-info-item border-box">
+                <i class="icon fas fa-history"></i>&nbsp;<span class="home-post-history" data-updated="Tue Mar 05 2024 22:49:20 GMT+1100">2024-03-05 22:49:20</span>
             </span>
         
+
         
-            <span class="home-article-tag">
-                <i class="fas fa-tags"></i>&nbsp;
-                <ul>
-                    
-                        <li>
-                            
-                            <a href="/tags/notes/">notes</a>&nbsp;
-                        </li>
-                    
-                        <li>
-                            | 
-                            <a href="/tags/thoughts/">thoughts</a>&nbsp;
-                        </li>
-                    
-                        <li>
-                            | 
-                            <a href="/tags/Investment/">Investment</a>&nbsp;
-                        </li>
-                    
-                        <li>
-                            | 
-                            <a href="/tags/money/">money</a>&nbsp;
-                        </li>
-                    
-                </ul>
-            </span>
+
+        
+
+        
+
+        
+        
+        
         
     </div>
 
-    <a href="/2023/04/17/money/%E7%BA%B3%E7%93%A6%E5%B0%94%E5%AE%9D%E5%85%B8-The-Almandack-of-Naval-Ravikant/">Read more&nbsp;<i class="fas fa-angle-right"></i></a>
+    
+        <a class="home-read-more" href="/2023/04/17/money/%E7%BA%B3%E7%93%A6%E5%B0%94%E5%AE%9D%E5%85%B8-The-Almandack-of-Naval-Ravikant/">Read more&nbsp;<i class="icon fas fa-angle-right"></i></a>
+    
 </div>
 
+                </div>
             </li>
         
     </ul>
-
-    <div class="home-paginator">
-        <div class="paginator">
     
+    <div class="paginator border-box flex-center">
+        <div class="btn-wrap">
+            <a class="jump-btn"
+               href="/"
+            ><i class="fa-solid fa-chevron-left"></i></a>
+        </div>
 
-    
-        <a class="next btn"
-           href="/page/2/"
-        >Next</a>
-    
-</div>
 
+        <div class="page-number-box border-box flex-center">
+            <input class="page-number-input border-box base-color-size"
+                   type="number"
+                   value="1"
+                   min="1"
+                   max="4"
+            ><span class="delimiter base-color-size">/</span><span class="base-color-size">4</span>
+        </div>
+
+
+        <div class="btn-wrap allowed">
+            <a class="jump-btn"
+               href="/page/2/"
+            ><i class="fa-solid fa-chevron-right"></i></a>
+        </div>
     </div>
+
+
+
+
 </div>
 
 
@@ -777,48 +699,57 @@ Config file location /u...
 
         </div>
 
-        <div class="page-main-content-bottom">
-            <footer class="footer">
-    <div class="info-container">
-        <div class="copyright-info info-item">
-            &copy;
+        <div class="page-main-content-bottom border-box">
             
-              <span>2020</span>
-              -
-            
-            2024&nbsp;<i class="fas fa-heart icon-animate"></i>&nbsp;<a href="/">Camille Chang</a>
-        </div>
+<footer class="footer border-box">
+    <div class="border-box website-info-box default">
         
-            <script async  src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
-            <div class="website-count info-item">
+            <div class="copyright-info info-item default">
+                &copy;&nbsp;<span>2020</span>&nbsp;-&nbsp;2024
                 
-                    <span id="busuanzi_container_site_uv">
-                        Visitor Count&nbsp;<span id="busuanzi_value_site_uv"></span>&ensp;
-                    </span>
-                
-                
-                    <span id="busuanzi_container_site_pv">
-                        Totalview&nbsp;<span id="busuanzi_value_site_pv"></span>
-                    </span>
+                    &nbsp;<i class="fas fa-heart icon-animate"></i>&nbsp;&nbsp;<a href="/">Camille Chang</a>
                 
             </div>
+
+            <div class="theme-info info-item default">
+                Powered by&nbsp;<a target="_blank" href="https://hexo.io">Hexo</a>&nbsp;&&nbsp;Theme&nbsp;<a class="keep-version" target="_blank" href="https://github.com/XPoet/hexo-theme-keep">Keep</a>
+            </div>
+
+            
+
+            
         
-        <div class="theme-info info-item">
-            Powered by <a target="_blank" href="https://hexo.io">Hexo</a>&nbsp;|&nbsp;Theme&nbsp;<a class="theme-version" target="_blank" href="https://github.com/XPoet/hexo-theme-keep">Keep v3.4.5</a>
+
+        <div class="count-item info-item default">
+            
+
+            
+                <span class="count-box border-box uv">
+                    <span class="item-type border-box">Unique Visitor</span>
+                    <span class="item-value border-box uv" id="busuanzi_value_site_uv"></span>
+                </span>
+            
+
+            
+                <span class="count-box border-box pv">
+                    <span class="item-type border-box">Page View</span>
+                    <span class="item-value border-box pv" id="busuanzi_value_site_pv"></span>
+                </span>
+            
         </div>
-        
-        
     </div>
 </footer>
 
         </div>
     </div>
 
+    <!-- post tools -->
     
 
-    <div class="right-bottom-side-tools">
-        <div class="side-tools-container">
-    <ul class="side-tools-list">
+    <!-- side tools -->
+    <div class="side-tools">
+        <div class="side-tools-container border-box side-tools-show-handle">
+    <ul class="side-tools-list side-tools-show-handle border-box">
         <li class="tools-item tool-font-adjust-plus flex-center">
             <i class="fas fa-search-plus"></i>
         </li>
@@ -827,11 +758,7 @@ Config file location /u...
             <i class="fas fa-search-minus"></i>
         </li>
 
-        <li class="tools-item tool-expand-width flex-center">
-            <i class="fas fa-arrows-alt-h"></i>
-        </li>
-
-        <li class="tools-item tool-dark-light-toggle flex-center">
+        <li class="tools-item tool-toggle-theme-mode flex-center">
             <i class="fas fa-moon"></i>
         </li>
 
@@ -847,65 +774,87 @@ Config file location /u...
             </li>
         
 
-        
-            <li class="tools-item tool-scroll-to-top flex-center">
-                <i class="fas fa-arrow-up"></i>
-            </li>
-        
-
         <li class="tools-item tool-scroll-to-bottom flex-center">
             <i class="fas fa-arrow-down"></i>
         </li>
     </ul>
 
-    <ul class="exposed-tools-list">
+    <ul class="exposed-tools-list border-box">
+        
+
+        
+
         <li class="tools-item tool-toggle-show flex-center">
             <i class="fas fa-cog fa-spin"></i>
         </li>
-        
+
+        <li class="tools-item tool-scroll-to-top flex-center show-arrow">
+            <i class="arrow fas fa-arrow-up"></i>
+            <span class="percent"></span>
+        </li>
     </ul>
 </div>
 
     </div>
 
-    
-
-    <div class="image-viewer-container">
-    <img src="">
+    <!-- image mask -->
+    <div class="zoom-in-image-mask">
+    <img class="zoom-in-image">
 </div>
 
 
+    <!-- local search -->
     
 
+    <!-- tablet toc -->
+    
 </main>
 
 
 
 
-			
-<script src="/js/utils.js"></script>
+<!-- common -->
 
-<script src="/js/main.js"></script>
+<script src="/js/utils.js"></script>
 
 <script src="/js/header-shrink.js"></script>
 
 <script src="/js/back2top.js"></script>
 
-<script src="/js/dark-light-toggle.js"></script>
+<script src="/js/toggle-theme.js"></script>
+
+<script src="/js/code-block.js"></script>
+
+<script src="/js/main.js"></script>
+
+<script src="/js/libs/anime.min.js"></script>
 
 
+<!-- local-search -->
 
 
+<!-- lazyload -->
 
 
+<div class="">
+    
 
+    <!-- category-page -->
+    
 
-<div class="post-scripts">
+    <!-- links-page -->
+    
+
+    <!-- photos-page -->
     
 </div>
 
+<!-- mermaid -->
 
 
-	</body>
+<!-- pjax -->
 
+
+
+</body>
 </html>
