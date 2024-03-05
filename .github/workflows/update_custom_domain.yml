@@ -1,0 +1,23 @@
+name: Update Custom Domain
+
+on:
+  push:
+    branches:
+      - master
+
+jobs:
+  update_custom_domain:
+    runs-on: ubuntu-latest
+    
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v2
+      
+    - name: Update Custom Domain
+      run: |
+        echo "camillechang.com" > CNAME  # Overwrite the CNAME file with your custom domain
+        git config --global user.email "github-actions@github.com"
+        git config --global user.name "GitHub Actions"
+        git add .
+        git commit -m "Update custom domain"
+        git push origin master
