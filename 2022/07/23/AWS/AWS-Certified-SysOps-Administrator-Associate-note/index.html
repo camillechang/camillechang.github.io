@@ -246,7 +246,9 @@
 <li>RDS<br>  1. Enhanced monitoring, metrics, cpu, memory, cheaper visibility<br>  2. Proxy pool share DB connections, improve performance.<br>  3. Multi-AZ, high availability.</li>
 <li>S3<br>  1. RTC(Replication time control), event notification &lt;15mins<br>  2. WORM, vault lock policy<br>  3. Inventory report, audit&#x2F;report replication&#x2F;encryption status of objects.<br>  vs System manager inventory, collect metadata from EC2 and on prem.<br>  4. Transfer Acceleration is a bucket-level feature that enables fast, easy, and secure transfers of files over long distances between your client and an S3 bucket.<br>  5. Global Accelerator service does not work with S3. It only supports endpoints like application load balancers, network load balancers, EC2 instances, or elastic IP addresses.</li>
 <li>Data Lifecycle Manager<br>  1. automate the creation, retention, and deletion of Amazon Elastic Block Store (Amazon EBS) snapshots.<br>  2. create a lifecycle policy that includes specific tags to back up EBS volumes on a specified schedule and for a specified retention period.</li>
-<li>Aurora DB cluster,<br>  - consists of one or more DB instances and a cluster volume that manages the data for those DB instances<br>  -  cluster volume is a virtual database storage volume that spans multiple Availability Zones, with each Availability Zone having a copy of the DB cluster data.<br>  <img src="/../../imgs/AuroraDBCluster.png" alt="AuroraDBCluster"><br>  Link <a class="link"   target="_blank" rel="noopener" href="https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/Aurora.Overview.html" >https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/Aurora.Overview.html<i class="fas fa-external-link-alt"></i></a><br>  - backtracking an Aurora DB cluster,”rewinds” the DB cluster to the time you specify<br>  - the Performance Insights feature in the Amazon Aurora Serverless database which will automatically connect to a new Aurora database instance while preserving application connections.<h3 id="AD"><a href="#AD" class="headerlink" title="AD"></a>AD</h3></li>
+<li>Aurora DB cluster,<br>  - consists of one or more DB instances and a cluster volume that manages the data for those DB instances<br>  -  cluster volume is a virtual database storage volume that spans multiple Availability Zones, with each Availability Zone having a copy of the DB cluster data.<br>  <img src="/../../imgs/AuroraDBCluster.png" alt="AuroraDBCluster"><br>  Link <a class="link"   target="_blank" rel="noopener" href="https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/Aurora.Overview.html" >https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/Aurora.Overview.html<i class="fas fa-external-link-alt"></i></a><br>  - backtracking an Aurora DB cluster,”rewinds” the DB cluster to the time you specify<br>  - the Performance Insights feature in the Amazon Aurora Serverless database which will automatically connect to a new Aurora database instance while preserving application connections.</li>
+</ul>
+<h3 id="AD"><a href="#AD" class="headerlink" title="AD"></a>AD</h3><ul>
 <li>AWS AD, windows, VPN&#x2F; direct connect</li>
 <li>AD connector, trust relationship, AD-&gt;AWS</li>
 <li>Simple AD, LDAP</li>
@@ -269,43 +271,28 @@
 <ol>
 <li>Scaling HORIZONTALLY:<br>   1.1. scale out (Add Nodes to a Cluster)<br>   1.2. scale in (Remove Nodes from a Cluster)</li>
 <li>Scaling VERTICALLY<br>   2.1  scale out (create a new cluster and using a higher EC2 type)<br>   2.1  scale in (create a new cluster and using a lower EC2 type)</li>
-<li>does not support Multi-AZ for high availability.<br>  <img src="/../../imgs/Memcached.png" alt="Memcached"><br>  From link <a class="link"   target="_blank" rel="noopener" href="https://portal.tutorialsdojo.com/courses/aws-certified-sysops-administrator-associate-practice-exams/" >https://portal.tutorialsdojo.com/courses/aws-certified-sysops-administrator-associate-practice-exams/<i class="fas fa-external-link-alt"></i></a><h3 id="Some-security-and-other-services"><a href="#Some-security-and-other-services" class="headerlink" title="Some security and other services"></a>Some security and other services</h3></li>
+<li>does not support Multi-AZ for high availability.<br>  <img src="/../../imgs/Memcached.png" alt="Memcached"><br>  From link <a class="link"   target="_blank" rel="noopener" href="https://portal.tutorialsdojo.com/courses/aws-certified-sysops-administrator-associate-practice-exams/" >https://portal.tutorialsdojo.com/courses/aws-certified-sysops-administrator-associate-practice-exams/<i class="fas fa-external-link-alt"></i></a></li>
 </ol>
 </li>
-<li><p>WAF, SQL Injection&#x2F; Cross site scripting, filter web traffic based on IP addresses, HTTP body&#x2F;headers, custom URIs</p>
-</li>
-<li><p>OpsHubs, manage snow family, devices and local aws services</p>
-</li>
-<li><p>OpsWorks, chef and puppet</p>
-</li>
-<li><p>Control tower,create accounts via account factory, enroll account, landing zone’s managment accounts.</p>
-</li>
-<li><p>Artifact, report of ISO certificates and PCI.</p>
-</li>
-<li><p>cloudHSM, hardware security module, 3rd party support, generated encryption keys</p>
-</li>
-<li><p>Config,</p>
-</li>
-<li><p>Shield, DDOS</p>
-</li>
-<li><p>Shield Advanced: DDOS protecting for scaling, layer3,4 and 7</p>
-</li>
-<li><p>Inspector, automated vulnerability management service that continually scans workloads for software vulnerabilities and unintended network exposure.</p>
-</li>
-<li><p>GuardDuty, Intelligent threat detection.</p>
-</li>
-<li><p>Cloudtrail, who to blame, log API activity, data events and file integrity validation.</p>
-</li>
-<li><p>X-Ray, debug apps</p>
-</li>
-<li><p>Macie, machine learning to discover, monitor and protect s3. API keys, regulatory documents.</p>
-</li>
-<li><p>Glue, extract, transform, load (ETL) service, work with data lakes,redshift,RDS,crawler to populate glue catalog with tables.</p>
-</li>
-<li><p>Trust Advisor, check service  usage&gt;80%, real time guidance, cost</p>
-</li>
-<li><p>Cost Explorer, view costs, usage and forecast.</p>
-</li>
+</ul>
+<h3 id="Some-security-and-other-services"><a href="#Some-security-and-other-services" class="headerlink" title="Some security and other services"></a>Some security and other services</h3><ul>
+<li>WAF, SQL Injection&#x2F; Cross site scripting, filter web traffic based on IP addresses, HTTP body&#x2F;headers, custom URIs</li>
+<li>OpsHubs, manage snow family, devices and local aws services</li>
+<li>OpsWorks, chef and puppet</li>
+<li>Control tower,create accounts via account factory, enroll account, landing zone’s managment accounts.</li>
+<li>Artifact, report of ISO certificates and PCI.</li>
+<li>cloudHSM, hardware security module, 3rd party support, generated encryption keys</li>
+<li>Config,</li>
+<li>Shield, DDOS</li>
+<li>Shield Advanced: DDOS protecting for scaling, layer3,4 and 7</li>
+<li>Inspector, automated vulnerability management service that continually scans workloads for software vulnerabilities and unintended network exposure.</li>
+<li>GuardDuty, Intelligent threat detection.</li>
+<li>Cloudtrail, who to blame, log API activity, data events and file integrity validation.</li>
+<li>X-Ray, debug apps</li>
+<li>Macie, machine learning to discover, monitor and protect s3. API keys, regulatory documents.</li>
+<li>Glue, extract, transform, load (ETL) service, work with data lakes,redshift,RDS,crawler to populate glue catalog with tables.</li>
+<li>Trust Advisor, check service  usage&gt;80%, real time guidance, cost</li>
+<li>Cost Explorer, view costs, usage and forecast.</li>
 </ul>
 <h3 id="VPC-and-Network"><a href="#VPC-and-Network" class="headerlink" title="VPC and Network"></a>VPC and Network</h3><ul>
 <li>Direct connect + VPN &#x3D; IPSec-encrypted private connection</li>
@@ -336,10 +323,14 @@
 <li>By default, the enableDnsHostNames is set to false for VPCs created using the AWS CLI</li>
 <li>AWS Resource Access Manager (RAM) helps you securely share your resources across AWS accounts</li>
 <li>Step Function, provides serverless orchestration for modern applications.</li>
-<li>SWF,fully-managed state tracker and task coordinator service<h2 id="ALB"><a href="#ALB" class="headerlink" title="ALB"></a>ALB</h2></li>
+<li>SWF,fully-managed state tracker and task coordinator service</li>
+</ul>
+<h2 id="ALB"><a href="#ALB" class="headerlink" title="ALB"></a>ALB</h2><ul>
 <li>Connection draining, Auto Scaling will wait for outstanding requests to complete before terminating instances.</li>
 <li>ASG lifecycle hook, can be used  to the auto-scaling group to pause an instance before it’s terminated.  perform custom actions during ec2 instances scale-out or scale-in.</li>
-<li>EC2Rescue,a troubleshooting tool that you can run on your Amazon EC2 Windows Server instances.<h2 id="IAM"><a href="#IAM" class="headerlink" title="IAM"></a>IAM</h2></li>
+<li>EC2Rescue,a troubleshooting tool that you can run on your Amazon EC2 Windows Server instances.</li>
+</ul>
+<h2 id="IAM"><a href="#IAM" class="headerlink" title="IAM"></a>IAM</h2><ul>
 <li>Identity based policy, attached to Identity(role, user and group)</li>
 <li>resource based policy, attached to resources and additional principal</li>
 </ul>
