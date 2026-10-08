@@ -9,7 +9,7 @@
     
     <title>
         
-            cks-cluster |
+            Installing a Kubernetes Cluster for CKS |
         
         Camille Blog
     </title>
@@ -23,7 +23,7 @@
     <script id="hexo-configurations">
     let KEEP = window.KEEP || {};
     KEEP.hexo_config = {"hostname":"camillechang.github.io","root":"/","language":["en","zh-CN","default"],"path":"search.json"};
-    KEEP.theme_config = {"toc":{"enable":true,"number":true,"expand_all":false,"init_open":false},"style":{"primary_color":"#7C3AED","avatar":"/images/cat.svg","favicon":"/images/cat.svg","article_img_align":"left","left_side_width":"260px","content_max_width":"1080px","hover":{"shadow":true,"scale":true},"first_screen":{"enable":true,"background_img":"/images/hero-bg.svg","description":"认真体验有限的人生，享受独处，勇敢去爱，也努力创造一点对世界有用的东西。"},"scroll":{"progress_bar":{"enable":true},"percent":{"enable":true}}},"local_search":{"enable":true,"trigger":"auto","top_n_per_article":3,"unescape":false,"preload":false},"code_copy":{"enable":true,"style":"mac"},"pjax":{"enable":false},"lazyload":{"enable":false},"version":"3.4.5"};
+    KEEP.theme_config = {"toc":{"enable":true,"number":true,"expand_all":false,"init_open":false},"style":{"primary_color":"#7C3AED","avatar":"/images/cat.svg","favicon":"/images/cat.svg","article_img_align":"left","left_side_width":"260px","content_max_width":"1080px","hover":{"shadow":true,"scale":true},"first_screen":{"enable":true,"background_img":"/images/hero-bg.svg","description":"Life is finite. Live it fully, embrace solitude, love courageously, and create something useful for the world."},"scroll":{"progress_bar":{"enable":true},"percent":{"enable":true}}},"local_search":{"enable":true,"trigger":"auto","top_n_per_article":3,"unescape":false,"preload":false},"code_copy":{"enable":true,"style":"mac"},"pjax":{"enable":false},"lazyload":{"enable":false},"version":"3.4.5"};
     KEEP.language_ago = {"second":"%s seconds ago","minute":"%s minutes ago","hour":"%s hours ago","day":"%s days ago","week":"%s weeks ago","month":"%s months ago","year":"%s years ago"};
   </script>
 <meta name="generator" content="Hexo 6.3.0"><link rel="alternate" href="/atom.xml" title="Camille Blog" type="application/atom+xml">
@@ -174,7 +174,7 @@
     <div class="article-content-container">
 
         <div class="article-title">
-            <span class="title-hover-animation">cks-cluster</span>
+            <span class="title-hover-animation">Installing a Kubernetes Cluster for CKS</span>
         </div>
 
         
@@ -200,12 +200,12 @@
     
     
         <span class="article-wordcount article-meta-item">
-            <i class="fas fa-file-word"></i>&nbsp;<span>297 Words</span>
+            <i class="fas fa-file-word"></i>&nbsp;<span>682 Words</span>
         </span>
     
     
         <span class="article-min2read article-meta-item">
-            <i class="fas fa-clock"></i>&nbsp;<span>1 Mins</span>
+            <i class="fas fa-clock"></i>&nbsp;<span>3 Mins</span>
         </span>
     
     
@@ -217,39 +217,74 @@
         
 
         <div class="article-content markdown-body">
-            <h2 id="Install-k8s-cluster-on-ubuntu"><a href="#Install-k8s-cluster-on-ubuntu" class="headerlink" title="Install k8s cluster on ubuntu"></a>Install k8s cluster on ubuntu</h2><ul>
-<li>Install three ubuntu servers, one is master, the other two are workers</li>
-<li>Config &#x2F;etc&#x2F;hosts and &#x2F;etc&#x2F;hostname</li>
+            <h2 id="English-Version"><a href="#English-Version" class="headerlink" title="English Version"></a>English Version</h2><h3 id="Install-a-Kubernetes-cluster-on-Ubuntu"><a href="#Install-a-Kubernetes-cluster-on-Ubuntu" class="headerlink" title="Install a Kubernetes cluster on Ubuntu"></a>Install a Kubernetes cluster on Ubuntu</h3><ul>
+<li>Install three Ubuntu servers: one control-plane node and two worker nodes.</li>
+<li>Configure <code>/etc/hosts</code> and <code>/etc/hostname</code>.</li>
 </ul>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">cat &lt;&lt; EOF | sudo tee /etc/modules-load.d/containerd.conf</span><br><span class="line">overlay</span><br><span class="line">br_netfilter</span><br><span class="line">EOF</span><br><span class="line"></span><br><span class="line">sudo modprobe overlay</span><br><span class="line">sudo modprobe br_netfilter</span><br><span class="line"></span><br></pre></td></tr></table></figure>
 
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">cat &lt;&lt;EOF | sudo tee /etc/sysctl.d/99-kubernetes-cri.conf</span><br><span class="line">net.bridge.bridge-nf-call-iptables  = 1</span><br><span class="line">net.ipv4.ip_forward                 = 1</span><br><span class="line">net.bridge.bridge-nf-call-ip6tables = 1</span><br><span class="line">EOF</span><br><span class="line"></span><br></pre></td></tr></table></figure>
 
 <ul>
-<li>reload system config<br><code>sudo sysctl --system</code></li>
-<li>Install containerd<br><code>sudo apt-get update &amp;&amp; sudo apt-get -y install containerd</code></li>
-<li>Create a directory and configure containerd</li>
+<li>Reload the system configuration:<br><code>sudo sysctl --system</code></li>
+<li>Install containerd:<br><code>sudo apt-get update &amp;&amp; sudo apt-get -y install containerd</code></li>
+<li>Create a directory and configure containerd:</li>
 </ul>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">sudo mkdir -p /etc/containerd</span><br><span class="line">sudo containerd config default | sudo tee /etc/containerd/config.toml</span><br><span class="line">sudo systemctl restart containerd</span><br><span class="line"></span><br><span class="line">sudo swapoff -a</span><br><span class="line">sudo apt-get install -y apt-transport-https curl</span><br><span class="line">curl -s https://packages.cloud.google.com/apt/doc/apt-key.gpg | sudo apt-key add -</span><br></pre></td></tr></table></figure>
 
 <ul>
-<li>Config repository<br><code>echo &quot;deb https://apt.kubernetes.io/ kubernetes-xenial main&quot; | sudo tee /etc/apt/sources.list.d/kubernetes.list</code></li>
-<li>Update apt package index, install kubelet, kubeadm and kubectl, and make sure not auto update</li>
+<li>Configure the repository:<br><code>echo &quot;deb https://apt.kubernetes.io/ kubernetes-xenial main&quot; | sudo tee /etc/apt/sources.list.d/kubernetes.list</code></li>
+<li>Update the APT package index, install kubelet, kubeadm, and kubectl, and prevent them from being updated automatically:</li>
 </ul>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">sudo apt-get update</span><br><span class="line">sudo apt-get install -y kubelet kubeadm kubectl</span><br><span class="line">sudo apt-mark hold kubelet kubeadm kubectl</span><br></pre></td></tr></table></figure>
 
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">sudo kubeadm init --pod-network-cidr 192.168.0.0/16 --kubernetes-version 1.26.2</span><br><span class="line"></span><br><span class="line">  mkdir -p $HOME/.kube</span><br><span class="line">  sudo cp -i /etc/kubernetes/admin.conf $HOME/.kube/config</span><br><span class="line">  sudo chown $(id -u):$(id -g) $HOME/.kube/config</span><br></pre></td></tr></table></figure>
 
 <ul>
-<li><p>Install network plugin Calico<br><a class="link"   target="_blank" rel="noopener" href="https://docs.tigera.io/calico/3.25/getting-started/kubernetes/self-managed-onprem/onpremises" >https://docs.tigera.io/calico/3.25/getting-started/kubernetes/self-managed-onprem/onpremises<i class="fas fa-external-link-alt"></i></a></p>
+<li><p>Install the Calico network plugin:<br><a class="link"   target="_blank" rel="noopener" href="https://docs.tigera.io/calico/3.25/getting-started/kubernetes/self-managed-onprem/onpremises" >https://docs.tigera.io/calico/3.25/getting-started/kubernetes/self-managed-onprem/onpremises<i class="fas fa-external-link-alt"></i></a></p>
 </li>
-<li><p>Join worker node, then apply the output to other worker nodes<br><code>kubeadm token create --print-join-command</code></p>
+<li><p>Generate the worker-node join command, then run its output on the worker nodes:<br><code>kubeadm token create --print-join-command</code></p>
 </li>
-<li><p>In master node, <code>kubectl get nodes</code></p>
+<li><p>On the control-plane node, run <code>kubectl get nodes</code>.</p>
 </li>
 </ul>
-<h3 id="error"><a href="#error" class="headerlink" title="error:"></a>error:</h3><ol>
-<li><img src="/../../imgs/cluster-error1.jpg" alt="kubeadm error"> Install docker, <a class="link"   target="_blank" rel="noopener" href="https://docs.docker.com/engine/install/ubuntu/" >https://docs.docker.com/engine/install/ubuntu/<i class="fas fa-external-link-alt"></i></a><br>fix the error: <a class="link"   target="_blank" rel="noopener" href="https://forum.linuxfoundation.org/discussion/862825/kubeadm-init-error-cri-v1-runtime-api-is-not-implemented" >https://forum.linuxfoundation.org/discussion/862825/kubeadm-init-error-cri-v1-runtime-api-is-not-implemented<i class="fas fa-external-link-alt"></i></a></li>
+<h3 id="Error"><a href="#Error" class="headerlink" title="Error"></a>Error</h3><ol>
+<li><img src="/../../imgs/cluster-error1.jpg" alt="kubeadm error"> Install Docker: <a class="link"   target="_blank" rel="noopener" href="https://docs.docker.com/engine/install/ubuntu/" >https://docs.docker.com/engine/install/ubuntu/<i class="fas fa-external-link-alt"></i></a><br>Fix the error by following: <a class="link"   target="_blank" rel="noopener" href="https://forum.linuxfoundation.org/discussion/862825/kubeadm-init-error-cri-v1-runtime-api-is-not-implemented" >https://forum.linuxfoundation.org/discussion/862825/kubeadm-init-error-cri-v1-runtime-api-is-not-implemented<i class="fas fa-external-link-alt"></i></a></li>
+</ol>
+<hr>
+<h2 id="中文版"><a href="#中文版" class="headerlink" title="中文版"></a>中文版</h2><h3 id="在-Ubuntu-上安装-Kubernetes-集群"><a href="#在-Ubuntu-上安装-Kubernetes-集群" class="headerlink" title="在 Ubuntu 上安装 Kubernetes 集群"></a>在 Ubuntu 上安装 Kubernetes 集群</h3><ul>
+<li>安装三台 Ubuntu 服务器：一台控制平面节点和两台工作节点。</li>
+<li>配置 <code>/etc/hosts</code> 和 <code>/etc/hostname</code>。</li>
+</ul>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">cat &lt;&lt; EOF | sudo tee /etc/modules-load.d/containerd.conf</span><br><span class="line">overlay</span><br><span class="line">br_netfilter</span><br><span class="line">EOF</span><br><span class="line"></span><br><span class="line">sudo modprobe overlay</span><br><span class="line">sudo modprobe br_netfilter</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">cat &lt;&lt;EOF | sudo tee /etc/sysctl.d/99-kubernetes-cri.conf</span><br><span class="line">net.bridge.bridge-nf-call-iptables  = 1</span><br><span class="line">net.ipv4.ip_forward                 = 1</span><br><span class="line">net.bridge.bridge-nf-call-ip6tables = 1</span><br><span class="line">EOF</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>重新加载系统配置：<br><code>sudo sysctl --system</code></li>
+<li>安装 containerd：<br><code>sudo apt-get update &amp;&amp; sudo apt-get -y install containerd</code></li>
+<li>创建目录并配置 containerd：</li>
+</ul>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">sudo mkdir -p /etc/containerd</span><br><span class="line">sudo containerd config default | sudo tee /etc/containerd/config.toml</span><br><span class="line">sudo systemctl restart containerd</span><br><span class="line"></span><br><span class="line">sudo swapoff -a</span><br><span class="line">sudo apt-get install -y apt-transport-https curl</span><br><span class="line">curl -s https://packages.cloud.google.com/apt/doc/apt-key.gpg | sudo apt-key add -</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>配置软件仓库：<br><code>echo &quot;deb https://apt.kubernetes.io/ kubernetes-xenial main&quot; | sudo tee /etc/apt/sources.list.d/kubernetes.list</code></li>
+<li>更新 APT 软件包索引，安装 kubelet、kubeadm 和 kubectl，并阻止它们自动更新：</li>
+</ul>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">sudo apt-get update</span><br><span class="line">sudo apt-get install -y kubelet kubeadm kubectl</span><br><span class="line">sudo apt-mark hold kubelet kubeadm kubectl</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">sudo kubeadm init --pod-network-cidr 192.168.0.0/16 --kubernetes-version 1.26.2</span><br><span class="line"></span><br><span class="line">  mkdir -p $HOME/.kube</span><br><span class="line">  sudo cp -i /etc/kubernetes/admin.conf $HOME/.kube/config</span><br><span class="line">  sudo chown $(id -u):$(id -g) $HOME/.kube/config</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li><p>安装 Calico 网络插件：<br><a class="link"   target="_blank" rel="noopener" href="https://docs.tigera.io/calico/3.25/getting-started/kubernetes/self-managed-onprem/onpremises" >https://docs.tigera.io/calico/3.25/getting-started/kubernetes/self-managed-onprem/onpremises<i class="fas fa-external-link-alt"></i></a></p>
+</li>
+<li><p>生成工作节点的加入命令，然后在各工作节点上执行其输出：<br><code>kubeadm token create --print-join-command</code></p>
+</li>
+<li><p>在控制平面节点上运行 <code>kubectl get nodes</code>。</p>
+</li>
+</ul>
+<h3 id="错误"><a href="#错误" class="headerlink" title="错误"></a>错误</h3><ol>
+<li><img src="/../../imgs/cluster-error1.jpg" alt="kubeadm error"> 安装 Docker：<a class="link"   target="_blank" rel="noopener" href="https://docs.docker.com/engine/install/ubuntu/" >https://docs.docker.com/engine/install/ubuntu/<i class="fas fa-external-link-alt"></i></a><br>按照以下说明修复错误：<a class="link"   target="_blank" rel="noopener" href="https://forum.linuxfoundation.org/discussion/862825/kubeadm-init-error-cri-v1-runtime-api-is-not-implemented" >https://forum.linuxfoundation.org/discussion/862825/kubeadm-init-error-cri-v1-runtime-api-is-not-implemented<i class="fas fa-external-link-alt"></i></a></li>
 </ol>
 
         </div>
@@ -270,7 +305,7 @@
                               <i class="fas fa-chevron-left"></i>
                             </span>
                             <span class="title flex-center">
-                                <span class="post-nav-title-item">The Barefoot investor advice</span>
+                                <span class="post-nav-title-item">Advice from The Barefoot Investor</span>
                                 <span class="post-nav-item">Prev posts</span>
                             </span>
                         </a>
@@ -283,7 +318,7 @@
                            href="/2023/03/01/k8s/cks/"
                         >
                             <span class="title flex-center">
-                                <span class="post-nav-title-item">cks</span>
+                                <span class="post-nav-title-item">CKS Exam Notes</span>
                                 <span class="post-nav-item">Next posts</span>
                             </span>
                             <span class="right arrow-icon flex-center">
@@ -418,7 +453,7 @@
         <aside class="page-aside">
             <div class="post-toc-wrap">
     <div class="post-toc">
-        <ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Install-k8s-cluster-on-ubuntu"><span class="nav-number">1.</span> <span class="nav-text">Install k8s cluster on ubuntu</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#error"><span class="nav-number">1.1.</span> <span class="nav-text">error:</span></a></li></ol></li></ol>
+        <ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#English-Version"><span class="nav-number">1.</span> <span class="nav-text">English Version</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Install-a-Kubernetes-cluster-on-Ubuntu"><span class="nav-number">1.1.</span> <span class="nav-text">Install a Kubernetes cluster on Ubuntu</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Error"><span class="nav-number">1.2.</span> <span class="nav-text">Error</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%B8%AD%E6%96%87%E7%89%88"><span class="nav-number">2.</span> <span class="nav-text">中文版</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%9C%A8-Ubuntu-%E4%B8%8A%E5%AE%89%E8%A3%85-Kubernetes-%E9%9B%86%E7%BE%A4"><span class="nav-number">2.1.</span> <span class="nav-text">在 Ubuntu 上安装 Kubernetes 集群</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E9%94%99%E8%AF%AF"><span class="nav-number">2.2.</span> <span class="nav-text">错误</span></a></li></ol></li></ol>
     </div>
 </div>
         </aside>

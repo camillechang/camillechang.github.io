@@ -9,7 +9,7 @@
     
     <title>
         
-            CKA-exam-5Feb-2023 |
+            CKA Exam Notes and Experience — February 2023 |
         
         Camille Blog
     </title>
@@ -23,7 +23,7 @@
     <script id="hexo-configurations">
     let KEEP = window.KEEP || {};
     KEEP.hexo_config = {"hostname":"camillechang.github.io","root":"/","language":["en","zh-CN","default"],"path":"search.json"};
-    KEEP.theme_config = {"toc":{"enable":true,"number":true,"expand_all":false,"init_open":false},"style":{"primary_color":"#7C3AED","avatar":"/images/cat.svg","favicon":"/images/cat.svg","article_img_align":"left","left_side_width":"260px","content_max_width":"1080px","hover":{"shadow":true,"scale":true},"first_screen":{"enable":true,"background_img":"/images/hero-bg.svg","description":"认真体验有限的人生，享受独处，勇敢去爱，也努力创造一点对世界有用的东西。"},"scroll":{"progress_bar":{"enable":true},"percent":{"enable":true}}},"local_search":{"enable":true,"trigger":"auto","top_n_per_article":3,"unescape":false,"preload":false},"code_copy":{"enable":true,"style":"mac"},"pjax":{"enable":false},"lazyload":{"enable":false},"version":"3.4.5"};
+    KEEP.theme_config = {"toc":{"enable":true,"number":true,"expand_all":false,"init_open":false},"style":{"primary_color":"#7C3AED","avatar":"/images/cat.svg","favicon":"/images/cat.svg","article_img_align":"left","left_side_width":"260px","content_max_width":"1080px","hover":{"shadow":true,"scale":true},"first_screen":{"enable":true,"background_img":"/images/hero-bg.svg","description":"Life is finite. Live it fully, embrace solitude, love courageously, and create something useful for the world."},"scroll":{"progress_bar":{"enable":true},"percent":{"enable":true}}},"local_search":{"enable":true,"trigger":"auto","top_n_per_article":3,"unescape":false,"preload":false},"code_copy":{"enable":true,"style":"mac"},"pjax":{"enable":false},"lazyload":{"enable":false},"version":"3.4.5"};
     KEEP.language_ago = {"second":"%s seconds ago","minute":"%s minutes ago","hour":"%s hours ago","day":"%s days ago","week":"%s weeks ago","month":"%s months ago","year":"%s years ago"};
   </script>
 <meta name="generator" content="Hexo 6.3.0"><link rel="alternate" href="/atom.xml" title="Camille Blog" type="application/atom+xml">
@@ -174,7 +174,7 @@
     <div class="article-content-container">
 
         <div class="article-title">
-            <span class="title-hover-animation">CKA-exam-5Feb-2023</span>
+            <span class="title-hover-animation">CKA Exam Notes and Experience — February 2023</span>
         </div>
 
         
@@ -226,12 +226,12 @@
     
     
         <span class="article-wordcount article-meta-item">
-            <i class="fas fa-file-word"></i>&nbsp;<span>542 Words</span>
+            <i class="fas fa-file-word"></i>&nbsp;<span>1.3k Words</span>
         </span>
     
     
         <span class="article-min2read article-meta-item">
-            <i class="fas fa-clock"></i>&nbsp;<span>3 Mins</span>
+            <i class="fas fa-clock"></i>&nbsp;<span>6 Mins</span>
         </span>
     
     
@@ -243,63 +243,64 @@
         
 
         <div class="article-content markdown-body">
-            <h3 id="View-Resources"><a href="#View-Resources" class="headerlink" title="View Resources"></a>View Resources</h3><ul>
-<li><code>k api-resources </code> get names of Kubernetes resources</li>
+            <h2 id="English-Version"><a href="#English-Version" class="headerlink" title="English Version"></a>English Version</h2><h3 id="View-resources"><a href="#View-resources" class="headerlink" title="View resources"></a>View resources</h3><ul>
+<li>Use <code>k api-resources </code> to get the names of Kubernetes resources.</li>
 </ul>
 <h3 id="ETCD-backup-and-restore"><a href="#ETCD-backup-and-restore" class="headerlink" title="ETCD backup and restore"></a>ETCD backup and restore</h3><ul>
 <li>endpoint?</li>
 <li>when restore, change etcd files location in <code>hostPath</code><br><code>vi /etc/kubernetes/etcd.yaml</code></li>
 </ul>
-<h3 id="monitoring-logging"><a href="#monitoring-logging" class="headerlink" title="monitoring, logging"></a>monitoring, logging</h3><ul>
-<li>Metrics-server(CPU, memory), <code>k top nodes</code>, <code>k top pods —containers=true</code></li>
-<li>crictl commands, logs, containers</li>
-<li>To load logs of service <code>journalctl -u kubelet -f</code></li>
+<h3 id="Monitoring-and-logging"><a href="#Monitoring-and-logging" class="headerlink" title="Monitoring and logging"></a>Monitoring and logging</h3><ul>
+<li>Metrics Server provides CPU and memory metrics: <code>k top nodes</code>, <code>k top pods —containers=true</code>.</li>
+<li>Use crictl commands to inspect logs and containers.</li>
+<li>To stream service logs, use <code>journalctl -u kubelet -f</code>.</li>
 </ul>
 <h3 id="DaemonSet-vs-deployment-vs-StatefulSet"><a href="#DaemonSet-vs-deployment-vs-StatefulSet" class="headerlink" title="DaemonSet vs deployment vs StatefulSet"></a>DaemonSet vs deployment vs StatefulSet</h3><ul>
-<li>DaemonSet 所有 Nodes 上运行 pod,每个 Node 上最多只能运行一个 pod.适合一些系统层面的应用，例如日志收集、资源监, eg: Kube-proxy</li>
-<li>StatefulSet, StatefulSet 类似于 ReplicaSet，但是它可以处理 Pod 的启动顺序，为保留每个 Pod 的状态设置唯一标识</li>
+<li>A DaemonSet runs pods on all nodes, with at most one pod on each node. It is suitable for system-level applications such as log collection and resource monitoring; for example, Kube-proxy.</li>
+<li>A StatefulSet is similar to a ReplicaSet, but it can manage pod startup order and assigns each pod a unique identity to preserve its state.</li>
 </ul>
-<h3 id="podAntiAffinity-•"><a href="#podAntiAffinity-•" class="headerlink" title="podAntiAffinity •"></a>podAntiAffinity •</h3><ul>
-<li>仅在 worker 上运行 topologySpreadConstraints</li>
-<li>requiredDuringSchedulingIgnoredDuringExecution,调度器只有在规则被满足的时候才能执行调度。此功能类似于 nodeSelector， 但其语法表达能力更强。</li>
-<li>Node Affinity,</li>
+<h3 id="podAntiAffinity"><a href="#podAntiAffinity" class="headerlink" title="podAntiAffinity"></a>podAntiAffinity</h3><ul>
+<li>Use topologySpreadConstraints to run workloads only on worker nodes.</li>
+<li>With requiredDuringSchedulingIgnoredDuringExecution, the scheduler can schedule a pod only when the rule is satisfied. This is similar to nodeSelector, but its syntax is more expressive.</li>
+<li>Node Affinity.</li>
 </ul>
-<h3 id="临时卷（Ephemeral-Volume）"><a href="#临时卷（Ephemeral-Volume）" class="headerlink" title="临时卷（Ephemeral Volume）"></a>临时卷（Ephemeral Volume）</h3><ul>
-<li>emptyDir, which is erased when a pod is removed,</li>
+<h3 id="Ephemeral-volumes"><a href="#Ephemeral-volumes" class="headerlink" title="Ephemeral volumes"></a>Ephemeral volumes</h3><ul>
+<li>emptyDir, which is erased when a pod is removed.</li>
 </ul>
 <h3 id="Service-CIDR-range—-gt-static-pod-kube-apiserver-yaml"><a href="#Service-CIDR-range—-gt-static-pod-kube-apiserver-yaml" class="headerlink" title="Service CIDR range—&gt; static-pod, kube-apiserver.yaml"></a>Service CIDR range—&gt; static-pod, kube-apiserver.yaml</h3><ul>
 <li><code>cat /etc/kubernetes/manifests/kube-apiserver.yaml | grep range</code></li>
 <li>&#x2F;etc&#x2F;kubernetes&#x2F;manifests&#x2F;kube-apiserver.yaml : –service-cluster-ip-range</li>
 <li>&#x2F;etc&#x2F;kubernetes&#x2F;manifests&#x2F;kube-controller-manager.yaml : –service-cluster-ip-range</li>
 </ul>
-<h3 id="upgrade-culster"><a href="#upgrade-culster" class="headerlink" title="upgrade culster"></a>upgrade culster</h3><p><code>kubeadm version</code><br><code>kubelet version</code><br><code>service kubelet status</code><br><code>systemctl daemon-reload &amp;&amp; systemctl restart kubelet</code></p>
-<p>drain node01, A forceful drain of the node will delete any pod that is not part of a replicaset.<br>kubectl cordon node01, This will ensure that no new pods are scheduled on this node and the existing pods will not be affected by this operation.</p>
-<h3 id="add-node-to-cluster"><a href="#add-node-to-cluster" class="headerlink" title="add node to cluster"></a>add node to cluster</h3><p>kubeadm token create， node join</p>
+<h3 id="Upgrade-a-cluster"><a href="#Upgrade-a-cluster" class="headerlink" title="Upgrade a cluster"></a>Upgrade a cluster</h3><p><code>kubeadm version</code><br><code>kubelet version</code><br><code>service kubelet status</code><br><code>systemctl daemon-reload &amp;&amp; systemctl restart kubelet</code></p>
+<p>Drain node01. A forceful drain of the node will delete any pod that is not part of a ReplicaSet.<br>Run kubectl cordon node01. This ensures that no new pods are scheduled on this node, while existing pods are not affected.</p>
+<h3 id="Add-a-node-to-the-cluster"><a href="#Add-a-node-to-the-cluster" class="headerlink" title="Add a node to the cluster"></a>Add a node to the cluster</h3><p>Use kubeadm token create to generate the node join command.</p>
 <ol>
-<li>controlplane node, <code>kubeadm token create --print-join-command</code></li>
-<li>Worker node, execute the output from the above</li>
+<li>On the control-plane node, run <code>kubeadm token create --print-join-command</code>.</li>
+<li>On the worker node, execute the output from the command above.</li>
 </ol>
 <h3 id="Certificate"><a href="#Certificate" class="headerlink" title="Certificate"></a>Certificate</h3><ul>
-<li>view cert details <code>openssl x509  -noout -text -in ./server.crt</code></li>
-<li><code>kubeadm</code> command , <code>kubeadm certs check-expiration</code></li>
-<li>Renew apiserver cert ,<code> kubeadm certs renew api-server</code></li>
+<li>View certificate details: <code>openssl x509  -noout -text -in ./server.crt</code>.</li>
+<li>Check certificate expiration with the <code>kubeadm</code> command: <code>kubeadm certs check-expiration</code>.</li>
+<li>Renew the API server certificate: <code> kubeadm certs renew api-server</code>.</li>
 </ul>
 <h3 id="Networking-CNI-plugin"><a href="#Networking-CNI-plugin" class="headerlink" title="Networking (CNI plugin)"></a>Networking (CNI plugin)</h3><ul>
-<li>default path &#x2F;etc&#x2F;cni&#x2F;net.d&#x2F;</li>
-<li>Coredns-deployment, &#x2F;&#x2F;in kube-system <code>kubectl -n kube-system get pod</code><br>Kube-scheduler, kube-scheduler.yaml</li>
+<li>The default path is &#x2F;etc&#x2F;cni&#x2F;net.d&#x2F;.</li>
+<li>The CoreDNS deployment is in kube-system: <code>kubectl -n kube-system get pod</code>.<br>Kube-scheduler, kube-scheduler.yaml</li>
 </ul>
 <h3 id="Kubeconfig"><a href="#Kubeconfig" class="headerlink" title="Kubeconfig"></a>Kubeconfig</h3><ul>
-<li>cluster and context info, ~&#x2F;.kube&#x2F;config</li>
+<li>Cluster and context information is stored in ~&#x2F;.kube&#x2F;config.</li>
 </ul>
-<h3 id="manually-scheduling"><a href="#manually-scheduling" class="headerlink" title="manually scheduling"></a>manually scheduling</h3><ul>
-<li>If there is no scheduler in kube-system, add <code>nodeName</code> in pod.yaml, otherwise pod status is pending.</li>
+<h3 id="Manual-scheduling"><a href="#Manual-scheduling" class="headerlink" title="Manual scheduling"></a>Manual scheduling</h3><ul>
+<li>If there is no scheduler in kube-system, add <code>nodeName</code> to pod.yaml; otherwise, the pod remains pending.</li>
 </ul>
-<h3 id="troubleshooting"><a href="#troubleshooting" class="headerlink" title="troubleshooting"></a>troubleshooting</h3><ul>
+<h3 id="Troubleshooting"><a href="#Troubleshooting" class="headerlink" title="Troubleshooting"></a>Troubleshooting</h3><ul>
 <li><code>sudo journalctl -u kubelet</code></li>
 </ul>
-<h2 id="Exam-experience"><a href="#Exam-experience" class="headerlink" title="Exam experience"></a>Exam experience</h2><h3 id="5-x2F-2-x2F-2023-exam-check-in-is-more-smooth-than-AWS-and-easy-to-use"><a href="#5-x2F-2-x2F-2023-exam-check-in-is-more-smooth-than-AWS-and-easy-to-use" class="headerlink" title="5&#x2F;2&#x2F;2023, exam check in is more smooth than AWS and easy to use."></a>5&#x2F;2&#x2F;2023, exam check in is more smooth than AWS and easy to use.</h3><ol>
-<li>Exam questions are way simpler than the killer mock exam. Only 1&#x2F;3 amount of questions of the mock one.</li>
-<li>Only regret things is I use laptop for easy, it’s more hard for me do things quick and my eyes get blur. Next time, I will choose big monitor.</li>
+<h2 id="Exam-experience"><a href="#Exam-experience" class="headerlink" title="Exam experience"></a>Exam experience</h2><h3 id="5-x2F-2-x2F-2023"><a href="#5-x2F-2-x2F-2023" class="headerlink" title="5&#x2F;2&#x2F;2023"></a>5&#x2F;2&#x2F;2023</h3><p>The exam check-in process was smoother than AWS and easy to use.</p>
+<ol>
+<li>The exam questions were much simpler than the difficult mock exam. The real exam had only about one-third as many questions as the mock exam.</li>
+<li>My only regret was using a laptop for convenience. It was harder to work quickly, and my vision became blurry. Next time, I will choose a large monitor.</li>
 <li>Exam topics:<ul>
 <li>ETCD backup and restore</li>
 <li>multiple containers pod</li>
@@ -310,7 +311,77 @@
 </ul>
 </li>
 </ol>
-<h3 id="6-x2F-2-x2F-2023"><a href="#6-x2F-2-x2F-2023" class="headerlink" title="6&#x2F;2&#x2F;2023"></a>6&#x2F;2&#x2F;2023</h3><p>24 hours later, after I got the exam result, I realized that I failed the exam. I missed some small details when I am doing the exam. There are some knowledge gaps.</p>
+<h3 id="6-x2F-2-x2F-2023"><a href="#6-x2F-2-x2F-2023" class="headerlink" title="6&#x2F;2&#x2F;2023"></a>6&#x2F;2&#x2F;2023</h3><p>Twenty-four hours later, after receiving the result, I learned that I had failed the exam. I missed some small details during the exam, and I still had some knowledge gaps.</p>
+<hr>
+<h2 id="中文版"><a href="#中文版" class="headerlink" title="中文版"></a>中文版</h2><h3 id="查看资源"><a href="#查看资源" class="headerlink" title="查看资源"></a>查看资源</h3><ul>
+<li>使用 <code>k api-resources </code> 获取 Kubernetes 资源名称。</li>
+</ul>
+<h3 id="ETCD-备份与恢复"><a href="#ETCD-备份与恢复" class="headerlink" title="ETCD 备份与恢复"></a>ETCD 备份与恢复</h3><ul>
+<li>endpoint 是什么？</li>
+<li>恢复时，在 <code>hostPath</code> 中修改 etcd 文件的位置：<br><code>vi /etc/kubernetes/etcd.yaml</code></li>
+</ul>
+<h3 id="监控与日志"><a href="#监控与日志" class="headerlink" title="监控与日志"></a>监控与日志</h3><ul>
+<li>Metrics Server 提供 CPU 和内存指标：<code>k top nodes</code>、<code>k top pods —containers=true</code>。</li>
+<li>使用 crictl 命令检查日志和容器。</li>
+<li>使用 <code>journalctl -u kubelet -f</code> 持续查看服务日志。</li>
+</ul>
+<h3 id="DaemonSet、Deployment-与-StatefulSet"><a href="#DaemonSet、Deployment-与-StatefulSet" class="headerlink" title="DaemonSet、Deployment 与 StatefulSet"></a>DaemonSet、Deployment 与 StatefulSet</h3><ul>
+<li>DaemonSet 在所有节点上运行 Pod，每个节点上最多运行一个 Pod。它适合日志收集、资源监控等系统级应用，例如 Kube-proxy。</li>
+<li>StatefulSet 与 ReplicaSet 类似，但它可以管理 Pod 的启动顺序，并为每个 Pod 分配唯一标识以保留其状态。</li>
+</ul>
+<h3 id="podAntiAffinity-1"><a href="#podAntiAffinity-1" class="headerlink" title="podAntiAffinity"></a>podAntiAffinity</h3><ul>
+<li>使用 topologySpreadConstraints 让工作负载仅在 worker 节点上运行。</li>
+<li>使用 requiredDuringSchedulingIgnoredDuringExecution 时，只有满足规则，调度器才能调度 Pod。此功能类似于 nodeSelector，但语法表达能力更强。</li>
+<li>Node Affinity。</li>
+</ul>
+<h3 id="临时卷"><a href="#临时卷" class="headerlink" title="临时卷"></a>临时卷</h3><ul>
+<li>emptyDir 会在 Pod 被删除时清空。</li>
+</ul>
+<h3 id="Service-CIDR-范围—-gt-static-pod、kube-apiserver-yaml"><a href="#Service-CIDR-范围—-gt-static-pod、kube-apiserver-yaml" class="headerlink" title="Service CIDR 范围—&gt; static-pod、kube-apiserver.yaml"></a>Service CIDR 范围—&gt; static-pod、kube-apiserver.yaml</h3><ul>
+<li><code>cat /etc/kubernetes/manifests/kube-apiserver.yaml | grep range</code></li>
+<li>&#x2F;etc&#x2F;kubernetes&#x2F;manifests&#x2F;kube-apiserver.yaml：–service-cluster-ip-range</li>
+<li>&#x2F;etc&#x2F;kubernetes&#x2F;manifests&#x2F;kube-controller-manager.yaml：–service-cluster-ip-range</li>
+</ul>
+<h3 id="升级集群"><a href="#升级集群" class="headerlink" title="升级集群"></a>升级集群</h3><p><code>kubeadm version</code><br><code>kubelet version</code><br><code>service kubelet status</code><br><code>systemctl daemon-reload &amp;&amp; systemctl restart kubelet</code></p>
+<p>对 node01 执行 drain。强制 drain 节点会删除所有不属于 ReplicaSet 的 Pod。<br>运行 kubectl cordon node01。这可以确保不再有新 Pod 被调度到该节点，同时不会影响现有 Pod。</p>
+<h3 id="向集群添加节点"><a href="#向集群添加节点" class="headerlink" title="向集群添加节点"></a>向集群添加节点</h3><p>使用 kubeadm token create 生成节点加入命令。</p>
+<ol>
+<li>在控制平面节点上运行 <code>kubeadm token create --print-join-command</code>。</li>
+<li>在工作节点上执行上述命令的输出。</li>
+</ol>
+<h3 id="证书"><a href="#证书" class="headerlink" title="证书"></a>证书</h3><ul>
+<li>查看证书详细信息：<code>openssl x509  -noout -text -in ./server.crt</code>。</li>
+<li>使用 <code>kubeadm</code> 命令检查证书到期时间：<code>kubeadm certs check-expiration</code>。</li>
+<li>更新 API server 证书：<code> kubeadm certs renew api-server</code>。</li>
+</ul>
+<h3 id="网络（CNI-插件）"><a href="#网络（CNI-插件）" class="headerlink" title="网络（CNI 插件）"></a>网络（CNI 插件）</h3><ul>
+<li>默认路径为 &#x2F;etc&#x2F;cni&#x2F;net.d&#x2F;。</li>
+<li>CoreDNS Deployment 位于 kube-system 中：<code>kubectl -n kube-system get pod</code>。<br>Kube-scheduler、kube-scheduler.yaml</li>
+</ul>
+<h3 id="Kubeconfig-1"><a href="#Kubeconfig-1" class="headerlink" title="Kubeconfig"></a>Kubeconfig</h3><ul>
+<li>集群和 context 信息存储在 ~&#x2F;.kube&#x2F;config 中。</li>
+</ul>
+<h3 id="手动调度"><a href="#手动调度" class="headerlink" title="手动调度"></a>手动调度</h3><ul>
+<li>如果 kube-system 中没有 scheduler，请在 pod.yaml 中添加 <code>nodeName</code>；否则 Pod 会保持 pending 状态。</li>
+</ul>
+<h3 id="故障排查"><a href="#故障排查" class="headerlink" title="故障排查"></a>故障排查</h3><ul>
+<li><code>sudo journalctl -u kubelet</code></li>
+</ul>
+<h2 id="考试经历"><a href="#考试经历" class="headerlink" title="考试经历"></a>考试经历</h2><h3 id="5-x2F-2-x2F-2023-1"><a href="#5-x2F-2-x2F-2023-1" class="headerlink" title="5&#x2F;2&#x2F;2023"></a>5&#x2F;2&#x2F;2023</h3><p>考试签到流程比 AWS 更顺畅，也很容易使用。</p>
+<ol>
+<li>考试题目比高难度模拟考试简单得多。正式考试的题量大约只有模拟考试的三分之一。</li>
+<li>我唯一后悔的是为了方便使用了笔记本电脑。这样更难快速操作，而且眼睛会变得模糊。下次我会选择大显示器。</li>
+<li>考试主题：<ul>
+<li>ETCD 备份与恢复</li>
+<li>多容器 Pod</li>
+<li>集群升级</li>
+<li>集群故障排查</li>
+<li>clusterrole、rolebinding 和 serviceaccount</li>
+<li>PV、PVC、Pod</li>
+</ul>
+</li>
+</ol>
+<h3 id="6-x2F-2-x2F-2023-1"><a href="#6-x2F-2-x2F-2023-1" class="headerlink" title="6&#x2F;2&#x2F;2023"></a>6&#x2F;2&#x2F;2023</h3><p>二十四小时后，我收到考试结果，得知自己没有通过。我在考试时遗漏了一些小细节，也仍然存在一些知识盲点。</p>
 
         </div>
 
@@ -342,7 +413,7 @@
                               <i class="fas fa-chevron-left"></i>
                             </span>
                             <span class="title flex-center">
-                                <span class="post-nav-title-item">Ansible Basic</span>
+                                <span class="post-nav-title-item">Ansible Basics</span>
                                 <span class="post-nav-item">Prev posts</span>
                             </span>
                         </a>
@@ -355,7 +426,7 @@
                            href="/2023/01/03/Azure/azure104/"
                         >
                             <span class="title flex-center">
-                                <span class="post-nav-title-item">azure104</span>
+                                <span class="post-nav-title-item">Azure Administrator (AZ-104) Notes</span>
                                 <span class="post-nav-item">Next posts</span>
                             </span>
                             <span class="right arrow-icon flex-center">
@@ -490,7 +561,7 @@
         <aside class="page-aside">
             <div class="post-toc-wrap">
     <div class="post-toc">
-        <ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#View-Resources"><span class="nav-number">1.</span> <span class="nav-text">View Resources</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#ETCD-backup-and-restore"><span class="nav-number">2.</span> <span class="nav-text">ETCD backup and restore</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#monitoring-logging"><span class="nav-number">3.</span> <span class="nav-text">monitoring, logging</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#DaemonSet-vs-deployment-vs-StatefulSet"><span class="nav-number">4.</span> <span class="nav-text">DaemonSet vs deployment vs StatefulSet</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#podAntiAffinity-%E2%80%A2"><span class="nav-number">5.</span> <span class="nav-text">podAntiAffinity •</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%B8%B4%E6%97%B6%E5%8D%B7%EF%BC%88Ephemeral-Volume%EF%BC%89"><span class="nav-number">6.</span> <span class="nav-text">临时卷（Ephemeral Volume）</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Service-CIDR-range%E2%80%94-gt-static-pod-kube-apiserver-yaml"><span class="nav-number">7.</span> <span class="nav-text">Service CIDR range—&gt; static-pod, kube-apiserver.yaml</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#upgrade-culster"><span class="nav-number">8.</span> <span class="nav-text">upgrade culster</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#add-node-to-cluster"><span class="nav-number">9.</span> <span class="nav-text">add node to cluster</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Certificate"><span class="nav-number">10.</span> <span class="nav-text">Certificate</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Networking-CNI-plugin"><span class="nav-number">11.</span> <span class="nav-text">Networking (CNI plugin)</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Kubeconfig"><span class="nav-number">12.</span> <span class="nav-text">Kubeconfig</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#manually-scheduling"><span class="nav-number">13.</span> <span class="nav-text">manually scheduling</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#troubleshooting"><span class="nav-number">14.</span> <span class="nav-text">troubleshooting</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Exam-experience"><span class="nav-number"></span> <span class="nav-text">Exam experience</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#5-x2F-2-x2F-2023-exam-check-in-is-more-smooth-than-AWS-and-easy-to-use"><span class="nav-number">1.</span> <span class="nav-text">5&#x2F;2&#x2F;2023, exam check in is more smooth than AWS and easy to use.</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#6-x2F-2-x2F-2023"><span class="nav-number">2.</span> <span class="nav-text">6&#x2F;2&#x2F;2023</span></a></li></ol>
+        <ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#English-Version"><span class="nav-number">1.</span> <span class="nav-text">English Version</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#View-resources"><span class="nav-number">1.1.</span> <span class="nav-text">View resources</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#ETCD-backup-and-restore"><span class="nav-number">1.2.</span> <span class="nav-text">ETCD backup and restore</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Monitoring-and-logging"><span class="nav-number">1.3.</span> <span class="nav-text">Monitoring and logging</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#DaemonSet-vs-deployment-vs-StatefulSet"><span class="nav-number">1.4.</span> <span class="nav-text">DaemonSet vs deployment vs StatefulSet</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#podAntiAffinity"><span class="nav-number">1.5.</span> <span class="nav-text">podAntiAffinity</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Ephemeral-volumes"><span class="nav-number">1.6.</span> <span class="nav-text">Ephemeral volumes</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Service-CIDR-range%E2%80%94-gt-static-pod-kube-apiserver-yaml"><span class="nav-number">1.7.</span> <span class="nav-text">Service CIDR range—&gt; static-pod, kube-apiserver.yaml</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Upgrade-a-cluster"><span class="nav-number">1.8.</span> <span class="nav-text">Upgrade a cluster</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Add-a-node-to-the-cluster"><span class="nav-number">1.9.</span> <span class="nav-text">Add a node to the cluster</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Certificate"><span class="nav-number">1.10.</span> <span class="nav-text">Certificate</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Networking-CNI-plugin"><span class="nav-number">1.11.</span> <span class="nav-text">Networking (CNI plugin)</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Kubeconfig"><span class="nav-number">1.12.</span> <span class="nav-text">Kubeconfig</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Manual-scheduling"><span class="nav-number">1.13.</span> <span class="nav-text">Manual scheduling</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Troubleshooting"><span class="nav-number">1.14.</span> <span class="nav-text">Troubleshooting</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Exam-experience"><span class="nav-number">2.</span> <span class="nav-text">Exam experience</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#5-x2F-2-x2F-2023"><span class="nav-number">2.1.</span> <span class="nav-text">5&#x2F;2&#x2F;2023</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#6-x2F-2-x2F-2023"><span class="nav-number">2.2.</span> <span class="nav-text">6&#x2F;2&#x2F;2023</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%B8%AD%E6%96%87%E7%89%88"><span class="nav-number">3.</span> <span class="nav-text">中文版</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%9F%A5%E7%9C%8B%E8%B5%84%E6%BA%90"><span class="nav-number">3.1.</span> <span class="nav-text">查看资源</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#ETCD-%E5%A4%87%E4%BB%BD%E4%B8%8E%E6%81%A2%E5%A4%8D"><span class="nav-number">3.2.</span> <span class="nav-text">ETCD 备份与恢复</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%9B%91%E6%8E%A7%E4%B8%8E%E6%97%A5%E5%BF%97"><span class="nav-number">3.3.</span> <span class="nav-text">监控与日志</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#DaemonSet%E3%80%81Deployment-%E4%B8%8E-StatefulSet"><span class="nav-number">3.4.</span> <span class="nav-text">DaemonSet、Deployment 与 StatefulSet</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#podAntiAffinity-1"><span class="nav-number">3.5.</span> <span class="nav-text">podAntiAffinity</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%B8%B4%E6%97%B6%E5%8D%B7"><span class="nav-number">3.6.</span> <span class="nav-text">临时卷</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Service-CIDR-%E8%8C%83%E5%9B%B4%E2%80%94-gt-static-pod%E3%80%81kube-apiserver-yaml"><span class="nav-number">3.7.</span> <span class="nav-text">Service CIDR 范围—&gt; static-pod、kube-apiserver.yaml</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%8D%87%E7%BA%A7%E9%9B%86%E7%BE%A4"><span class="nav-number">3.8.</span> <span class="nav-text">升级集群</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%90%91%E9%9B%86%E7%BE%A4%E6%B7%BB%E5%8A%A0%E8%8A%82%E7%82%B9"><span class="nav-number">3.9.</span> <span class="nav-text">向集群添加节点</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%AF%81%E4%B9%A6"><span class="nav-number">3.10.</span> <span class="nav-text">证书</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%BD%91%E7%BB%9C%EF%BC%88CNI-%E6%8F%92%E4%BB%B6%EF%BC%89"><span class="nav-number">3.11.</span> <span class="nav-text">网络（CNI 插件）</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Kubeconfig-1"><span class="nav-number">3.12.</span> <span class="nav-text">Kubeconfig</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%89%8B%E5%8A%A8%E8%B0%83%E5%BA%A6"><span class="nav-number">3.13.</span> <span class="nav-text">手动调度</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%95%85%E9%9A%9C%E6%8E%92%E6%9F%A5"><span class="nav-number">3.14.</span> <span class="nav-text">故障排查</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%80%83%E8%AF%95%E7%BB%8F%E5%8E%86"><span class="nav-number">4.</span> <span class="nav-text">考试经历</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#5-x2F-2-x2F-2023-1"><span class="nav-number">4.1.</span> <span class="nav-text">5&#x2F;2&#x2F;2023</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#6-x2F-2-x2F-2023-1"><span class="nav-number">4.2.</span> <span class="nav-text">6&#x2F;2&#x2F;2023</span></a></li></ol></li></ol>
     </div>
 </div>
         </aside>

@@ -9,7 +9,7 @@
     
     <title>
         
-            AWS Certified SysOps Administrator Associate notes |
+            AWS Certified SysOps Administrator – Associate Notes |
         
         Camille Blog
     </title>
@@ -23,7 +23,7 @@
     <script id="hexo-configurations">
     let KEEP = window.KEEP || {};
     KEEP.hexo_config = {"hostname":"camillechang.github.io","root":"/","language":["en","zh-CN","default"],"path":"search.json"};
-    KEEP.theme_config = {"toc":{"enable":true,"number":true,"expand_all":false,"init_open":false},"style":{"primary_color":"#7C3AED","avatar":"/images/cat.svg","favicon":"/images/cat.svg","article_img_align":"left","left_side_width":"260px","content_max_width":"1080px","hover":{"shadow":true,"scale":true},"first_screen":{"enable":true,"background_img":"/images/hero-bg.svg","description":"认真体验有限的人生，享受独处，勇敢去爱，也努力创造一点对世界有用的东西。"},"scroll":{"progress_bar":{"enable":true},"percent":{"enable":true}}},"local_search":{"enable":true,"trigger":"auto","top_n_per_article":3,"unescape":false,"preload":false},"code_copy":{"enable":true,"style":"mac"},"pjax":{"enable":false},"lazyload":{"enable":false},"version":"3.4.5"};
+    KEEP.theme_config = {"toc":{"enable":true,"number":true,"expand_all":false,"init_open":false},"style":{"primary_color":"#7C3AED","avatar":"/images/cat.svg","favicon":"/images/cat.svg","article_img_align":"left","left_side_width":"260px","content_max_width":"1080px","hover":{"shadow":true,"scale":true},"first_screen":{"enable":true,"background_img":"/images/hero-bg.svg","description":"Life is finite. Live it fully, embrace solitude, love courageously, and create something useful for the world."},"scroll":{"progress_bar":{"enable":true},"percent":{"enable":true}}},"local_search":{"enable":true,"trigger":"auto","top_n_per_article":3,"unescape":false,"preload":false},"code_copy":{"enable":true,"style":"mac"},"pjax":{"enable":false},"lazyload":{"enable":false},"version":"3.4.5"};
     KEEP.language_ago = {"second":"%s seconds ago","minute":"%s minutes ago","hour":"%s hours ago","day":"%s days ago","week":"%s weeks ago","month":"%s months ago","year":"%s years ago"};
   </script>
 <meta name="generator" content="Hexo 6.3.0"><link rel="alternate" href="/atom.xml" title="Camille Blog" type="application/atom+xml">
@@ -174,7 +174,7 @@
     <div class="article-content-container">
 
         <div class="article-title">
-            <span class="title-hover-animation">AWS Certified SysOps Administrator Associate notes</span>
+            <span class="title-hover-animation">AWS Certified SysOps Administrator – Associate Notes</span>
         </div>
 
         
@@ -226,12 +226,12 @@
     
     
         <span class="article-wordcount article-meta-item">
-            <i class="fas fa-file-word"></i>&nbsp;<span>1.1k Words</span>
+            <i class="fas fa-file-word"></i>&nbsp;<span>2.7k Words</span>
         </span>
     
     
         <span class="article-min2read article-meta-item">
-            <i class="fas fa-clock"></i>&nbsp;<span>6 Mins</span>
+            <i class="fas fa-clock"></i>&nbsp;<span>13 Mins</span>
         </span>
     
     
@@ -243,7 +243,7 @@
         
 
         <div class="article-content markdown-body">
-            <h3 id="Route53"><a href="#Route53" class="headerlink" title="Route53"></a>Route53</h3><ol>
+            <h2 id="English-Version"><a href="#English-Version" class="headerlink" title="English Version"></a>English Version</h2><h3 id="Route-53"><a href="#Route-53" class="headerlink" title="Route 53"></a>Route 53</h3><ol>
 <li>A record - root domain, forward domain&#x2F;sub domain to IPv4 address</li>
 <li>Alias - route traffic to AWS resources, such as CloudFront, S3.</li>
 <li>CNAME - map one domain to another, but not root domain.</li>
@@ -325,7 +325,7 @@
 <h2 id="Others-never-remembered"><a href="#Others-never-remembered" class="headerlink" title="Others never remembered"></a>Others never remembered</h2><ul>
 <li>Enhanced Networking, provides higher bandwidth, higher packet per second (PPS) performance, and consistently lower inter-instance latencies</li>
 <li>Virtual Private Gateway,VPN endpoint<br> <img src="/../../imgs/VPG.png" alt="VPG"></li>
-<li>CloudFront Origin Shield, an additional layer in the CloudFront caching infrastructure that helps to minimize your origin’s load, improve its availability, and reduce its operating costs.缓存Better cache hit ratio,Better network performance and Reduced origin load.</li>
+<li>CloudFront Origin Shield, an additional layer in the CloudFront caching infrastructure that helps to minimize your origin’s load, improve its availability, and reduce its operating costs. Benefits include a better cache hit ratio, better network performance, and reduced origin load.</li>
 <li>warm pool is a pool of pre-initialized EC2 instances that sits alongside an Auto Scaling group</li>
 </ul>
 <h2 id="System-manager"><a href="#System-manager" class="headerlink" title="System manager"></a>System manager</h2><ul>
@@ -355,6 +355,152 @@
 <h2 id="IAM"><a href="#IAM" class="headerlink" title="IAM"></a>IAM</h2><ul>
 <li>Identity based policy, attached to Identity(role, user and group)</li>
 <li>resource based policy, attached to resources and additional principal</li>
+</ul>
+<hr>
+<h2 id="中文版"><a href="#中文版" class="headerlink" title="中文版"></a>中文版</h2><h3 id="Route-53-1"><a href="#Route-53-1" class="headerlink" title="Route 53"></a>Route 53</h3><ol>
+<li>A 记录——用于根域名，将域名&#x2F;子域名指向 IPv4 地址</li>
+<li>Alias——将流量路由到 AWS 资源，例如 CloudFront、S3</li>
+<li>CNAME——将一个域名映射到另一个域名，但不能用于根域名</li>
+<li>AAAA——IPv6</li>
+</ol>
+<h3 id="CloudFormation-1"><a href="#CloudFormation-1" class="headerlink" title="CloudFormation"></a>CloudFormation</h3><ul>
+<li>StackSets——可通过单次操作部署到多个账户&#x2F;区域</li>
+<li>Change set——即将发生的变更</li>
+<li>嵌套堆栈——复用</li>
+</ul>
+<h3 id="加密"><a href="#加密" class="headerlink" title="加密"></a>加密</h3><ul>
+<li>SSE-S3：S3 托管密钥 + AES 256</li>
+<li>SSE-KMS：密钥可以由客户生成并由 KMS 管理</li>
+<li>SSE-C：服务器端加密 + 客户端管理密钥 + 密钥不存储在 AWS 上</li>
+<li>客户端加密</li>
+</ul>
+<h3 id="卷与存储"><a href="#卷与存储" class="headerlink" title="卷与存储"></a>卷与存储</h3><ul>
+<li>Volume Gateway<ol>
+<li>Stored Volumes：将副本同步到 S3，完整卷保留在本地网关</li>
+<li>Cached Volumes：完整卷存储在 S3，部分卷保留在本地缓存</li>
+</ol>
+</li>
+<li>File Gateway（NFS、SMB）</li>
+<li>SSD<ol>
+<li>通用型：gp3、gp2</li>
+<li>预置 IOPS：io2（Block Express）、io1</li>
+</ol>
+</li>
+<li>HDD（不能用作启动卷，也不能多重挂载）<ol>
+<li>吞吐优化型：st1</li>
+<li>Cold HDD：sc1</li>
+</ol>
+</li>
+<li>RDS<ol>
+<li>Enhanced Monitoring：提供指标、CPU 和内存信息，以较低成本提高可见性</li>
+<li>Proxy：池化并共享数据库连接，以提升性能</li>
+<li>Multi-AZ：高可用性</li>
+</ol>
+</li>
+<li>S3<ol>
+<li>RTC（Replication Time Control）：事件通知少于 15 分钟</li>
+<li>WORM、Vault Lock 策略</li>
+<li>Inventory Report：审计&#x2F;报告对象的复制和加密状态；相比之下，Systems Manager Inventory 从 EC2 和本地环境收集元数据</li>
+<li>Transfer Acceleration 是存储桶级功能，可在客户端与 S3 存储桶之间进行快速、简便且安全的远距离文件传输</li>
+<li>Global Accelerator 不适用于 S3。它只支持 Application Load Balancer、Network Load Balancer、EC2 实例或 Elastic IP 地址等端点</li>
+</ol>
+</li>
+<li>Data Lifecycle Manager<ol>
+<li>自动创建、保留和删除 Amazon Elastic Block Store（Amazon EBS）快照</li>
+<li>创建生命周期策略，根据指定标签，按指定计划和保留期备份 EBS 卷</li>
+</ol>
+</li>
+<li>Aurora DB 集群<ul>
+<li>由一个或多个 DB 实例以及管理这些实例数据的集群卷组成</li>
+<li>集群卷是一种跨多个 Availability Zone 的虚拟数据库存储卷，每个 Availability Zone 都有一份 DB 集群数据副本<br><img src="/../../imgs/AuroraDBCluster.png" alt="AuroraDBCluster"><br>链接：<a class="link"   target="_blank" rel="noopener" href="https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/Aurora.Overview.html" >https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/Aurora.Overview.html<i class="fas fa-external-link-alt"></i></a></li>
+<li>对 Aurora DB 集群执行 backtracking，会将 DB 集群“倒回”到指定时间</li>
+<li>Amazon Aurora Serverless 数据库中的 Performance Insights 功能会自动连接到新的 Aurora 数据库实例，同时保留应用程序连接</li>
+</ul>
+</li>
+</ul>
+<h3 id="AD-1"><a href="#AD-1" class="headerlink" title="AD"></a>AD</h3><ul>
+<li>AWS AD：Windows、VPN&#x2F;Direct Connect</li>
+<li>AD Connector：信任关系，AD → AWS</li>
+<li>Simple AD：LDAP</li>
+</ul>
+<h3 id="AMI-1"><a href="#AMI-1" class="headerlink" title="AMI"></a>AMI</h3><ul>
+<li>Linux 半虚拟化 AMI 并非所有 AWS 区域都支持</li>
+<li>Hardware VM（HVM）</li>
+</ul>
+<h3 id="ElastiCache（内存数据存储）"><a href="#ElastiCache（内存数据存储）" class="headerlink" title="ElastiCache（内存数据存储）"></a>ElastiCache（内存数据存储）</h3><ul>
+<li>Redis：增加分片、横向扩展、支持多种数据类型<ol>
+<li>启用集群模式意味着数据以及对数据的读写访问会分布到多个 Redis 节点</li>
+<li>提供更丰富的数据类型和操作，非常适合排行榜和地理空间数据</li>
+</ol>
+</li>
+<li>Memcached：多线程、增加节点、纵向扩展<ul>
+<li>键值存储，比 Redis 更快</li>
+</ul>
+<ol>
+<li>横向扩展：<br>1.1. 扩出（向集群添加节点）<br>1.2. 缩入（从集群移除节点）</li>
+<li>纵向扩展：<br>2.1. 扩大（新建集群并使用更高规格的 EC2 类型）<br>2.2. 缩小（新建集群并使用更低规格的 EC2 类型）</li>
+<li>不支持使用 Multi-AZ 实现高可用<br><img src="/../../imgs/Memcached.png" alt="Memcached"><br>来源：<a class="link"   target="_blank" rel="noopener" href="https://portal.tutorialsdojo.com/courses/aws-certified-sysops-administrator-associate-practice-exams/" >https://portal.tutorialsdojo.com/courses/aws-certified-sysops-administrator-associate-practice-exams/<i class="fas fa-external-link-alt"></i></a></li>
+</ol>
+</li>
+</ul>
+<h3 id="一些安全及其他服务"><a href="#一些安全及其他服务" class="headerlink" title="一些安全及其他服务"></a>一些安全及其他服务</h3><ul>
+<li>WAF：SQL Injection&#x2F;Cross-Site Scripting；根据 IP 地址、HTTP 正文&#x2F;标头和自定义 URI 筛选 Web 流量</li>
+<li>OpsHub：管理 Snow Family、设备和本地 AWS 服务</li>
+<li>OpsWorks：Chef 和 Puppet</li>
+<li>Control Tower：通过 Account Factory 创建账户、注册账户以及管理 Landing Zone 的管理账户</li>
+<li>Artifact：ISO 证书和 PCI 报告</li>
+<li>CloudHSM：硬件安全模块、第三方支持、生成加密密钥</li>
+<li>Config</li>
+<li>Shield：DDoS</li>
+<li>Shield Advanced：用于扩展的 DDoS 防护，覆盖第 3、4 和 7 层</li>
+<li>Inspector：自动化漏洞管理服务，持续扫描工作负载中的软件漏洞和意外网络暴露</li>
+<li>GuardDuty：智能威胁检测</li>
+<li>CloudTrail：追踪责任方、记录 API 活动、数据事件和文件完整性验证</li>
+<li>X-Ray：调试应用程序</li>
+<li>Macie：使用机器学习发现、监控和保护 S3 中的 API 密钥及监管文档</li>
+<li>Glue：提取、转换和加载（ETL）服务；处理 Data Lake、Redshift 和 RDS；使用爬网程序在 Glue Catalog 中填充表</li>
+<li>Trusted Advisor：检查服务使用率是否超过 80%，提供实时指导和成本建议</li>
+<li>Cost Explorer：查看成本、使用量和预测</li>
+</ul>
+<h3 id="VPC-与网络"><a href="#VPC-与网络" class="headerlink" title="VPC 与网络"></a>VPC 与网络</h3><ul>
+<li>Direct Connect + VPN &#x3D; 采用 IPsec 加密的私有连接</li>
+<li>Site-to-Site VPN &#x3D; 本地环境 + Amazon VPC</li>
+<li>Route Table 和 NACL：无状态，VPC 级别</li>
+<li>Security Group：有状态，子网级别</li>
+</ul>
+<h2 id="其他总是记不住的内容"><a href="#其他总是记不住的内容" class="headerlink" title="其他总是记不住的内容"></a>其他总是记不住的内容</h2><ul>
+<li>Enhanced Networking：提供更高带宽、更高的每秒数据包（PPS）性能，以及持续更低的实例间延迟</li>
+<li>Virtual Private Gateway：VPN 端点<br><img src="/../../imgs/VPG.png" alt="VPG"></li>
+<li>CloudFront Origin Shield：CloudFront 缓存基础设施中的附加层，有助于降低源站负载、提高可用性并减少运营成本；其优势包括更高的缓存命中率、更好的网络性能和更低的源站负载</li>
+<li>Warm Pool：位于 Auto Scaling Group 旁的一组预初始化 EC2 实例</li>
+</ul>
+<h2 id="Systems-Manager"><a href="#Systems-Manager" class="headerlink" title="Systems Manager"></a>Systems Manager</h2><ul>
+<li>Inventory：收集实例及其已安装软件的信息，帮助了解系统配置和已安装的应用程序</li>
+<li>Automation：自动执行常见、重复的 IT 运维和管理任务</li>
+<li>Run Command：无需登录服务器，即可安全地大规模远程管理实例，可替代 Bastion Host、SSH 或远程 PowerShell</li>
+</ul>
+<h2 id="CloudFront"><a href="#CloudFront" class="headerlink" title="CloudFront"></a>CloudFront</h2><ul>
+<li>Edge Location 和 Local Zone</li>
+<li>缓存统计</li>
+<li>Popular Objects：了解哪些对象被频繁访问，并获取这些对象的统计信息</li>
+<li>Top Referrers</li>
+<li>Usage Report：CloudFront 从所选区域的 Edge Location 响应的 HTTP 和 HTTPS 请求数量</li>
+<li>Viewers：物理设备（台式电脑、移动设备）以及查看器（通常是 Web 浏览器）</li>
+</ul>
+<h2 id="零散知识"><a href="#零散知识" class="headerlink" title="零散知识"></a>零散知识</h2><ul>
+<li>默认情况下，通过 AWS CLI 创建的 VPC，其 <code>enableDnsHostNames</code> 设置为 <code>false</code></li>
+<li>AWS Resource Access Manager（RAM）帮助你跨 AWS 账户安全地共享资源</li>
+<li>Step Functions：为现代应用程序提供无服务器编排</li>
+<li>SWF：完全托管的状态跟踪器和任务协调服务</li>
+</ul>
+<h2 id="ALB-1"><a href="#ALB-1" class="headerlink" title="ALB"></a>ALB</h2><ul>
+<li>Connection Draining：Auto Scaling 会等待未完成的请求处理完毕，再终止实例</li>
+<li>ASG Lifecycle Hook：可让 Auto Scaling Group 在终止实例前暂停该实例，并在 EC2 实例扩出或缩入期间执行自定义操作</li>
+<li>EC2Rescue：可在 Amazon EC2 Windows Server 实例上运行的故障排除工具</li>
+</ul>
+<h2 id="IAM-1"><a href="#IAM-1" class="headerlink" title="IAM"></a>IAM</h2><ul>
+<li>基于身份的策略：附加到身份（角色、用户和组）</li>
+<li>基于资源的策略：附加到资源，并包含额外的 Principal</li>
 </ul>
 
         </div>
@@ -387,7 +533,7 @@
                               <i class="fas fa-chevron-left"></i>
                             </span>
                             <span class="title flex-center">
-                                <span class="post-nav-title-item">Reflections on Life 生活随想</span>
+                                <span class="post-nav-title-item">Reflections on Life</span>
                                 <span class="post-nav-item">Prev posts</span>
                             </span>
                         </a>
@@ -520,7 +666,7 @@
         <aside class="page-aside">
             <div class="post-toc-wrap">
     <div class="post-toc">
-        <ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#Route53"><span class="nav-number">1.</span> <span class="nav-text">Route53</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#CloudFormation"><span class="nav-number">2.</span> <span class="nav-text">CloudFormation</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#encryption"><span class="nav-number">3.</span> <span class="nav-text">encryption</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Volume-and-Storage"><span class="nav-number">4.</span> <span class="nav-text">Volume and Storage</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#AD"><span class="nav-number">5.</span> <span class="nav-text">AD</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#AMI"><span class="nav-number">6.</span> <span class="nav-text">AMI</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#ElasticCache-in-memory-data-store"><span class="nav-number">7.</span> <span class="nav-text">ElasticCache(in-memory data store)</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Some-security-and-other-services"><span class="nav-number">8.</span> <span class="nav-text">Some security and other services</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#VPC-and-Network"><span class="nav-number">9.</span> <span class="nav-text">VPC and Network</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Others-never-remembered"><span class="nav-number"></span> <span class="nav-text">Others never remembered</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#System-manager"><span class="nav-number"></span> <span class="nav-text">System manager</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Cloudfront"><span class="nav-number"></span> <span class="nav-text">Cloudfront</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Little"><span class="nav-number"></span> <span class="nav-text">Little</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#ALB"><span class="nav-number"></span> <span class="nav-text">ALB</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#IAM"><span class="nav-number"></span> <span class="nav-text">IAM</span></a>
+        <ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#English-Version"><span class="nav-number">1.</span> <span class="nav-text">English Version</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Route-53"><span class="nav-number">1.1.</span> <span class="nav-text">Route 53</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#CloudFormation"><span class="nav-number">1.2.</span> <span class="nav-text">CloudFormation</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#encryption"><span class="nav-number">1.3.</span> <span class="nav-text">encryption</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Volume-and-Storage"><span class="nav-number">1.4.</span> <span class="nav-text">Volume and Storage</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#AD"><span class="nav-number">1.5.</span> <span class="nav-text">AD</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#AMI"><span class="nav-number">1.6.</span> <span class="nav-text">AMI</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#ElasticCache-in-memory-data-store"><span class="nav-number">1.7.</span> <span class="nav-text">ElasticCache(in-memory data store)</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Some-security-and-other-services"><span class="nav-number">1.8.</span> <span class="nav-text">Some security and other services</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#VPC-and-Network"><span class="nav-number">1.9.</span> <span class="nav-text">VPC and Network</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Others-never-remembered"><span class="nav-number">2.</span> <span class="nav-text">Others never remembered</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#System-manager"><span class="nav-number">3.</span> <span class="nav-text">System manager</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Cloudfront"><span class="nav-number">4.</span> <span class="nav-text">Cloudfront</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Little"><span class="nav-number">5.</span> <span class="nav-text">Little</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#ALB"><span class="nav-number">6.</span> <span class="nav-text">ALB</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#IAM"><span class="nav-number">7.</span> <span class="nav-text">IAM</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%B8%AD%E6%96%87%E7%89%88"><span class="nav-number">8.</span> <span class="nav-text">中文版</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Route-53-1"><span class="nav-number">8.1.</span> <span class="nav-text">Route 53</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#CloudFormation-1"><span class="nav-number">8.2.</span> <span class="nav-text">CloudFormation</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%8A%A0%E5%AF%86"><span class="nav-number">8.3.</span> <span class="nav-text">加密</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%8D%B7%E4%B8%8E%E5%AD%98%E5%82%A8"><span class="nav-number">8.4.</span> <span class="nav-text">卷与存储</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#AD-1"><span class="nav-number">8.5.</span> <span class="nav-text">AD</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#AMI-1"><span class="nav-number">8.6.</span> <span class="nav-text">AMI</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#ElastiCache%EF%BC%88%E5%86%85%E5%AD%98%E6%95%B0%E6%8D%AE%E5%AD%98%E5%82%A8%EF%BC%89"><span class="nav-number">8.7.</span> <span class="nav-text">ElastiCache（内存数据存储）</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%B8%80%E4%BA%9B%E5%AE%89%E5%85%A8%E5%8F%8A%E5%85%B6%E4%BB%96%E6%9C%8D%E5%8A%A1"><span class="nav-number">8.8.</span> <span class="nav-text">一些安全及其他服务</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#VPC-%E4%B8%8E%E7%BD%91%E7%BB%9C"><span class="nav-number">8.9.</span> <span class="nav-text">VPC 与网络</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%85%B6%E4%BB%96%E6%80%BB%E6%98%AF%E8%AE%B0%E4%B8%8D%E4%BD%8F%E7%9A%84%E5%86%85%E5%AE%B9"><span class="nav-number">9.</span> <span class="nav-text">其他总是记不住的内容</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Systems-Manager"><span class="nav-number">10.</span> <span class="nav-text">Systems Manager</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#CloudFront"><span class="nav-number">11.</span> <span class="nav-text">CloudFront</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E9%9B%B6%E6%95%A3%E7%9F%A5%E8%AF%86"><span class="nav-number">12.</span> <span class="nav-text">零散知识</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#ALB-1"><span class="nav-number">13.</span> <span class="nav-text">ALB</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#IAM-1"><span class="nav-number">14.</span> <span class="nav-text">IAM</span></a></li></ol>
     </div>
 </div>
         </aside>

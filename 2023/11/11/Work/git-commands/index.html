@@ -9,7 +9,7 @@
     
     <title>
         
-            git commands |
+            Essential Git Commands |
         
         Camille Blog
     </title>
@@ -23,7 +23,7 @@
     <script id="hexo-configurations">
     let KEEP = window.KEEP || {};
     KEEP.hexo_config = {"hostname":"camillechang.github.io","root":"/","language":["en","zh-CN","default"],"path":"search.json"};
-    KEEP.theme_config = {"toc":{"enable":true,"number":true,"expand_all":false,"init_open":false},"style":{"primary_color":"#7C3AED","avatar":"/images/cat.svg","favicon":"/images/cat.svg","article_img_align":"left","left_side_width":"260px","content_max_width":"1080px","hover":{"shadow":true,"scale":true},"first_screen":{"enable":true,"background_img":"/images/hero-bg.svg","description":"认真体验有限的人生，享受独处，勇敢去爱，也努力创造一点对世界有用的东西。"},"scroll":{"progress_bar":{"enable":true},"percent":{"enable":true}}},"local_search":{"enable":true,"trigger":"auto","top_n_per_article":3,"unescape":false,"preload":false},"code_copy":{"enable":true,"style":"mac"},"pjax":{"enable":false},"lazyload":{"enable":false},"version":"3.4.5"};
+    KEEP.theme_config = {"toc":{"enable":true,"number":true,"expand_all":false,"init_open":false},"style":{"primary_color":"#7C3AED","avatar":"/images/cat.svg","favicon":"/images/cat.svg","article_img_align":"left","left_side_width":"260px","content_max_width":"1080px","hover":{"shadow":true,"scale":true},"first_screen":{"enable":true,"background_img":"/images/hero-bg.svg","description":"Life is finite. Live it fully, embrace solitude, love courageously, and create something useful for the world."},"scroll":{"progress_bar":{"enable":true},"percent":{"enable":true}}},"local_search":{"enable":true,"trigger":"auto","top_n_per_article":3,"unescape":false,"preload":false},"code_copy":{"enable":true,"style":"mac"},"pjax":{"enable":false},"lazyload":{"enable":false},"version":"3.4.5"};
     KEEP.language_ago = {"second":"%s seconds ago","minute":"%s minutes ago","hour":"%s hours ago","day":"%s days ago","week":"%s weeks ago","month":"%s months ago","year":"%s years ago"};
   </script>
 <meta name="generator" content="Hexo 6.3.0"><link rel="alternate" href="/atom.xml" title="Camille Blog" type="application/atom+xml">
@@ -174,7 +174,7 @@
     <div class="article-content-container">
 
         <div class="article-title">
-            <span class="title-hover-animation">git commands</span>
+            <span class="title-hover-animation">Essential Git Commands</span>
         </div>
 
         
@@ -230,12 +230,12 @@
     
     
         <span class="article-wordcount article-meta-item">
-            <i class="fas fa-file-word"></i>&nbsp;<span>244 Words</span>
+            <i class="fas fa-file-word"></i>&nbsp;<span>561 Words</span>
         </span>
     
     
         <span class="article-min2read article-meta-item">
-            <i class="fas fa-clock"></i>&nbsp;<span>1 Mins</span>
+            <i class="fas fa-clock"></i>&nbsp;<span>2 Mins</span>
         </span>
     
     
@@ -247,29 +247,61 @@
         
 
         <div class="article-content markdown-body">
-            <ol>
-<li><code>git clean</code>, used to remove untracked files from the working tree. It’s important to be cautious with this command, as it will permanently delete these files.</li>
-</ol>
+            <h2 id="English-Version"><a href="#English-Version" class="headerlink" title="English Version"></a>English Version</h2><ol>
+<li><p><code>git clean</code> removes untracked files from the working tree. Use this command cautiously because it permanently deletes those files.</p>
 <ul>
-<li>To see what files would be removed without actually deleting them, you can run: <code>git clean -n</code></li>
-<li>To remove untracked files (excluding directories), you can use: <code>git clean -f</code></li>
-<li>also want to remove untracked directories, you can add the -d option: <code>git clean -fd</code></li>
+<li>To see which files would be removed without actually deleting them, run: <code>git clean -n</code></li>
+<li>To remove untracked files, excluding directories, use: <code>git clean -f</code></li>
+<li>To also remove untracked directories, add the <code>-d</code> option: <code>git clean -fd</code></li>
 </ul>
-<ol start="2">
-<li><code>git gc</code>, cleans up unnecessary files and optimizes the local repository. It does not affect the working tree or the current state of the project</li>
-<li><code>git reflog</code>, shows a list of the recent actions in the repository, including commits, amends, rebases, and more.</li>
-<li>git fast forward merge, does not create a new commit.<br><img src="/../../imgs/git-fast-forward.jpg" alt="git fast forward merge"></li>
-</ol>
+</li>
+<li><p><code>git gc</code> cleans up unnecessary files and optimizes the local repository. It does not affect the working tree or the project’s current state.</p>
+</li>
+<li><p><code>git reflog</code> shows a list of recent actions in the repository, including commits, amends, rebases, and more.</p>
+</li>
+<li><p>A Git fast-forward merge does not create a new commit.</p>
+<p><img src="/../../imgs/git-fast-forward.jpg" alt="git fast forward merge"></p>
 <ul>
-<li>If you prefer to have a merge commit for record-keeping purposes (such as in certain team workflows), you can use the –no-ff option with git merge to force Git to create a new merge commit even when it could perform a fast-forward merge.</li>
+<li>If you prefer a merge commit for record-keeping, such as in certain team workflows, use the <code>--no-ff</code> option with <code>git merge</code>. This forces Git to create a new merge commit even when it could perform a fast-forward merge.</li>
 <li>Reference: <a class="link"   target="_blank" rel="noopener" href="https://segmentfault.com/q/1010000002477106" >https://segmentfault.com/q/1010000002477106<i class="fas fa-external-link-alt"></i></a></li>
 </ul>
-<ol start="5">
-<li><code>git push -f (Force Push)</code>, forcefully updates the remote branch with the current state of your local branch. This can be dangerous, as it rewrites the history on the remote.</li>
-</ol>
+</li>
+<li><p><code>git push -f</code> (force push) forcefully updates the remote branch to the current state of your local branch. This can be dangerous because it rewrites remote history.</p>
 <ul>
-<li>The command would look something like this: <code>git push -f origin branch_name</code>.<br>6 <code>git remote remove</code>, used to remove a remote reference from your local Git configuration. It does not affect the commits or the remote repository itself.</li>
+<li>The command looks like this: <code>git push -f origin branch_name</code>.</li>
 </ul>
+</li>
+<li><p><code>git remote remove</code> removes a remote reference from your local Git configuration. It does not affect commits or the remote repository itself.</p>
+</li>
+</ol>
+<hr>
+<h2 id="中文版"><a href="#中文版" class="headerlink" title="中文版"></a>中文版</h2><ol>
+<li><p><code>git clean</code> 用于从工作树中删除未跟踪的文件。使用此命令时务必谨慎，因为它会永久删除这些文件。</p>
+<ul>
+<li>如果要查看哪些文件会被删除，但不实际删除它们，可以运行：<code>git clean -n</code></li>
+<li>如果要删除未跟踪的文件，但不包括目录，可以使用：<code>git clean -f</code></li>
+<li>如果还要删除未跟踪的目录，请添加 <code>-d</code> 选项：<code>git clean -fd</code></li>
+</ul>
+</li>
+<li><p><code>git gc</code> 会清理不必要的文件并优化本地仓库。它不会影响工作树或项目的当前状态。</p>
+</li>
+<li><p><code>git reflog</code> 会显示仓库中近期操作的列表，包括提交、修订提交、变基等。</p>
+</li>
+<li><p>Git 快进合并不会创建新的提交。</p>
+<p><img src="/../../imgs/git-fast-forward.jpg" alt="git fast forward merge"></p>
+<ul>
+<li>如果出于记录目的希望保留合并提交，例如在某些团队工作流中，可以为 <code>git merge</code> 使用 <code>--no-ff</code> 选项。即使可以执行快进合并，这也会强制 Git 创建新的合并提交。</li>
+<li>参考资料：<a class="link"   target="_blank" rel="noopener" href="https://segmentfault.com/q/1010000002477106" >https://segmentfault.com/q/1010000002477106<i class="fas fa-external-link-alt"></i></a></li>
+</ul>
+</li>
+<li><p><code>git push -f</code>（强制推送）会强制使用本地分支的当前状态更新远程分支。此操作可能很危险，因为它会重写远程历史。</p>
+<ul>
+<li>命令如下：<code>git push -f origin branch_name</code>。</li>
+</ul>
+</li>
+<li><p><code>git remote remove</code> 用于从本地 Git 配置中删除远程引用。它不会影响提交或远程仓库本身。</p>
+</li>
+</ol>
 
         </div>
 
@@ -305,7 +337,7 @@
                               <i class="fas fa-chevron-left"></i>
                             </span>
                             <span class="title flex-center">
-                                <span class="post-nav-title-item">金钱心理学</span>
+                                <span class="post-nav-title-item">The Psychology of Money</span>
                                 <span class="post-nav-item">Prev posts</span>
                             </span>
                         </a>
@@ -318,7 +350,7 @@
                            href="/2023/11/11/Work/AWS-Interview-questions/"
                         >
                             <span class="title flex-center">
-                                <span class="post-nav-title-item">AWS Interview questions</span>
+                                <span class="post-nav-title-item">AWS Interview Questions</span>
                                 <span class="post-nav-item">Next posts</span>
                             </span>
                             <span class="right arrow-icon flex-center">
@@ -453,7 +485,7 @@
         <aside class="page-aside">
             <div class="post-toc-wrap">
     <div class="post-toc">
-        
+        <ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#English-Version"><span class="nav-number">1.</span> <span class="nav-text">English Version</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%B8%AD%E6%96%87%E7%89%88"><span class="nav-number">2.</span> <span class="nav-text">中文版</span></a></li></ol>
     </div>
 </div>
         </aside>

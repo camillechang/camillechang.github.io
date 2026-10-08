@@ -9,7 +9,7 @@
     
     <title>
         
-            AWS Certified Security – Specialty exam (SCS-C01) notes |
+            AWS Certified Security – Specialty (SCS-C01) Exam Notes |
         
         Camille Blog
     </title>
@@ -23,7 +23,7 @@
     <script id="hexo-configurations">
     let KEEP = window.KEEP || {};
     KEEP.hexo_config = {"hostname":"camillechang.github.io","root":"/","language":["en","zh-CN","default"],"path":"search.json"};
-    KEEP.theme_config = {"toc":{"enable":true,"number":true,"expand_all":false,"init_open":false},"style":{"primary_color":"#7C3AED","avatar":"/images/cat.svg","favicon":"/images/cat.svg","article_img_align":"left","left_side_width":"260px","content_max_width":"1080px","hover":{"shadow":true,"scale":true},"first_screen":{"enable":true,"background_img":"/images/hero-bg.svg","description":"认真体验有限的人生，享受独处，勇敢去爱，也努力创造一点对世界有用的东西。"},"scroll":{"progress_bar":{"enable":true},"percent":{"enable":true}}},"local_search":{"enable":true,"trigger":"auto","top_n_per_article":3,"unescape":false,"preload":false},"code_copy":{"enable":true,"style":"mac"},"pjax":{"enable":false},"lazyload":{"enable":false},"version":"3.4.5"};
+    KEEP.theme_config = {"toc":{"enable":true,"number":true,"expand_all":false,"init_open":false},"style":{"primary_color":"#7C3AED","avatar":"/images/cat.svg","favicon":"/images/cat.svg","article_img_align":"left","left_side_width":"260px","content_max_width":"1080px","hover":{"shadow":true,"scale":true},"first_screen":{"enable":true,"background_img":"/images/hero-bg.svg","description":"Life is finite. Live it fully, embrace solitude, love courageously, and create something useful for the world."},"scroll":{"progress_bar":{"enable":true},"percent":{"enable":true}}},"local_search":{"enable":true,"trigger":"auto","top_n_per_article":3,"unescape":false,"preload":false},"code_copy":{"enable":true,"style":"mac"},"pjax":{"enable":false},"lazyload":{"enable":false},"version":"3.4.5"};
     KEEP.language_ago = {"second":"%s seconds ago","minute":"%s minutes ago","hour":"%s hours ago","day":"%s days ago","week":"%s weeks ago","month":"%s months ago","year":"%s years ago"};
   </script>
 <meta name="generator" content="Hexo 6.3.0"><link rel="alternate" href="/atom.xml" title="Camille Blog" type="application/atom+xml">
@@ -174,7 +174,7 @@
     <div class="article-content-container">
 
         <div class="article-title">
-            <span class="title-hover-animation">AWS Certified Security – Specialty exam (SCS-C01) notes</span>
+            <span class="title-hover-animation">AWS Certified Security – Specialty (SCS-C01) Exam Notes</span>
         </div>
 
         
@@ -230,12 +230,12 @@
     
     
         <span class="article-wordcount article-meta-item">
-            <i class="fas fa-file-word"></i>&nbsp;<span>2.2k Words</span>
+            <i class="fas fa-file-word"></i>&nbsp;<span>5.2k Words</span>
         </span>
     
     
         <span class="article-min2read article-meta-item">
-            <i class="fas fa-clock"></i>&nbsp;<span>13 Mins</span>
+            <i class="fas fa-clock"></i>&nbsp;<span>25 Mins</span>
         </span>
     
     
@@ -247,7 +247,7 @@
         
 
         <div class="article-content markdown-body">
-            <h3 id="Exam-area"><a href="#Exam-area" class="headerlink" title="Exam area"></a>Exam area</h3><ol>
+            <h2 id="English-Version"><a href="#English-Version" class="headerlink" title="English Version"></a>English Version</h2><h3 id="Exam-Areas"><a href="#Exam-Areas" class="headerlink" title="Exam Areas"></a>Exam Areas</h3><ol>
 <li>Incident Response -12%</li>
 </ol>
 <ul>
@@ -369,7 +369,7 @@
 <li><strong>cryptographic erasure</strong>, is when the encryption material used to encrypt the data is deleted. ensure that the key materials are backed up offline(<strong>import key material into an AWS KMS ke</strong>y) so you can perform a restore of the data.</li>
 </ul>
 <h3 id="System-manager"><a href="#System-manager" class="headerlink" title="System manager"></a>System manager</h3><ul>
-<li>patch manager, can be used to scan systems, report compliance 生成报告, identify vulnerable versions of software and then install the patches on the systems</li>
+<li>Patch Manager can be used to scan systems, report compliance, identify vulnerable versions of software, and then install patches on the systems.</li>
 <li>systems Manager automation can be configured for automatic remediation if the rule returns a non-compliant state.</li>
 <li>systems Manager Compliance is used to scan instances for patch compliance and configuration inconsistencies. It is not used to monitor access policies of S3 buckets.</li>
 <li>Run command, allows you to automate common administrative tasks and perform one-time configuration changes at scale, eg reset passwords(AWSSupport-RunEC2RescueForWindowsTool).</li>
@@ -491,6 +491,241 @@
 <ul>
 <li><a class="link"   target="_blank" rel="noopener" href="https://docs.aws.amazon.com/apigateway/latest/developerguide/apigateway-use-lambda-authorizer.html" >https://docs.aws.amazon.com/apigateway/latest/developerguide/apigateway-use-lambda-authorizer.html<i class="fas fa-external-link-alt"></i></a></li>
 </ul>
+<hr>
+<h2 id="中文版"><a href="#中文版" class="headerlink" title="中文版"></a>中文版</h2><h3 id="考试领域"><a href="#考试领域" class="headerlink" title="考试领域"></a>考试领域</h3><ol>
+<li>Incident Response——12%</li>
+</ol>
+<ul>
+<li>Trusted Advisor、CloudFormation、Service Catalog、VPC Flow Logs、AWS Config、API Gateway、CloudTrail、CloudWatch</li>
+</ul>
+<ol start="2">
+<li>Logging and Monitoring——20%</li>
+</ol>
+<ul>
+<li>CloudWatch、Config、CloudTrail、Inspector、Kinesis</li>
+</ul>
+<ol start="3">
+<li>Infrastructure Security——26%</li>
+</ol>
+<ul>
+<li>Route 53、WAF、CloudFront、Shield</li>
+</ul>
+<ol start="4">
+<li>IAM——20%</li>
+<li>Data Protection——22%</li>
+</ol>
+<h3 id="S3-1"><a href="#S3-1" class="headerlink" title="S3"></a>S3</h3><ul>
+<li>Glacier Vault Lock、Vault Lock 策略、WORM（write once, read many times）。锁定后，策略无法再更改</li>
+<li>VPC Gateway Endpoint → DynamoDB 和 S3</li>
+<li>VPC Interface Endpoint → 其他 AWS 服务</li>
+<li>Object ACL：向存储桶所有者授予权限，以及授予对单个对象的访问权限</li>
+<li>Bucket ACL：向日志传递组授予对存储桶的写入权限</li>
+<li>Bucket Policy：提供比 Bucket ACL 更广泛的权限</li>
+<li>S3 服务器端加密用于保护静态数据</li>
+<li>Server Access Logging 为对存储桶发出的请求提供详细记录</li>
+<li>如果启用了存储桶版本控制，每个对象版本都应使用不同的加密密钥</li>
+<li>S3 存储桶可以设置 <strong>aws:referer</strong> 键，以接受来自特定网页的请求</li>
+</ul>
+<h3 id="Interface-Endpoint-与-Gateway-Endpoint"><a href="#Interface-Endpoint-与-Gateway-Endpoint" class="headerlink" title="Interface Endpoint 与 Gateway Endpoint"></a>Interface Endpoint 与 Gateway Endpoint</h3><ul>
+<li>Interface Endpoint 由 PrivateLink 提供支持，并使用 Elastic Network Interface（ENI）作为发往服务的流量入口</li>
+<li>Gateway Endpoint 作为路由表中发往服务的流量目标，仅适用于 S3 和 DynamoDB</li>
+</ul>
+<h3 id="CloudFront-1"><a href="#CloudFront-1" class="headerlink" title="CloudFront"></a>CloudFront</h3><ul>
+<li>Access Logs 包含源 IP 地址、原始请求、Referrer 和协议信息</li>
+</ul>
+<h3 id="ACM-1"><a href="#ACM-1" class="headerlink" title="ACM"></a>ACM</h3><ul>
+<li>不存在 ACM Private CA 策略；可以使用 IAM 策略（用户、组、角色）控制访问</li>
+<li>ACM 是区域性服务；为了实现冗余，需要创建多个 CA（无论是 Private CA 还是 Public CA）</li>
+<li>AssumeRoleWithWebIdentity：该 API 返回的 STS 临时安全凭证由 Access Key ID、Secret Access Key 和 Security Token 组成</li>
+</ul>
+<h3 id="ALB-1"><a href="#ALB-1" class="headerlink" title="ALB"></a>ALB</h3><ul>
+<li>通过 SNI（Server Name Indication）支持多个 TLS 证书</li>
+</ul>
+<h3 id="STS-1"><a href="#STS-1" class="headerlink" title="STS"></a>STS</h3><ul>
+<li>联合身份验证（通常使用 Active Directory）<ul>
+<li>SAML</li>
+<li>SSO 允许用户在没有 IAM 凭证的情况下登录</li>
+</ul>
+</li>
+<li>与移动应用联合<ul>
+<li>使用 Facebook&#x2F;Amazon&#x2F;Google 或其他 OpenID Provider 登录</li>
+<li>无需在本地存储 AWS 凭证</li>
+<li>提供映射到 IAM Role 的临时凭证</li>
+</ul>
+</li>
+<li>跨账户访问</li>
+<li>GetFederationToken 为联合用户返回一组临时安全凭证（包括 Access Key ID、Secret Access Key 和 Security Token）</li>
+</ul>
+<h3 id="Cognito-1"><a href="#Cognito-1" class="headerlink" title="Cognito"></a>Cognito</h3><ul>
+<li>用于 Web 和移动应用身份验证，与 Microsoft AD 无关</li>
+<li>User Pools：用户目录，用于创建用户或与社交 IdP 联合</li>
+<li>Identity Pools：支持<strong>匿名</strong>访客用户或未经身份验证的访问</li>
+</ul>
+<h3 id="Identity-Provider-与联合"><a href="#Identity-Provider-与联合" class="headerlink" title="Identity Provider 与联合"></a>Identity Provider 与联合</h3><ul>
+<li>当需要在兼容 OIDC 的 IdP 与 AWS 账户之间建立信任但不能管理用户时，使用 IAM OpenID Connect（OIDC）；适用于移动或 Web 应用</li>
+<li>当需要在兼容 SAML 的 IdP（ADFS 与 AWS）之间建立信任，让组织内用户访问 AWS 时，使用 IAM Identity Provider</li>
+</ul>
+<h3 id="IAM-1"><a href="#IAM-1" class="headerlink" title="IAM"></a>IAM</h3><ul>
+<li>Trust Policy：附加到 IAM Role 的必需基于资源的策略。可指定的 Principal 包括用户、角色、账户和服务</li>
+<li>IAM Access Analyzer：帮助识别组织和账户中与<strong>外部实体共享</strong>的资源，例如 Amazon S3 存储桶或 IAM Role，从而发现对资源和数据的意外访问</li>
+<li>IAM Access Advisor：显示该用户可访问的服务以及上次访问这些服务的时间<br><img src="/../../imgs/IAM-access-advisor.png" alt="IAM Access advisor"></li>
+<li>IAM Credential Report：列出所有用户及其各类凭证的状态，包括密码、Access Key 和 MFA<br><img src="/../../imgs/IAM-credential-report.png" alt="IAM credential report"></li>
+</ul>
+<h3 id="AWS-Resource-Access-Manager-1"><a href="#AWS-Resource-Access-Manager-1" class="headerlink" title="AWS Resource Access Manager"></a>AWS Resource Access Manager</h3><ul>
+<li>与其他账户共享 AWS 资源</li>
+</ul>
+<h2 id="日志记录与监控"><a href="#日志记录与监控" class="headerlink" title="日志记录与监控"></a>日志记录与监控</h2><h3 id="CloudTrail"><a href="#CloudTrail" class="headerlink" title="CloudTrail"></a>CloudTrail</h3><ul>
+<li>Log File Integrity：与 Digest File 一起传递</li>
+<li>不使用 IAM Role，而是使用 Service Principal <code>“cloudtrail.amazonaws.com&quot;</code></li>
+<li>Event History：90 天</li>
+</ul>
+<h3 id="AWS-Config"><a href="#AWS-Config" class="headerlink" title="AWS Config"></a>AWS Config</h3><ul>
+<li>检测资源变更，而不是访问泄露或使用情况</li>
+<li>Auto Remediation 自动修复 AWS Config Rule 评估出的不合规资源</li>
+<li>提供 AWS 账户中已定义资源的详细列表</li>
+<li>可使用 Lambda Function 添加自定义规则</li>
+<li>触发频率为 1、3、6、12、24 小时</li>
+</ul>
+<h3 id="CloudHSM-1"><a href="#CloudHSM-1" class="headerlink" title="CloudHSM"></a>CloudHSM</h3><ul>
+<li>单租户、安全密钥存储、加密操作、防篡改硬件安全模块</li>
+<li>如果需要 VPC 内基于硬件的 HSM，应使用 CloudHSM</li>
+<li>CloudHSM 集群可包含分布在不同 AZ 的多个 HSM 实例</li>
+</ul>
+<h3 id="AWS-Inspector"><a href="#AWS-Inspector" class="headerlink" title="AWS Inspector"></a>AWS Inspector</h3><ul>
+<li>CIS Benchmark&#x2F;认证规则、自动化安全和漏洞评估服务</li>
+<li>测试 <strong>EC2</strong> 实例的网络可访问性，以及这些实例上运行的应用程序的安全状态</li>
+</ul>
+<h3 id="Trusted-Advisor"><a href="#Trusted-Advisor" class="headerlink" title="Trusted Advisor"></a>Trusted Advisor</h3><ul>
+<li>提供有助于遵循 AWS 最佳实践的建议。Trusted Advisor 使用检查来评估账户，从而找出优化 AWS 基础设施、提高安全性和性能、降低成本以及监控 Service Quota 的方法</li>
+<li>可提供有关 Security Group 中各种不受限制访问的信息</li>
+</ul>
+<h2 id="基础设施安全"><a href="#基础设施安全" class="headerlink" title="基础设施安全"></a>基础设施安全</h2><h3 id="KMS-1"><a href="#KMS-1" class="headerlink" title="KMS"></a>KMS</h3><ul>
+<li>密钥删除的最短等待时间为 7 天</li>
+<li>KMS Key 最多只能加密 4 KB 数据；更大的数据需要创建 Data Encryption Key</li>
+<li>密钥轮换：<ul>
+<li><strong>AWS Managed KMS：你无法进行任何操作，甚至不能添加密钥</strong>；每年自动轮换</li>
+<li>Customer Managed KMS：每 365 天自动轮换一次（<strong>默认禁用</strong>）；也可手动轮换，即创建新 CMK 或将 Key Alias 改指向新 CMK</li>
+<li>Customer Managed + Imported Key Material：不支持自动轮换；创建新 CMK 或将 Key Alias 改指向新 CMK</li>
+</ul>
+</li>
+<li>更改 KMS Key 的到期日期：重新导入相同的 Key Material，并指定新的到期日期</li>
+<li><strong>Kms:ViaService</strong>：用于来自 us-west 区域的 EC2&#x2F;RDS</li>
+<li><strong>Custom Key Store</strong> 由 AWS CloudHSM 支持，并有一些限制。例如，不能将自己的 Key Material 导入 KMS Key，也不能启用自动轮换</li>
+<li><strong>Cryptographic Erasure</strong> 指删除用于加密数据的加密材料。确保 Key Material 已离线备份（<strong>将 Key Material 导入 AWS KMS Key</strong>），以便恢复数据</li>
+</ul>
+<h3 id="Systems-Manager"><a href="#Systems-Manager" class="headerlink" title="Systems Manager"></a>Systems Manager</h3><ul>
+<li>Patch Manager 可扫描系统、报告合规性、识别存在漏洞的软件版本，然后在系统上安装补丁</li>
+<li>Systems Manager Automation 可配置为在规则返回不合规状态时自动修复</li>
+<li>Systems Manager Compliance 用于扫描实例的补丁合规性和配置不一致；不用于监控 S3 存储桶的访问策略</li>
+<li>Run Command 可自动执行常见管理任务，并大规模执行一次性配置更改，例如重置密码（AWSSupport-RunEC2RescueForWindowsTool）</li>
+<li>EC2Rescue 是可在 Amazon EC2 Windows Server 实例上运行的故障排除工具。可以使用 EC2Rescue CLI 的 <code>/offline</code> 模式并指定 Device ID，从无响应的 EC2 实例收集 Memory Dump</li>
+</ul>
+<h3 id="Macie-1"><a href="#Macie-1" class="headerlink" title="Macie"></a>Macie</h3><ul>
+<li>使用机器学习发现、分类和保护 <strong>S3&#x2F;CloudTrail</strong> 中的 <strong>PII</strong></li>
+<li>包含 Dashboard、报告和警报</li>
+</ul>
+<h3 id="GuardDuty-1"><a href="#GuardDuty-1" class="headerlink" title="GuardDuty"></a>GuardDuty</h3><ul>
+<li><strong>Threat Detection Service</strong>，提供准确、简便的方式来持续监控和保护 AWS 账户及工作负载</li>
+<li>可以检测应用层攻击等攻击；但要提供防护，需要与 CloudWatch Events 和 Lambda 等其他服务集成以响应事件</li>
+<li><strong>Findings</strong>：<strong>恶意和未经授权的行为</strong>（受影响资源、操作），例如端口扫描</li>
+</ul>
+<h3 id="QuickSight-1"><a href="#QuickSight-1" class="headerlink" title="QuickSight"></a>QuickSight</h3><ul>
+<li>用于可视化，仅支持存储在 S3 中的文本文件格式（.csv、.tsv、.clf 或 .elf）</li>
+</ul>
+<h3 id="QuickSigh-1"><a href="#QuickSigh-1" class="headerlink" title="QuickSigh"></a>QuickSigh</h3><h3 id="Security-Hub-1"><a href="#Security-Hub-1" class="headerlink" title="Security Hub"></a>Security Hub</h3><ul>
+<li>安全警报的中央枢纽</li>
+<li>自动检查：<ul>
+<li>PCI-DSS（Payment Card Industry）</li>
+<li>CIS（Center for Internet Security）</li>
+</ul>
+</li>
+<li>集成（GuardDuty、Macie、Inspector、Firewall Manager）</li>
+</ul>
+<h3 id="Artifact-1"><a href="#Artifact-1" class="headerlink" title="Artifact"></a>Artifact</h3><ul>
+<li>合规与安全相关信息的中央资源</li>
+<li>ISO、PCI、SOC 报告；验证底层 AWS 基础设施的合规性</li>
+</ul>
+<h3 id="AWS-上的-DDoS-缓解"><a href="#AWS-上的-DDoS-缓解" class="headerlink" title="AWS 上的 DDoS 缓解"></a>AWS 上的 DDoS 缓解</h3><ul>
+<li>ELB、CloudWatch、ASG、Shield、Route 53、WAF 和 CloudFront</li>
+</ul>
+<h3 id="CloudWatch-1"><a href="#CloudWatch-1" class="headerlink" title="CloudWatch"></a>CloudWatch</h3><ul>
+<li>Unified CloudWatch Agent 将 EC2 和本地服务器的系统级指标（内存和磁盘使用量）发送到 CloudWatch</li>
+</ul>
+<h3 id="AWS-Signer"><a href="#AWS-Signer" class="headerlink" title="AWS Signer"></a>AWS Signer</h3><ul>
+<li>确保 Lambda Function 中只运行受信任代码；为 Lambda 部署创建数字签名包</li>
+</ul>
+<h3 id="VPC-1"><a href="#VPC-1" class="headerlink" title="VPC"></a>VPC</h3><ul>
+<li>Flow Logs 可用于捕获 IP 流量</li>
+<li>VPC <strong>Traffic Mirroring</strong> 用于复制 Amazon EC2 实例的 Elastic Network Interface 流量，然后可将流量发送到带外安全和监控设备，用于内容检查、威胁监控和故障排除</li>
+<li>通过为 Network Load Balancer 配置 VPC Traffic Mirroring，可以捕获发送到 EC2 实例的所有流量，并使用入侵检测设备检查</li>
+<li>每个 EC2 实例默认执行 <strong>Source&#x2F;Destination Check</strong>，即实例必须是其发送或接收流量的源或目标。但内联安全设备&#x2F;NAT Instance 必须能在自身不是源或目标时发送和接收流量</li>
+<li>公钥位于实例的 <strong>.ssh&#x2F;authorized_keys</strong> 文件中。若要替换 Key Pair，请使用 EC2 控制台生成新 Key Pair，然后将公钥信息粘贴到 <strong>authorized_keys 文件</strong>中；还应删除原始密钥信息</li>
+</ul>
+<h3 id="Organization-Trail"><a href="#Organization-Trail" class="headerlink" title="Organization Trail"></a>Organization Trail</h3><ul>
+<li><strong>记录组织中 Management Account 和所有 Member Account 的事件</strong></li>
+<li>创建 Organization Trail 时，每个属于该组织的 AWS 账户中都会创建一个同名 Trail。Member Account 中拥有 CloudTrail 权限的用户登录其账户的 AWS CloudTrail 控制台，或运行 describe-trail 等 AWS CLI 命令时，可以看到该 Trail</li>
+<li>但是，Member Account 中的用户没有足够权限删除 Organization Trail、开启或关闭日志记录，或更改所记录的事件类型</li>
+</ul>
+<h3 id="Amazon-Detective-1"><a href="#Amazon-Detective-1" class="headerlink" title="Amazon Detective"></a>Amazon Detective</h3><ul>
+<li>自动收集 AWS 资源的日志数据，然后使用机器学习、统计分析和图论生成可视化，帮助更快、更高效地开展安全调查</li>
+<li>启用 Detective 时，它会检查账户是否已启用 GuardDuty 至少 48 小时。如果你不是 GuardDuty 客户，或使用时间不足 48 小时，则无法启用 Detective；必须启用 GuardDuty 或等待 48 小时，以便 GuardDuty 评估账户产生的数据量</li>
+</ul>
+<h3 id="OpenSearch-1"><a href="#OpenSearch-1" class="headerlink" title="OpenSearch"></a>OpenSearch</h3><ul>
+<li>Elasticsearch 的后继者，是分布式开源搜索和分析套件，适用于实时应用监控、日志分析和网站搜索等广泛场景</li>
+<li>可从 Kinesis 接收数据，然后分析并存储这些数据</li>
+</ul>
+<h3 id="Secrets-Manager-与-Parameter-Store"><a href="#Secrets-Manager-与-Parameter-Store" class="headerlink" title="Secrets Manager 与 Parameter Store"></a><em>Secrets Manager 与 Parameter Store</em></h3><ul>
+<li>Secrets Manager：符合 PCI 要求，可满足每 90 天轮换密码的规定；仅适用于选定数据库，不适用于 SSH Key</li>
+<li>Parameter Store：用于存储加密或未加密 Secret 的更便宜方案，不会自动轮换凭证</li>
+</ul>
+<h3 id="AWS-Audit-Manager-1"><a href="#AWS-Audit-Manager-1" class="headerlink" title="AWS Audit Manager"></a>AWS Audit Manager</h3><ul>
+<li>使用预构建和自定义 Framework 以及自动证据收集，将合规要求映射到 AWS 使用数据</li>
+</ul>
+<h3 id="AWS-Firewall-Manager-1"><a href="#AWS-Firewall-Manager-1" class="headerlink" title="AWS Firewall Manager"></a>AWS Firewall Manager</h3><ul>
+<li>与 WAF、Network Firewall、Shield、Route 53 Resolver DNS Firewall 配合使用</li>
+<li>Network Access Control List（NACL）是 <strong>VPC 或子网级别</strong>的可选安全层，充当防火墙以控制一个或多个子网的入站和出站流量；SG 则用于实例</li>
+</ul>
+<h3 id="Network-Firewall-1"><a href="#Network-Firewall-1" class="headerlink" title="Network Firewall"></a>Network Firewall</h3><ul>
+<li>用于 Virtual Private Cloud（VPC）的入侵检测与防御服务</li>
+<li>可以筛选流量</li>
+</ul>
+<h3 id="Kinesis-1"><a href="#Kinesis-1" class="headerlink" title="Kinesis"></a>Kinesis</h3><ul>
+<li>日志摄取<ul>
+<li>Kinesis Data Streams<ul>
+<li>Basic（Stream 级别）：每分钟自动收集，不收费</li>
+<li>Enhanced（Shard 级别）：每分钟收集，额外收费</li>
+<li>Producer（DescribeStream、PutRecord）和 Consumer（GetStream、GetRecords）</li>
+</ul>
+</li>
+<li>Kinesis Data Firehose</li>
+</ul>
+</li>
+<li>日志分析<ul>
+<li>Kinesis Data Analytics</li>
+</ul>
+</li>
+</ul>
+<h3 id="AWS-Directory-Service-1"><a href="#AWS-Directory-Service-1" class="headerlink" title="AWS Directory Service"></a>AWS Directory Service</h3><ul>
+<li><strong>AWS Managed Microsoft AD</strong>——位于 AWS Cloud，最多支持 5000 名员工和目录对象</li>
+<li><strong>AD Connector</strong>——本地用户需要通过 AD 访问 AWS 服务</li>
+<li><strong>Simple AD</strong>——小规模、低成本的基础 Active Directory 功能</li>
+</ul>
+<h3 id="其他"><a href="#其他" class="headerlink" title="其他"></a>其他</h3><ul>
+<li>Direct Connect + Virtual Private Gateway（VGW）&#x3D; 传输中加密（采用 IPsec 加密的私有连接）</li>
+<li>Kinesis Data Streams 对所有连接使用 TLS，因此默认对传输中的数据加密</li>
+<li><strong>Forward Secrecy（FS）</strong> 使用派生 Session Key，为防止加密数据被窃听提供额外保障。即使长期 Secret Key 泄露，也无法解码已捕获的数据。<strong>ALB 不支持自定义安全策略</strong></li>
+<li>Envelope Encryption：使用 Data Key 加密明文数据，再用另一个密钥加密该 Data Key</li>
+<li>Key Pair 由 Public Key 和 Private Key 组成。Private Key 用于创建数字签名，Public Key 用于验证签名。Key Pair 可用于通过 SSH 连接 AWS EC2 实例</li>
+<li>AppSync 支持使用订阅在设备之间同步数据</li>
+<li>可通过将 Lambda Function 配置到 VPC 中，并为 DynamoDB Table 使用 VPC Endpoint，使其通过私有 IP 连接 DynamoDB</li>
+<li>AWS 区域之间经 AWS Global Network 传输的所有数据，在离开 AWS 安全设施前都会在物理层自动加密；AZ 之间的所有流量也会加密</li>
+<li>Organization Trail 可记录组织内所有 AWS 账户的全部事件</li>
+<li>Lambda Authorizer 使用 OAuth 或 SAML 等 Bearer Token 身份验证策略，或使用请求参数确定调用者身份。当客户端请求 API 的某个方法时，API Gateway 调用 Lambda Authorizer；后者以调用者身份作为输入，并返回 IAM Policy 作为输出</li>
+</ul>
+<p>参考：<a class="link"   target="_blank" rel="noopener" href="https://learn.acloud.guru/course/aws-certified-security-specialty/dashboard" >https://learn.acloud.guru/course/aws-certified-security-specialty/dashboard<i class="fas fa-external-link-alt"></i></a></p>
+<ul>
+<li><a class="link"   target="_blank" rel="noopener" href="https://docs.aws.amazon.com/apigateway/latest/developerguide/apigateway-use-lambda-authorizer.html" >https://docs.aws.amazon.com/apigateway/latest/developerguide/apigateway-use-lambda-authorizer.html<i class="fas fa-external-link-alt"></i></a></li>
+</ul>
 
         </div>
 
@@ -526,7 +761,7 @@
                               <i class="fas fa-chevron-left"></i>
                             </span>
                             <span class="title flex-center">
-                                <span class="post-nav-title-item">Deep work rules- reading notes</span>
+                                <span class="post-nav-title-item">Deep Work Rules: Reading Notes</span>
                                 <span class="post-nav-item">Prev posts</span>
                             </span>
                         </a>
@@ -539,7 +774,7 @@
                            href="/2022/09/10/python3/"
                         >
                             <span class="title flex-center">
-                                <span class="post-nav-title-item">python3.md</span>
+                                <span class="post-nav-title-item">Python 3 Collection Data Types</span>
                                 <span class="post-nav-item">Next posts</span>
                             </span>
                             <span class="right arrow-icon flex-center">
@@ -674,7 +909,7 @@
         <aside class="page-aside">
             <div class="post-toc-wrap">
     <div class="post-toc">
-        <ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#Exam-area"><span class="nav-number">1.</span> <span class="nav-text">Exam area</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#S3"><span class="nav-number">2.</span> <span class="nav-text">S3</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#interface-endpoint-vs-gateway-endpoint"><span class="nav-number">3.</span> <span class="nav-text">interface endpoint vs gateway endpoint</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#CloudFront"><span class="nav-number">4.</span> <span class="nav-text">CloudFront</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#ACM"><span class="nav-number">5.</span> <span class="nav-text">ACM</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#ALB"><span class="nav-number">6.</span> <span class="nav-text">ALB</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#STS"><span class="nav-number">7.</span> <span class="nav-text">STS</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Cognito"><span class="nav-number">8.</span> <span class="nav-text">Cognito</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Identity-providers-and-federation"><span class="nav-number">9.</span> <span class="nav-text">Identity providers and federation</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#IAM"><span class="nav-number">10.</span> <span class="nav-text">IAM</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#AWS-Resource-Access-Manager"><span class="nav-number">11.</span> <span class="nav-text">AWS Resource Access Manager</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Logging-and-Monitoring"><span class="nav-number"></span> <span class="nav-text">Logging and Monitoring</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Cloudtrail"><span class="nav-number">1.</span> <span class="nav-text">Cloudtrail</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Cloud-config"><span class="nav-number">2.</span> <span class="nav-text">Cloud config</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#CloudHSM"><span class="nav-number">3.</span> <span class="nav-text">CloudHSM</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#AWS-inspector"><span class="nav-number">4.</span> <span class="nav-text">AWS inspector</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Trust-advisor"><span class="nav-number">5.</span> <span class="nav-text">Trust advisor</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Infrastructure-security"><span class="nav-number"></span> <span class="nav-text">Infrastructure security</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#KMS"><span class="nav-number">1.</span> <span class="nav-text">KMS</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#System-manager"><span class="nav-number">2.</span> <span class="nav-text">System manager</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Macie"><span class="nav-number">3.</span> <span class="nav-text">Macie</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#GuardDuty"><span class="nav-number">4.</span> <span class="nav-text">GuardDuty</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#QuickSight"><span class="nav-number">5.</span> <span class="nav-text">QuickSight</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#QuickSigh"><span class="nav-number">6.</span> <span class="nav-text">QuickSigh</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Security-Hub"><span class="nav-number">7.</span> <span class="nav-text">Security Hub</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Artifact"><span class="nav-number">8.</span> <span class="nav-text">Artifact</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#DDos-mitigation-on-AWS"><span class="nav-number">9.</span> <span class="nav-text">DDos mitigation on AWS</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#CloudWatch"><span class="nav-number">10.</span> <span class="nav-text">CloudWatch</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#AWS-signer"><span class="nav-number">11.</span> <span class="nav-text">AWS signer</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#VPC"><span class="nav-number">12.</span> <span class="nav-text">VPC</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Organization-trails"><span class="nav-number">13.</span> <span class="nav-text">Organization trails</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Amazon-Detective"><span class="nav-number">14.</span> <span class="nav-text">Amazon Detective</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#OpenSearch"><span class="nav-number">15.</span> <span class="nav-text">OpenSearch</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Secrets-Manager-vs-Parameter-Store"><span class="nav-number">16.</span> <span class="nav-text">Secrets Manager vs Parameter Store</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#AWS-Audit-Manager"><span class="nav-number">17.</span> <span class="nav-text">AWS Audit Manager</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#AWS-Firewall-Manager"><span class="nav-number">18.</span> <span class="nav-text">AWS Firewall Manager</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Network-Firewall"><span class="nav-number">19.</span> <span class="nav-text">Network Firewall</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Kinesis"><span class="nav-number">20.</span> <span class="nav-text">Kinesis</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#AWS-Directory-Service"><span class="nav-number">21.</span> <span class="nav-text">AWS Directory Service</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Others"><span class="nav-number">22.</span> <span class="nav-text">Others</span></a></li></ol>
+        <ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#English-Version"><span class="nav-number">1.</span> <span class="nav-text">English Version</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Exam-Areas"><span class="nav-number">1.1.</span> <span class="nav-text">Exam Areas</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#S3"><span class="nav-number">1.2.</span> <span class="nav-text">S3</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#interface-endpoint-vs-gateway-endpoint"><span class="nav-number">1.3.</span> <span class="nav-text">interface endpoint vs gateway endpoint</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#CloudFront"><span class="nav-number">1.4.</span> <span class="nav-text">CloudFront</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#ACM"><span class="nav-number">1.5.</span> <span class="nav-text">ACM</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#ALB"><span class="nav-number">1.6.</span> <span class="nav-text">ALB</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#STS"><span class="nav-number">1.7.</span> <span class="nav-text">STS</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Cognito"><span class="nav-number">1.8.</span> <span class="nav-text">Cognito</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Identity-providers-and-federation"><span class="nav-number">1.9.</span> <span class="nav-text">Identity providers and federation</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#IAM"><span class="nav-number">1.10.</span> <span class="nav-text">IAM</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#AWS-Resource-Access-Manager"><span class="nav-number">1.11.</span> <span class="nav-text">AWS Resource Access Manager</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Logging-and-Monitoring"><span class="nav-number">2.</span> <span class="nav-text">Logging and Monitoring</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Cloudtrail"><span class="nav-number">2.1.</span> <span class="nav-text">Cloudtrail</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Cloud-config"><span class="nav-number">2.2.</span> <span class="nav-text">Cloud config</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#CloudHSM"><span class="nav-number">2.3.</span> <span class="nav-text">CloudHSM</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#AWS-inspector"><span class="nav-number">2.4.</span> <span class="nav-text">AWS inspector</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Trust-advisor"><span class="nav-number">2.5.</span> <span class="nav-text">Trust advisor</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Infrastructure-security"><span class="nav-number">3.</span> <span class="nav-text">Infrastructure security</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#KMS"><span class="nav-number">3.1.</span> <span class="nav-text">KMS</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#System-manager"><span class="nav-number">3.2.</span> <span class="nav-text">System manager</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Macie"><span class="nav-number">3.3.</span> <span class="nav-text">Macie</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#GuardDuty"><span class="nav-number">3.4.</span> <span class="nav-text">GuardDuty</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#QuickSight"><span class="nav-number">3.5.</span> <span class="nav-text">QuickSight</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#QuickSigh"><span class="nav-number">3.6.</span> <span class="nav-text">QuickSigh</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Security-Hub"><span class="nav-number">3.7.</span> <span class="nav-text">Security Hub</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Artifact"><span class="nav-number">3.8.</span> <span class="nav-text">Artifact</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#DDos-mitigation-on-AWS"><span class="nav-number">3.9.</span> <span class="nav-text">DDos mitigation on AWS</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#CloudWatch"><span class="nav-number">3.10.</span> <span class="nav-text">CloudWatch</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#AWS-signer"><span class="nav-number">3.11.</span> <span class="nav-text">AWS signer</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#VPC"><span class="nav-number">3.12.</span> <span class="nav-text">VPC</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Organization-trails"><span class="nav-number">3.13.</span> <span class="nav-text">Organization trails</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Amazon-Detective"><span class="nav-number">3.14.</span> <span class="nav-text">Amazon Detective</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#OpenSearch"><span class="nav-number">3.15.</span> <span class="nav-text">OpenSearch</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Secrets-Manager-vs-Parameter-Store"><span class="nav-number">3.16.</span> <span class="nav-text">Secrets Manager vs Parameter Store</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#AWS-Audit-Manager"><span class="nav-number">3.17.</span> <span class="nav-text">AWS Audit Manager</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#AWS-Firewall-Manager"><span class="nav-number">3.18.</span> <span class="nav-text">AWS Firewall Manager</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Network-Firewall"><span class="nav-number">3.19.</span> <span class="nav-text">Network Firewall</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Kinesis"><span class="nav-number">3.20.</span> <span class="nav-text">Kinesis</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#AWS-Directory-Service"><span class="nav-number">3.21.</span> <span class="nav-text">AWS Directory Service</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Others"><span class="nav-number">3.22.</span> <span class="nav-text">Others</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%B8%AD%E6%96%87%E7%89%88"><span class="nav-number">4.</span> <span class="nav-text">中文版</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%80%83%E8%AF%95%E9%A2%86%E5%9F%9F"><span class="nav-number">4.1.</span> <span class="nav-text">考试领域</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#S3-1"><span class="nav-number">4.2.</span> <span class="nav-text">S3</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Interface-Endpoint-%E4%B8%8E-Gateway-Endpoint"><span class="nav-number">4.3.</span> <span class="nav-text">Interface Endpoint 与 Gateway Endpoint</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#CloudFront-1"><span class="nav-number">4.4.</span> <span class="nav-text">CloudFront</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#ACM-1"><span class="nav-number">4.5.</span> <span class="nav-text">ACM</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#ALB-1"><span class="nav-number">4.6.</span> <span class="nav-text">ALB</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#STS-1"><span class="nav-number">4.7.</span> <span class="nav-text">STS</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Cognito-1"><span class="nav-number">4.8.</span> <span class="nav-text">Cognito</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Identity-Provider-%E4%B8%8E%E8%81%94%E5%90%88"><span class="nav-number">4.9.</span> <span class="nav-text">Identity Provider 与联合</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#IAM-1"><span class="nav-number">4.10.</span> <span class="nav-text">IAM</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#AWS-Resource-Access-Manager-1"><span class="nav-number">4.11.</span> <span class="nav-text">AWS Resource Access Manager</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%97%A5%E5%BF%97%E8%AE%B0%E5%BD%95%E4%B8%8E%E7%9B%91%E6%8E%A7"><span class="nav-number">5.</span> <span class="nav-text">日志记录与监控</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#CloudTrail"><span class="nav-number">5.1.</span> <span class="nav-text">CloudTrail</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#AWS-Config"><span class="nav-number">5.2.</span> <span class="nav-text">AWS Config</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#CloudHSM-1"><span class="nav-number">5.3.</span> <span class="nav-text">CloudHSM</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#AWS-Inspector"><span class="nav-number">5.4.</span> <span class="nav-text">AWS Inspector</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Trusted-Advisor"><span class="nav-number">5.5.</span> <span class="nav-text">Trusted Advisor</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%9F%BA%E7%A1%80%E8%AE%BE%E6%96%BD%E5%AE%89%E5%85%A8"><span class="nav-number">6.</span> <span class="nav-text">基础设施安全</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#KMS-1"><span class="nav-number">6.1.</span> <span class="nav-text">KMS</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Systems-Manager"><span class="nav-number">6.2.</span> <span class="nav-text">Systems Manager</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Macie-1"><span class="nav-number">6.3.</span> <span class="nav-text">Macie</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#GuardDuty-1"><span class="nav-number">6.4.</span> <span class="nav-text">GuardDuty</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#QuickSight-1"><span class="nav-number">6.5.</span> <span class="nav-text">QuickSight</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#QuickSigh-1"><span class="nav-number">6.6.</span> <span class="nav-text">QuickSigh</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Security-Hub-1"><span class="nav-number">6.7.</span> <span class="nav-text">Security Hub</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Artifact-1"><span class="nav-number">6.8.</span> <span class="nav-text">Artifact</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#AWS-%E4%B8%8A%E7%9A%84-DDoS-%E7%BC%93%E8%A7%A3"><span class="nav-number">6.9.</span> <span class="nav-text">AWS 上的 DDoS 缓解</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#CloudWatch-1"><span class="nav-number">6.10.</span> <span class="nav-text">CloudWatch</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#AWS-Signer"><span class="nav-number">6.11.</span> <span class="nav-text">AWS Signer</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#VPC-1"><span class="nav-number">6.12.</span> <span class="nav-text">VPC</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Organization-Trail"><span class="nav-number">6.13.</span> <span class="nav-text">Organization Trail</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Amazon-Detective-1"><span class="nav-number">6.14.</span> <span class="nav-text">Amazon Detective</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#OpenSearch-1"><span class="nav-number">6.15.</span> <span class="nav-text">OpenSearch</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Secrets-Manager-%E4%B8%8E-Parameter-Store"><span class="nav-number">6.16.</span> <span class="nav-text">Secrets Manager 与 Parameter Store</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#AWS-Audit-Manager-1"><span class="nav-number">6.17.</span> <span class="nav-text">AWS Audit Manager</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#AWS-Firewall-Manager-1"><span class="nav-number">6.18.</span> <span class="nav-text">AWS Firewall Manager</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Network-Firewall-1"><span class="nav-number">6.19.</span> <span class="nav-text">Network Firewall</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Kinesis-1"><span class="nav-number">6.20.</span> <span class="nav-text">Kinesis</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#AWS-Directory-Service-1"><span class="nav-number">6.21.</span> <span class="nav-text">AWS Directory Service</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%85%B6%E4%BB%96"><span class="nav-number">6.22.</span> <span class="nav-text">其他</span></a></li></ol></li></ol>
     </div>
 </div>
         </aside>

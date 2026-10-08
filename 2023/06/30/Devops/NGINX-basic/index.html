@@ -9,7 +9,7 @@
     
     <title>
         
-            NGINX basic |
+            NGINX Basics |
         
         Camille Blog
     </title>
@@ -23,7 +23,7 @@
     <script id="hexo-configurations">
     let KEEP = window.KEEP || {};
     KEEP.hexo_config = {"hostname":"camillechang.github.io","root":"/","language":["en","zh-CN","default"],"path":"search.json"};
-    KEEP.theme_config = {"toc":{"enable":true,"number":true,"expand_all":false,"init_open":false},"style":{"primary_color":"#7C3AED","avatar":"/images/cat.svg","favicon":"/images/cat.svg","article_img_align":"left","left_side_width":"260px","content_max_width":"1080px","hover":{"shadow":true,"scale":true},"first_screen":{"enable":true,"background_img":"/images/hero-bg.svg","description":"认真体验有限的人生，享受独处，勇敢去爱，也努力创造一点对世界有用的东西。"},"scroll":{"progress_bar":{"enable":true},"percent":{"enable":true}}},"local_search":{"enable":true,"trigger":"auto","top_n_per_article":3,"unescape":false,"preload":false},"code_copy":{"enable":true,"style":"mac"},"pjax":{"enable":false},"lazyload":{"enable":false},"version":"3.4.5"};
+    KEEP.theme_config = {"toc":{"enable":true,"number":true,"expand_all":false,"init_open":false},"style":{"primary_color":"#7C3AED","avatar":"/images/cat.svg","favicon":"/images/cat.svg","article_img_align":"left","left_side_width":"260px","content_max_width":"1080px","hover":{"shadow":true,"scale":true},"first_screen":{"enable":true,"background_img":"/images/hero-bg.svg","description":"Life is finite. Live it fully, embrace solitude, love courageously, and create something useful for the world."},"scroll":{"progress_bar":{"enable":true},"percent":{"enable":true}}},"local_search":{"enable":true,"trigger":"auto","top_n_per_article":3,"unescape":false,"preload":false},"code_copy":{"enable":true,"style":"mac"},"pjax":{"enable":false},"lazyload":{"enable":false},"version":"3.4.5"};
     KEEP.language_ago = {"second":"%s seconds ago","minute":"%s minutes ago","hour":"%s hours ago","day":"%s days ago","week":"%s weeks ago","month":"%s months ago","year":"%s years ago"};
   </script>
 <meta name="generator" content="Hexo 6.3.0"><link rel="alternate" href="/atom.xml" title="Camille Blog" type="application/atom+xml">
@@ -174,7 +174,7 @@
     <div class="article-content-container">
 
         <div class="article-title">
-            <span class="title-hover-animation">NGINX basic</span>
+            <span class="title-hover-animation">NGINX Basics</span>
         </div>
 
         
@@ -226,7 +226,7 @@
     
     
         <span class="article-wordcount article-meta-item">
-            <i class="fas fa-file-word"></i>&nbsp;<span>143 Words</span>
+            <i class="fas fa-file-word"></i>&nbsp;<span>279 Words</span>
         </span>
     
     
@@ -243,19 +243,35 @@
         
 
         <div class="article-content markdown-body">
-            <ul>
-<li>Reverse Proxy Server</li>
+            <h2 id="English-Version"><a href="#English-Version" class="headerlink" title="English Version"></a>English Version</h2><ul>
+<li>NGINX is a reverse proxy server.</li>
 </ul>
-<h2 id="NGINX-vs-Apache"><a href="#NGINX-vs-Apache" class="headerlink" title="NGINX vs Apache"></a>NGINX vs Apache</h2><p><img src="/../../imgs/nginx.jpg" alt="nginx"></p>
-<h2 id="MacOS-install-Nginx"><a href="#MacOS-install-Nginx" class="headerlink" title="MacOS install Nginx"></a>MacOS install Nginx</h2><ul>
+<h3 id="NGINX-vs-Apache"><a href="#NGINX-vs-Apache" class="headerlink" title="NGINX vs Apache"></a>NGINX vs Apache</h3><p><img src="/../../imgs/nginx.jpg" alt="nginx"></p>
+<h3 id="Install-NGINX-on-macOS"><a href="#Install-NGINX-on-macOS" class="headerlink" title="Install NGINX on macOS"></a>Install NGINX on macOS</h3><ul>
 <li><code>brew install nginx</code></li>
 <li><code>brew services reload nginx</code></li>
-<li>Config file location <code>/usr/local/etc/nginx/nginx.conf</code></li>
-<li><code>curl -I ip/style.css</code> get header info</li>
+<li>The configuration file is located at <code>/usr/local/etc/nginx/nginx.conf</code>.</li>
+<li>Use <code>curl -I ip/style.css</code> to get header information.</li>
 </ul>
-<h2 id="Reverse-Proxy"><a href="#Reverse-Proxy" class="headerlink" title="Reverse Proxy"></a>Reverse Proxy</h2><ul>
-<li>正向代理是客户端的代理，而反向代理是服务器的代理</li>
-<li>正向代理（Forward Proxy）是一种代理服务器，代表客户端向其他服务器发送请求，并将响应返回给客户端</li>
+<h3 id="Reverse-proxy"><a href="#Reverse-proxy" class="headerlink" title="Reverse proxy"></a>Reverse proxy</h3><ul>
+<li>A forward proxy acts on behalf of clients, while a reverse proxy acts on behalf of servers.</li>
+<li>A forward proxy is a proxy server that sends requests to other servers on behalf of a client and returns the responses to that client.</li>
+<li>A reverse proxy is a network service that handles client requests on behalf of servers and forwards those requests to backend servers on an internal network.</li>
+</ul>
+<hr>
+<h2 id="中文版"><a href="#中文版" class="headerlink" title="中文版"></a>中文版</h2><ul>
+<li>NGINX 是一款反向代理服务器。</li>
+</ul>
+<h3 id="NGINX-与-Apache"><a href="#NGINX-与-Apache" class="headerlink" title="NGINX 与 Apache"></a>NGINX 与 Apache</h3><p><img src="/../../imgs/nginx.jpg" alt="nginx"></p>
+<h3 id="在-macOS-上安装-NGINX"><a href="#在-macOS-上安装-NGINX" class="headerlink" title="在 macOS 上安装 NGINX"></a>在 macOS 上安装 NGINX</h3><ul>
+<li><code>brew install nginx</code></li>
+<li><code>brew services reload nginx</code></li>
+<li>配置文件位于 <code>/usr/local/etc/nginx/nginx.conf</code>。</li>
+<li>使用 <code>curl -I ip/style.css</code> 获取响应头信息。</li>
+</ul>
+<h3 id="反向代理"><a href="#反向代理" class="headerlink" title="反向代理"></a>反向代理</h3><ul>
+<li>正向代理代表客户端，而反向代理代表服务器。</li>
+<li>正向代理（Forward Proxy）是一种代理服务器，它代表客户端向其他服务器发送请求，并将响应返回给客户端。</li>
 <li>反向代理（Reverse Proxy）是一种网络服务，它代表服务器处理客户端请求，并将这些请求转发到内部网络中的后端服务器。</li>
 </ul>
 
@@ -289,7 +305,7 @@
                               <i class="fas fa-chevron-left"></i>
                             </span>
                             <span class="title flex-center">
-                                <span class="post-nav-title-item">Linux commands</span>
+                                <span class="post-nav-title-item">Essential Linux Commands</span>
                                 <span class="post-nav-item">Prev posts</span>
                             </span>
                         </a>
@@ -302,7 +318,7 @@
                            href="/2023/06/26/books/%E4%B8%8D%E7%96%B2%E5%8A%B3%E7%9A%84%E7%94%9F%E6%B4%BB/"
                         >
                             <span class="title flex-center">
-                                <span class="post-nav-title-item">不疲劳的生活</span>
+                                <span class="post-nav-title-item">Living Without Fatigue</span>
                                 <span class="post-nav-item">Next posts</span>
                             </span>
                             <span class="right arrow-icon flex-center">
@@ -437,7 +453,7 @@
         <aside class="page-aside">
             <div class="post-toc-wrap">
     <div class="post-toc">
-        <ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#NGINX-vs-Apache"><span class="nav-number">1.</span> <span class="nav-text">NGINX vs Apache</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#MacOS-install-Nginx"><span class="nav-number">2.</span> <span class="nav-text">MacOS install Nginx</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Reverse-Proxy"><span class="nav-number">3.</span> <span class="nav-text">Reverse Proxy</span></a></li></ol>
+        <ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#English-Version"><span class="nav-number">1.</span> <span class="nav-text">English Version</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#NGINX-vs-Apache"><span class="nav-number">1.1.</span> <span class="nav-text">NGINX vs Apache</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Install-NGINX-on-macOS"><span class="nav-number">1.2.</span> <span class="nav-text">Install NGINX on macOS</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Reverse-proxy"><span class="nav-number">1.3.</span> <span class="nav-text">Reverse proxy</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%B8%AD%E6%96%87%E7%89%88"><span class="nav-number">2.</span> <span class="nav-text">中文版</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#NGINX-%E4%B8%8E-Apache"><span class="nav-number">2.1.</span> <span class="nav-text">NGINX 与 Apache</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%9C%A8-macOS-%E4%B8%8A%E5%AE%89%E8%A3%85-NGINX"><span class="nav-number">2.2.</span> <span class="nav-text">在 macOS 上安装 NGINX</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%8F%8D%E5%90%91%E4%BB%A3%E7%90%86"><span class="nav-number">2.3.</span> <span class="nav-text">反向代理</span></a></li></ol></li></ol>
     </div>
 </div>
         </aside>
