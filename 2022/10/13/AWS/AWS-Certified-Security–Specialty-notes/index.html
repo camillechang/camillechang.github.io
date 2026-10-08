@@ -1,10 +1,10 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en,zh-CN,default">
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-    <meta name="keywords" content="Hexo Theme Keep">
-    <meta name="description" content="Study note">
+    <meta name="keywords" content="technology, cloud, DevOps, books, money, habits, life">
+    <meta name="description" content="Camille&#39;s notes on technology, cloud engineering, money, books, habits, and life.">
     <meta name="author" content="Camille">
     
     <title>
@@ -22,17 +22,19 @@
 
     <script id="hexo-configurations">
     let KEEP = window.KEEP || {};
-    KEEP.hexo_config = {"hostname":"camillechang.github.io","root":"/","language":"en","path":"search.json"};
-    KEEP.theme_config = {"toc":{"enable":false,"number":false,"expand_all":false,"init_open":false},"style":{"primary_color":"#0066CC","avatar":"/images/cat.svg","favicon":"/images/cat.svg","article_img_align":"left","left_side_width":"260px","content_max_width":"920px","hover":{"shadow":true,"scale":true},"first_screen":{"enable":false,"background_img":"/images/rainbow-bg.svg","description":"Keep writing and Keep loving."},"scroll":{"progress_bar":{"enable":false},"percent":{"enable":false}}},"local_search":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"code_copy":{"enable":false,"style":"default"},"pjax":{"enable":false},"lazyload":{"enable":false},"version":"3.4.5"};
+    KEEP.hexo_config = {"hostname":"camillechang.github.io","root":"/","language":["en","zh-CN","default"],"path":"search.json"};
+    KEEP.theme_config = {"toc":{"enable":true,"number":true,"expand_all":false,"init_open":false},"style":{"primary_color":"#7C3AED","avatar":"/images/cat.svg","favicon":"/images/cat.svg","article_img_align":"left","left_side_width":"260px","content_max_width":"1080px","hover":{"shadow":true,"scale":true},"first_screen":{"enable":true,"background_img":"/images/hero-bg.svg","description":"Notes on technology, money, books, and a life in progress."},"scroll":{"progress_bar":{"enable":true},"percent":{"enable":true}}},"local_search":{"enable":true,"trigger":"auto","top_n_per_article":3,"unescape":false,"preload":false},"code_copy":{"enable":true,"style":"mac"},"pjax":{"enable":false},"lazyload":{"enable":false},"version":"3.4.5"};
     KEEP.language_ago = {"second":"%s seconds ago","minute":"%s minutes ago","hour":"%s hours ago","day":"%s days ago","week":"%s weeks ago","month":"%s months ago","year":"%s years ago"};
   </script>
-<meta name="generator" content="Hexo 6.3.0"><link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
+<meta name="generator" content="Hexo 6.3.0"><link rel="alternate" href="/atom.xml" title="Camille Blog" type="application/atom+xml">
 </head>
 
 
 
 	<body>
 		<div class="progress-bar-container">
+    
+        <span class="scroll-progress-bar"></span>
     
 
     
@@ -88,16 +90,29 @@
 						
 						<li class="menu-item">
 							<a class=""
+								href="/tags">
+								TAGS
+							</a>
+						</li>
+						
+						<li class="menu-item">
+							<a class=""
 								href="/about">
 								ABOUT
 							</a>
 						</li>
 						
 							
+								<li class="menu-item search search-popup-trigger">
+									<i class="fas fa-search"></i>
+								</li>
+								
 				</ul>
 			</div>
 			<div class="mobile">
 				
+					<div class="icon-item search search-popup-trigger"><i class="fas fa-search"></i></div>
+					
 						<div class="icon-item menu-bar">
 							<div class="menu-bar-middle"></div>
 						</div>
@@ -126,6 +141,13 @@
 					<a class=""
 						href="/categories">
 						CATEGORIES
+					</a>
+				</li>
+				
+				<li class="drawer-menu-item flex-center">
+					<a class=""
+						href="/tags">
+						TAGS
 					</a>
 				</li>
 				
@@ -582,6 +604,10 @@
     <ul class="tools-list">
         <!-- TOC aside toggle -->
         
+            <li class="tools-item page-aside-toggle">
+                <i class="fas fa-outdent"></i>
+            </li>
+        
 
         <!-- go comment -->
         
@@ -623,10 +649,6 @@
         
 
         
-            <li class="tools-item tool-scroll-to-top flex-center">
-                <i class="fas fa-arrow-up"></i>
-            </li>
-        
 
         <li class="tools-item tool-scroll-to-bottom flex-center">
             <i class="fas fa-arrow-down"></i>
@@ -638,17 +660,59 @@
             <i class="fas fa-cog fa-spin"></i>
         </li>
         
+            <li class="tools-item tool-scroll-to-top flex-center">
+                <i class="arrow-up fas fa-arrow-up"></i>
+                <span class="percent"></span>
+            </li>
+        
     </ul>
 </div>
 
     </div>
 
     
+        <aside class="page-aside">
+            <div class="post-toc-wrap">
+    <div class="post-toc">
+        <ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#Exam-area"><span class="nav-number">1.</span> <span class="nav-text">Exam area</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#S3"><span class="nav-number">2.</span> <span class="nav-text">S3</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#interface-endpoint-vs-gateway-endpoint"><span class="nav-number">3.</span> <span class="nav-text">interface endpoint vs gateway endpoint</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#CloudFront"><span class="nav-number">4.</span> <span class="nav-text">CloudFront</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#ACM"><span class="nav-number">5.</span> <span class="nav-text">ACM</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#ALB"><span class="nav-number">6.</span> <span class="nav-text">ALB</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#STS"><span class="nav-number">7.</span> <span class="nav-text">STS</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Cognito"><span class="nav-number">8.</span> <span class="nav-text">Cognito</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Identity-providers-and-federation"><span class="nav-number">9.</span> <span class="nav-text">Identity providers and federation</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#IAM"><span class="nav-number">10.</span> <span class="nav-text">IAM</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#AWS-Resource-Access-Manager"><span class="nav-number">11.</span> <span class="nav-text">AWS Resource Access Manager</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Logging-and-Monitoring"><span class="nav-number"></span> <span class="nav-text">Logging and Monitoring</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Cloudtrail"><span class="nav-number">1.</span> <span class="nav-text">Cloudtrail</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Cloud-config"><span class="nav-number">2.</span> <span class="nav-text">Cloud config</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#CloudHSM"><span class="nav-number">3.</span> <span class="nav-text">CloudHSM</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#AWS-inspector"><span class="nav-number">4.</span> <span class="nav-text">AWS inspector</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Trust-advisor"><span class="nav-number">5.</span> <span class="nav-text">Trust advisor</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Infrastructure-security"><span class="nav-number"></span> <span class="nav-text">Infrastructure security</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#KMS"><span class="nav-number">1.</span> <span class="nav-text">KMS</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#System-manager"><span class="nav-number">2.</span> <span class="nav-text">System manager</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Macie"><span class="nav-number">3.</span> <span class="nav-text">Macie</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#GuardDuty"><span class="nav-number">4.</span> <span class="nav-text">GuardDuty</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#QuickSight"><span class="nav-number">5.</span> <span class="nav-text">QuickSight</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#QuickSigh"><span class="nav-number">6.</span> <span class="nav-text">QuickSigh</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Security-Hub"><span class="nav-number">7.</span> <span class="nav-text">Security Hub</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Artifact"><span class="nav-number">8.</span> <span class="nav-text">Artifact</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#DDos-mitigation-on-AWS"><span class="nav-number">9.</span> <span class="nav-text">DDos mitigation on AWS</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#CloudWatch"><span class="nav-number">10.</span> <span class="nav-text">CloudWatch</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#AWS-signer"><span class="nav-number">11.</span> <span class="nav-text">AWS signer</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#VPC"><span class="nav-number">12.</span> <span class="nav-text">VPC</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Organization-trails"><span class="nav-number">13.</span> <span class="nav-text">Organization trails</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Amazon-Detective"><span class="nav-number">14.</span> <span class="nav-text">Amazon Detective</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#OpenSearch"><span class="nav-number">15.</span> <span class="nav-text">OpenSearch</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Secrets-Manager-vs-Parameter-Store"><span class="nav-number">16.</span> <span class="nav-text">Secrets Manager vs Parameter Store</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#AWS-Audit-Manager"><span class="nav-number">17.</span> <span class="nav-text">AWS Audit Manager</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#AWS-Firewall-Manager"><span class="nav-number">18.</span> <span class="nav-text">AWS Firewall Manager</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Network-Firewall"><span class="nav-number">19.</span> <span class="nav-text">Network Firewall</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Kinesis"><span class="nav-number">20.</span> <span class="nav-text">Kinesis</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#AWS-Directory-Service"><span class="nav-number">21.</span> <span class="nav-text">AWS Directory Service</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Others"><span class="nav-number">22.</span> <span class="nav-text">Others</span></a></li></ol>
+    </div>
+</div>
+        </aside>
+    
 
     <div class="image-viewer-container">
     <img src="">
 </div>
 
+
+    
+        <div class="search-pop-overlay">
+    <div class="popup search-popup">
+        <div class="search-header">
+          <span class="search-input-field-pre">
+            <i class="fas fa-keyboard"></i>
+          </span>
+            <div class="search-input-container">
+                <input autocomplete="off"
+                       autocorrect="off"
+                       autocapitalize="off"
+                       placeholder="Search..."
+                       spellcheck="false"
+                       type="search"
+                       class="search-input"
+                >
+            </div>
+            <span class="popup-btn-close">
+                <i class="fas fa-times"></i>
+            </span>
+        </div>
+        <div id="search-result">
+            <div id="no-result">
+                <i class="fas fa-spinner fa-pulse fa-5x fa-fw"></i>
+            </div>
+        </div>
+    </div>
+</div>
 
     
 
@@ -669,12 +733,28 @@
 
 
 
+    
+<script src="/js/local-search.js"></script>
+
+
+
+
+    
+<script src="/js/code-copy.js"></script>
 
 
 
 
 
 <div class="post-scripts">
+    
+        
+<script src="/js/left-side-toggle.js"></script>
+
+<script src="/js/libs/anime.min.js"></script>
+
+<script src="/js/toc.js"></script>
+
     
 </div>
 

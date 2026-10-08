@@ -1,10 +1,10 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en,zh-CN,default">
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-    <meta name="keywords" content="Hexo Theme Keep">
-    <meta name="description" content="Study note">
+    <meta name="keywords" content="technology, cloud, DevOps, books, money, habits, life">
+    <meta name="description" content="Camille&#39;s notes on technology, cloud engineering, money, books, habits, and life.">
     <meta name="author" content="Camille">
     
     <title>
@@ -22,17 +22,19 @@
 
     <script id="hexo-configurations">
     let KEEP = window.KEEP || {};
-    KEEP.hexo_config = {"hostname":"camillechang.github.io","root":"/","language":"en","path":"search.json"};
-    KEEP.theme_config = {"toc":{"enable":false,"number":false,"expand_all":false,"init_open":false},"style":{"primary_color":"#0066CC","avatar":"/images/cat.svg","favicon":"/images/cat.svg","article_img_align":"left","left_side_width":"260px","content_max_width":"920px","hover":{"shadow":true,"scale":true},"first_screen":{"enable":false,"background_img":"/images/rainbow-bg.svg","description":"Keep writing and Keep loving."},"scroll":{"progress_bar":{"enable":false},"percent":{"enable":false}}},"local_search":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"code_copy":{"enable":false,"style":"default"},"pjax":{"enable":false},"lazyload":{"enable":false},"version":"3.4.5"};
+    KEEP.hexo_config = {"hostname":"camillechang.github.io","root":"/","language":["en","zh-CN","default"],"path":"search.json"};
+    KEEP.theme_config = {"toc":{"enable":true,"number":true,"expand_all":false,"init_open":false},"style":{"primary_color":"#7C3AED","avatar":"/images/cat.svg","favicon":"/images/cat.svg","article_img_align":"left","left_side_width":"260px","content_max_width":"1080px","hover":{"shadow":true,"scale":true},"first_screen":{"enable":true,"background_img":"/images/hero-bg.svg","description":"Notes on technology, money, books, and a life in progress."},"scroll":{"progress_bar":{"enable":true},"percent":{"enable":true}}},"local_search":{"enable":true,"trigger":"auto","top_n_per_article":3,"unescape":false,"preload":false},"code_copy":{"enable":true,"style":"mac"},"pjax":{"enable":false},"lazyload":{"enable":false},"version":"3.4.5"};
     KEEP.language_ago = {"second":"%s seconds ago","minute":"%s minutes ago","hour":"%s hours ago","day":"%s days ago","week":"%s weeks ago","month":"%s months ago","year":"%s years ago"};
   </script>
-<meta name="generator" content="Hexo 6.3.0"><link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
+<meta name="generator" content="Hexo 6.3.0"><link rel="alternate" href="/atom.xml" title="Camille Blog" type="application/atom+xml">
 </head>
 
 
 
 	<body>
 		<div class="progress-bar-container">
+    
+        <span class="scroll-progress-bar"></span>
     
 
     
@@ -88,16 +90,29 @@
 						
 						<li class="menu-item">
 							<a class=""
+								href="/tags">
+								TAGS
+							</a>
+						</li>
+						
+						<li class="menu-item">
+							<a class=""
 								href="/about">
 								ABOUT
 							</a>
 						</li>
 						
 							
+								<li class="menu-item search search-popup-trigger">
+									<i class="fas fa-search"></i>
+								</li>
+								
 				</ul>
 			</div>
 			<div class="mobile">
 				
+					<div class="icon-item search search-popup-trigger"><i class="fas fa-search"></i></div>
+					
 						<div class="icon-item menu-bar">
 							<div class="menu-bar-middle"></div>
 						</div>
@@ -126,6 +141,13 @@
 					<a class=""
 						href="/categories">
 						CATEGORIES
+					</a>
+				</li>
+				
+				<li class="drawer-menu-item flex-center">
+					<a class=""
+						href="/tags">
+						TAGS
 					</a>
 				</li>
 				
@@ -353,6 +375,10 @@
     <ul class="tools-list">
         <!-- TOC aside toggle -->
         
+            <li class="tools-item page-aside-toggle">
+                <i class="fas fa-outdent"></i>
+            </li>
+        
 
         <!-- go comment -->
         
@@ -394,10 +420,6 @@
         
 
         
-            <li class="tools-item tool-scroll-to-top flex-center">
-                <i class="fas fa-arrow-up"></i>
-            </li>
-        
 
         <li class="tools-item tool-scroll-to-bottom flex-center">
             <i class="fas fa-arrow-down"></i>
@@ -409,17 +431,59 @@
             <i class="fas fa-cog fa-spin"></i>
         </li>
         
+            <li class="tools-item tool-scroll-to-top flex-center">
+                <i class="arrow-up fas fa-arrow-up"></i>
+                <span class="percent"></span>
+            </li>
+        
     </ul>
 </div>
 
     </div>
 
     
+        <aside class="page-aside">
+            <div class="post-toc-wrap">
+    <div class="post-toc">
+        <ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#Courses"><span class="nav-number">1.</span> <span class="nav-text">Courses:</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Practice-exam"><span class="nav-number">2.</span> <span class="nav-text">Practice exam:</span></a></li></ol>
+    </div>
+</div>
+        </aside>
+    
 
     <div class="image-viewer-container">
     <img src="">
 </div>
 
+
+    
+        <div class="search-pop-overlay">
+    <div class="popup search-popup">
+        <div class="search-header">
+          <span class="search-input-field-pre">
+            <i class="fas fa-keyboard"></i>
+          </span>
+            <div class="search-input-container">
+                <input autocomplete="off"
+                       autocorrect="off"
+                       autocapitalize="off"
+                       placeholder="Search..."
+                       spellcheck="false"
+                       type="search"
+                       class="search-input"
+                >
+            </div>
+            <span class="popup-btn-close">
+                <i class="fas fa-times"></i>
+            </span>
+        </div>
+        <div id="search-result">
+            <div id="no-result">
+                <i class="fas fa-spinner fa-pulse fa-5x fa-fw"></i>
+            </div>
+        </div>
+    </div>
+</div>
 
     
 
@@ -440,12 +504,28 @@
 
 
 
+    
+<script src="/js/local-search.js"></script>
+
+
+
+
+    
+<script src="/js/code-copy.js"></script>
 
 
 
 
 
 <div class="post-scripts">
+    
+        
+<script src="/js/left-side-toggle.js"></script>
+
+<script src="/js/libs/anime.min.js"></script>
+
+<script src="/js/toc.js"></script>
+
     
 </div>
 
